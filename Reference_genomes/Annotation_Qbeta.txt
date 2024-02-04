@@ -1,0 +1,3 @@
+Qbeta	Genbank	region	1	100	.	+	.	ID=Qbeta:1..100;Dbxref=taxon:qbeta;Is_circular=true;Name=ANONYMOUS;country=Germany;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=QB
+Qbeta	Genbank	gene	1	100	.	+	.	ID=qbeta;Name=qbeta;gbkey=Gene;gene=qbeta;gene_biotype=rna_coding;locus_tag=qbeta
+Qbeta	Protein Homology	CDS	1	100	.	+	0	ID=cds-qbeta;Parent=qbeta;Dbxref=NCBI_GP:qbeta;Name=qbeta;Note=qbeta;gbkey=CDS;gene=qbeta;inference=EXISTENCE: similar to sequence: qbeta;locus_tag=qbeta;product=qbeta;protein_id=none;transl_table=none
