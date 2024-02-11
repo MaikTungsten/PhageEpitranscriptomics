@@ -1,0 +1,709 @@
+---
+title: "Analysis NAD captureSeq"
+output: html_document
+keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "YourPath")
+```
+
+```{r load-packages, include=FALSE}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(ggpubr)
+library(viridis)
+library(tidyverse)
+library(reshape)
+library(readxl)
+library(pheatmap)
+library (RColorBrewer)
+library(grid)
+library(gridExtra)
+library(VennDiagram)
+```
+
+## 1. Data import
+
+First, we import the counts table from replicate 2.
+
+```{r}
+
+countsTable <- read.delim("CountsTable.tsv", comment.char="#", stringsAsFactors=TRUE)
+```
+
+We adjust the column names to a more comprehensive style
+
+```{r}
+colnames(countsTable) <- c("Geneid", "Chr", "Start", "End", "Strand", "Length", "T0_p", "T1_p", "T4_p", "T7_p", "T10_p", "T20_p", "T0_n", "T1_n", "T4_n", "T7_n", "T10_n", "T20_n")
+head(countsTable)
+tail(countsTable)
+
+```
+
+# 2. Data normalization
+
+Now, we add a pseudocount (pse) to each count for each gene
+
+```{r}
+pse <- 0.1
+countsTable_pse <- countsTable 
+countsTable_pse[,7:18] <- countsTable[,7:18]+pse
+head(countsTable_pse)
+tail(countsTable_pse)
+```
+
+We normalize the counts per gene and sample as the fraction of reads using all reads for all genes per sample.
+
+```{r}
+normalize_counts <- function(x){
+  df <- x
+  normValues <- colSums(x)
+  i <- 1
+  while(i<=length(normValues)){
+    df[,i] <- x[,i]/normValues[i]
+    i <- i+1
+  }
+  return(df)
+}
+
+df_normalized <- normalize_counts(countsTable_pse[,7:18])
+head(df_normalized)
+```
+
+We create a table of counts with normalized reads in a rearranged setting.
+
+```{r}
+normCounts <- data.frame(cbind(countsTable_pse[,1:6], df_normalized[,c(1,7,2,8,3,9,4,10,5,11,6,12)]))
+head(normCounts)
+tail(normCounts)
+```
+
+# 3. Estimation of total reads per genome
+
+We calculate the sum of normalized counts for each entity (genome)
+
+```{r}
+counts_phage <- normCounts %>% filter(normCounts[,2]=="NC_000866.4")
+tpm_sum_phage <- colSums(counts_phage[,7:18])
+
+counts_coli <- normCounts %>% filter(normCounts[,2]=="U00096.3")
+tpm_sum_coli <- colSums((counts_coli[,7:18]))
+
+counts_qbeta <- normCounts %>% filter(normCounts[,2]=="Qbeta")
+tpm_sum_qbeta <- colSums((counts_qbeta[,7:18]))
+
+counts_total <- colSums(normCounts[,7:18])
+```
+
+## 3.1 Combining the information in one table
+
+We create a new table which represents a summary of all the information obtained for each timepoint of infection by +ADPRC and -ADPRC samples, where "p" represents a +ADPRC-treated sample and "n" the negative control.
+
+```{r}
+sample <- c("T0_p", "T0_n", "T1_p", "T1_n", "T4_p", "T4_n", "T7_p", "T7_n", "T10_p", "T10_n", "T20_p", "T20_n")
+
+time <- c("0","0","1","1","4","4","7","7","10","10","20","20")
+
+type <- c("+ADPRC", "-ADPRC", "+ADPRC", "-ADPRC", "+ADPRC", "-ADPRC", "+ADPRC", "-ADPRC", "+ADPRC", "-ADPRC", "+ADPRC", "-ADPRC")
+
+ratio_table_tpm <- data.frame(sample, time, type, tpm_sum_coli, tpm_sum_phage, tpm_sum_qbeta)
+head(ratio_table_tpm)
+tail (ratio_table_tpm)
+```
+
+## 3.2 Plotting of the data
+
+We use the newly created table from the previous step
+
+```{r}
+tpm_data <- ratio_table_tpm
+colnames(tpm_data) <- c("Sample", "Time", "Type", "E. coli", "T4 phage", "Qbeta")
+tpm_data <- as.data.frame(tpm_data)
+```
+
+We optimize the format of the table
+
+```{r}
+df <- melt(tpm_data, id=c("Sample", "Time", "Type"))
+colnames(df) <- c("Sample", "Time", "Type", "Entity", "FractionAligned")
+df$FractionAligned <- as.numeric(as.character(df$FractionAligned))
+head(df)
+tail(df)
+```
+
+We plot the data on a continuous x scale
+
+```{r}
+df$Time <- as.numeric(as.character(df$Time))
+ggplot(df, aes(x = Time, y = 100*FractionAligned, fill = Entity))+
+  geom_bar(stat = "identity", position = "stack")+
+ scale_x_continuous(breaks = c(0, 1 , 4, 7, 10, 20 ))+
+  facet_wrap(~Type)+
+  theme_classic()+
+  ylab("Fraction of reads aligned to genome [%]")+
+  xlab("Time [min]")+
+  scale_fill_manual(values = c( "#56B4E9", "#0072B2", "#009E73"))
+```
+
+# 4. Quality control (QC) analysis
+
+## 4.1 Definition of matrix for the following analysis
+
+```{r}
+inp <- normCounts[,7:18]
+head(inp)
+tail(inp)
+```
+
+## 4.2 Euclidean distances
+
+We create a heatmap of TPM data for all sample types measuring euclidean distances. Clearly, +ADPRC- and -ADPRC-treated samples show most similiarities among each other. Amongst others due to the abundance of the model RNA (spike-in, Qbeta)
+
+```{r}
+
+sampleDists <- dist(t(inp))
+sampleDistMatrix <- as.matrix(sampleDists)
+
+pheatmap(sampleDistMatrix, cluster_rows = T, cluster_cols = T,
+         color = colorRampPalette(rev(brewer.pal(9, "Blues")))(255))
+
+```
+
+## 4.3 Pearson correlation
+
+We create a heatmap of TPM data measuring pearson correlation.
+
+```{r}
+
+tpm_correlation <- cor(inp, method = "pearson")
+
+ph1 <- pheatmap(tpm_correlation, cluster_rows = T, cluster_cols = T,
+         color = colorRampPalette(brewer.pal(9, "Blues"))(255))
+
+```
+
+## 4.4 Principal component analysis (PCA)
+
+We create a matrix consisting of calculated PCs.
+
+```{r}
+tpm_pca <- prcomp(t(as.matrix(inp)), center = TRUE, scale. = TRUE)
+```
+
+Then, we determine the variances of each PC (principal component).
+
+```{r}
+pc1 <- summary(tpm_pca)$importance[2,1]*100
+pc2 <- summary(tpm_pca)$importance[2,2]*100
+pc1
+pc2
+```
+
+We configure a dataframe for PC1 and PC2 coordinates for all samples.
+
+```{r}
+pcs_1_2 <- tpm_pca$x[,1:2]
+pcs_1_2_sample <- data.frame(cbind(pcs_1_2, rownames(pcs_1_2)))
+head(pcs_1_2_sample)
+```
+
+Then, we transform the format of these values in order to make them calculable.
+
+```{r}
+pcs_1_2_sample$PC1 <- as.numeric(as.character(pcs_1_2_sample$PC1))
+pcs_1_2_sample$PC2 <- as.numeric(as.character(pcs_1_2_sample$PC2))
+```
+
+We fill the data frame with the annotation for all samples.
+
+```{r}
+sample <- c("T0_p", "T0_n", "T1_p", "T1_n", "T4_p", "T4_n", "T7_p", "T7_n", "T10_p", "T10_n", "T20_p", "T20_n")
+
+time <- c("0","0","1","1","4","4","7","7","10","10","20","20")
+
+type <- c("+ADPRC", "-ADPRC")
+
+pc_annotated <- data.frame(pcs_1_2_sample, type, time)
+colnames(pc_annotated) <- c("PC1", "PC2", "Sample", "Type", "Time")
+head(pc_annotated)
+```
+
+We visualize the results of PCA.
+
+```{r}
+ggplot(pc_annotated, aes(x = PC1, y = PC2, color = Time, shape = Type))+
+  geom_point(size= 2.5)+
+  scale_color_hue(l=80)+
+  theme_classic()+
+  xlab(paste0("PC1 - ", pc1, " % of variance"))+
+  ylab(paste0("PC2 - ", pc2, " % of variance"))
+
+```
+
+## 4.5 Preparing data for enriched genes
+
+We calculate log2 fold changes (LFC) of two different conditions (+ADPRC and -ADPRC) for each gene and timepoint.
+
+```{r}
+# x defines the normCounts dataframe, n the number of sample pairs.
+lfc_calc <- function(x,n){
+  df <- x[,1:(n+2)]
+  i <- 1
+  j <- 3
+  while(i<=n*2){
+    df[,j] <- log2(x[,n+i]/x[,n+i+1])
+    j <- j+1
+    i <- i+2
+  }
+  return(df)
+}
+
+lfcs <- lfc_calc(normCounts, 6)  
+colnames(lfcs) <- c("Gene", "Genome", "LFC_t0", "LFC_t1", "LFC_t4", "LFC_t7", "LFC_t10", "LFC_t20")
+head(lfcs)
+```
+
+Moreover, we calculate mean expression for each gene and timepoint including +ADPRC and -ADPRC samples.
+
+```{r}
+# x defines the normCounts dataframe, n the number of sample pairs.
+means_calc <- function(x,n){
+  df <- x[,1:(n+2)]
+  i <- 1
+  j <- 3
+  while(i<=n*2){
+    df[,j] <- (x[,n+i]+x[,n+i+1])/2
+    j <- j+1
+    i <- i+2
+  }
+  return(df)
+}
+
+means <- means_calc(normCounts, 6)  
+colnames(means) <- c("Gene", "Genome", "Mean_t0", "Mean_t1", "Mean_t4", "Mean_t7", "Mean_t10", "Mean_t20")
+head(means)
+```
+
+Then, we combine the data in tables for each timepoint considering that the means and LFC tables have the same origins.
+
+```{r}
+lfc_table_t0 <- data.frame(lfcs[,c(1,2,3)], means[,3])
+colnames(lfc_table_t0) <- c("Gene", "Genome", "LFC", "Mean")
+lfc_table_t1 <- data.frame(lfcs[,c(1,2,4)], means[,4])
+colnames(lfc_table_t1) <- c("Gene", "Genome", "LFC", "Mean")
+lfc_table_t4 <- data.frame(lfcs[,c(1,2,5)], means[,5])
+colnames(lfc_table_t4) <- c("Gene", "Genome", "LFC", "Mean")
+lfc_table_t7 <- data.frame(lfcs[,c(1,2,6)], means[,6])
+colnames(lfc_table_t7) <- c("Gene", "Genome", "LFC", "Mean")
+lfc_table_t10 <- data.frame(lfcs[,c(1,2,7)], means[,7])
+colnames(lfc_table_t10) <- c("Gene", "Genome", "LFC", "Mean")
+lfc_table_t20 <- data.frame(lfcs[,c(1,2,8)], means[,8])
+colnames(lfc_table_t20) <- c("Gene", "Genome", "LFC", "Mean")
+```
+
+
+## 5. Creating plots with labeled enriched genes for each timepoint.
+
+First, we optimize the format of LFC-mean tables by addition of the gene symbols. Then, we create the plot.
+
+We load the annotation table that contains the gene symbols to assign gene symbols to the geneids.
+
+```{r}
+# You need to adjust the path below.
+annotation_table <- as.data.frame(read.delim("YourPath/feature_table.tsv"))
+annotation_table_all <- annotation_table[which(annotation_table$type == "gene"),]
+```
+
+#### 0 min post-infection
+
+```{r}
+# x represents the lfc table containing gene, genome, lfc and mean information for each gene and an individual time point
+# the annotation table is added via the "annotation_table_all" variable
+# lfc_thr and mean_thr are the self-chosen thresholds for LFC and mean values
+# "time_point" should match the time point from x
+
+plot_lfc_vs_mean <- function(x=lfc_table_t0, annotation_table_all, lfc_thr=2.5, mean_thr=0.001, time_point="0 min post infection"){
+  df_genes <- annotation_table_all$gene[match(x[,1], annotation_table_all$ID)]
+  df_edit <- x
+  df_edit$Gene <- df_genes
+
+  enr_plot <- ggplot(df_edit, aes(x = log2(Mean), y = LFC))+
+    geom_point(size = 1.3, aes(color = Genome))+
+    theme_classic()+
+    ylab("Log2 Fold Change (+ADPRC/-ADPRC)")+
+    xlab("Log2 Transformed Mean Expression")+
+    geom_hline(yintercept = 0, linetype = "dashed")+
+    geom_segment(aes(x = log2(mean_thr), y = lfc_thr, xend = log2(0.001), yend = +Inf), linewidth = 0.7)+
+    geom_segment(aes(x = log2(mean_thr) , y = lfc_thr, xend = +Inf, yend = 2.5), linewidth = 0.7)+
+    ggtitle(paste0(time_point," - LFC vs. Log2 mean expression"))+
+    geom_text(data=subset(df_edit, LFC >=lfc_thr & Mean >= mean_thr), aes(label= Gene, color = Genome), hjust = 0, nudge_x = 0.05, size = 3, show.legend = F)
+  return(enr_plot)
+}
+
+
+plot_lfc_vs_mean(lfc_table_t0, annotation_table_all, 2.5, 0.001, "0 min post infection")
+```
+
+#### 1 min post-infection
+
+```{r}
+plot_lfc_vs_mean(lfc_table_t1, annotation_table_all, 2.5, 0.001, "1 min post infection")
+```
+
+
+#### 4 min post-infection
+
+```{r}
+plot_lfc_vs_mean(lfc_table_t4, annotation_table_all, 2.5, 0.001, "4 min post infection")
+```
+
+
+#### 7 min post-infection
+
+```{r}
+plot_lfc_vs_mean(lfc_table_t7, annotation_table_all, 2.5, 0.001, "7 min post infection")
+```
+
+
+#### 10 min post-infection
+
+```{r}
+plot_lfc_vs_mean(lfc_table_t10, annotation_table_all, 2.5, 0.001, "10 min post infection")
+```
+
+
+#### 20 min post-infection
+
+```{r}
+plot_lfc_vs_mean(lfc_table_t20, annotation_table_all, 2.5, 0.001, "20 min post infection")
+```
+
+
+# 6. Filtering of the significantly enriched and expressed genes
+
+There are two criteria, which should be defined that we have applied above already:
+
+1.  Mean expression of 0.001 (= 0.1 %), to consider that very few reads are mostly present in -ADPRC samples
+
+2.  LFC \>= 2.5
+
+Filtering of the LFC tables based on these criteria in order to extract those genes specifically.
+
+```{r}
+df_filtered <- lfc_table_t0 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+df_filtered1 <- lfc_table_t1 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+df_filtered4 <- lfc_table_t4 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+df_filtered7 <- lfc_table_t7 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+df_filtered10 <- lfc_table_t10 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+df_filtered20 <- lfc_table_t20 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5)
+```
+
+The adjusted table for timepoint 0 is for instance:
+
+```{r}
+# x = filtered genes; annotation_table_all matches geneids to symbols
+gene_annotation <- function(x, annotation_table_all){
+  gene_symbols <- annotation_table_all$gene[match(x[,1], annotation_table_all$ID)]
+  df_final <- data.frame(x, gene_symbols)
+  return(df_final)
+}
+df_final <- gene_annotation(df_filtered, annotation_table_all)
+head(df_final)
+```
+
+The adjusted table for timepoint 1, and so on...
+
+```{r}
+df_final1 <- gene_annotation(df_filtered1, annotation_table_all)
+df_final4 <- gene_annotation(df_filtered4, annotation_table_all)
+df_final7 <- gene_annotation(df_filtered7, annotation_table_all)
+df_final10 <- gene_annotation(df_filtered10, annotation_table_all)
+df_final20 <- gene_annotation(df_filtered20, annotation_table_all)
+```
+
+These tables can be exported as csv files.
+
+```{r}
+#write_excel_csv(df_final, paste0("ONTrun_061_enriched_genes_", time, "_unclassified.csv"), delim = ";")
+#write_excel_csv(df_final1, paste0("ONTrun_061_enriched_genes_", time1, "_unclassified.csv"), delim = ";")
+#write_excel_csv(df_final4, paste0("ONTrun_061_enriched_genes_", time4, "_unclassified.csv"), delim = ";")
+#write_excel_csv(df_final7, paste0("ONTrun_061_enriched_genes_", time7, "_unclassified.csv"), delim = ";")
+#write_excel_csv(df_final10, paste0("ONTrun_061_enriched_genes_", time10, "_unclassified.csv"), delim = ";")
+#write_excel_csv(df_final20, paste0("ONTrun_061_enriched_genes_", time20, "_unclassified.csv"), delim = ";")
+```
+
+# 7. Filtering of the abundant but non-enriched genes from LFC tables
+
+These could be the rRNA genes that we found to be in the background. Thus, LFC is somewhere in between -1 and 1.
+
+```{r}
+# t0
+df_filteredb <- lfc_table_t0 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+# t1
+df_filtered1b <- lfc_table_t1 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+# t4
+df_filtered4b <- lfc_table_t4 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+# t7
+df_filtered7b <- lfc_table_t7 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+# t10
+df_filtered10b <- lfc_table_t10 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+# t20
+df_filtered20b <- lfc_table_t20 %>% filter(Mean >= 0.03) %>% filter(LFC <= 1) %>% filter(LFC >= -1)
+```
+
+Here, we add gene symbols and gene types to the newly filtered LFC tables for each timepoint. We take the function from before and add gene biotype feature in order to get a better insight into the nature of the background.
+
+```{r}
+# x = filtered genes; annotation_table_all matches geneids to symbols
+gene_annotation_background <- function(x, annotation_table_all){
+  gene_symbols <- annotation_table_all$gene[match(x[,1], annotation_table_all$ID)]
+  gene_types <- annotation_table_all$gene_biotype[match(x[,1], annotation_table_all$ID)]
+  df_final <- data.frame(x, gene_symbols, gene_types)
+  return(df_final)
+}
+df_final_back <- gene_annotation_background(df_filteredb, annotation_table_all)
+head(df_final_back)
+```
+
+Again, this can be performed for each time point yielding the background genes for each time point.
+
+```{r}
+# t1
+df_final_back1 <- gene_annotation_background(df_filtered1b, annotation_table_all)
+# t4
+df_final_back4 <- gene_annotation_background(df_filtered4b, annotation_table_all)
+# t7
+df_final_back7 <- gene_annotation_background(df_filtered7b, annotation_table_all)
+# t10
+df_final_back10 <- gene_annotation_background(df_filtered10b, annotation_table_all)
+# t20
+df_final_back20 <- gene_annotation_background(df_filtered20b, annotation_table_all)
+```
+
+
+# 8. Overlaps between different timepoints of T4 phage infection
+
+## 8.1 Plotting of the overlaps between NAD-RNAs of different time points
+
+Therefore, we use the filtered NAD-RNAs, which fulfill the two criteria (Mean \>= 0.0005, LFC \>= 2.5): t0_filtered, t1_filtered, t4_filtered, t7_filtered, t10_filtered, t20_filtered
+
+```{r}
+t0_filtered <- (lfc_table_t0 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+t1_filtered <- (lfc_table_t1 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+t4_filtered <- (lfc_table_t4 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+t7_filtered <- (lfc_table_t7 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+t10_filtered <- (lfc_table_t10 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+t20_filtered <- (lfc_table_t20 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1:2]
+```
+
+Now, we create a list containing NAD-RNA geneids from t4, t7, t10, t20
+
+```{r}
+x <- list(t4_filtered[,1], t7_filtered[,1], t10_filtered[,1], t20_filtered[,1])
+```
+
+We use Venn diagram for showing the overlaps of NAD-RNAs between different time points.
+
+For this, library(VennDiagram) and a helper-function are necessary.
+
+```{r}
+display_venn <- function(x, ...){
+  library(VennDiagram)
+  grid.newpage()
+  venn_object <- venn.diagram(x, filename = NULL, ...)
+  grid.draw(venn_object)
+}
+
+display_venn(
+  x,
+  category.names = c("4 min" , "7 min" , "10 min", "20 min"),
+  fill = c("#999999", "#E69F00", "#56B4E9", "#009E73")
+)
+```
+
+```{r}
+# We can create a different set of geneids from different time points, e.g. t0, t4, t10, t20.
+x1 <- list(t0_filtered[,1], t4_filtered[,1], t10_filtered[,1], t20_filtered[,1])
+
+display_venn1 <- function(x, ...){
+  library(VennDiagram)
+  grid.newpage()
+  venn_object <- venn.diagram(x, filename = NULL, ...)
+  grid.draw(venn_object)
+}
+
+display_venn1(
+  x1,
+  category.names = c("0 min" , "4 min" , "10 min", "20 min"),
+  fill = c("#999999", "#E69F00", "#56B4E9", "#009E73")
+)
+```
+
+# 10. Plotting of fractions of NAD-RNAs per entity (*E. coli* or T4 phage) comparing different timepoints
+
+## Addition of functions of the filtered NAD-RNAs from the annotation table
+
+We add the product name to each gene from the NAD-RNAs filtered from the LFC Table in order to get an idea of the functions they encode.
+
+```{r}
+t0_functions <- annotation_table$product[match(t0_filtered[,1], annotation_table$Parent)]
+t1_functions <- annotation_table$product[match(t1_filtered[,1], annotation_table$Parent)]
+t4_functions <- annotation_table$product[match(t4_filtered[,1], annotation_table$Parent)]
+t7_functions <- annotation_table$product[match(t7_filtered[,1], annotation_table$Parent)]
+t10_functions <- annotation_table$product[match(t10_filtered[,1], annotation_table$Parent)]
+t20_functions <- annotation_table$product[match(t20_filtered[,1], annotation_table$Parent)]
+```
+
+## We define all the required variables and create a graph representing the absolute number of NAD-capped RNAs detected in each of both genomes
+
+```{r}
+# Extract phage NAD-RNAs for each time point
+t0_phage <- nrow(t0_filtered[which(t0_filtered[,2] == "NC_000866.4"),])
+t1_phage <- nrow(t1_filtered[which(t1_filtered[,2] == "NC_000866.4"),])
+t4_phage <- nrow(t4_filtered[which(t4_filtered[,2] == "NC_000866.4"),])
+t7_phage <- nrow(t7_filtered[which(t7_filtered[,2] == "NC_000866.4"),])
+t10_phage <- nrow(t10_filtered[which(t10_filtered[,2] == "NC_000866.4"),])
+t20_phage <- nrow(t20_filtered[which(t20_filtered[,2] == "NC_000866.4"),])
+
+# Extract coli NAD-RNAs for each time point
+t0_coli <- nrow(t0_filtered[which(t0_filtered[,2] == "U00096.3"),])
+t1_coli <- nrow(t1_filtered[which(t1_filtered[,2] == "U00096.3"),])
+t4_coli <- nrow(t4_filtered[which(t4_filtered[,2] == "U00096.3"),])
+t7_coli <- nrow(t7_filtered[which(t7_filtered[,2] == "U00096.3"),])
+t10_coli <- nrow(t10_filtered[which(t10_filtered[,2] == "U00096.3"),])
+t20_coli <- nrow(t20_filtered[which(t20_filtered[,2] == "U00096.3"),])
+
+# Merge the information in a data frame
+Coli <- c(t0_coli, t1_coli, t4_coli, t7_coli, t10_coli, t20_coli)
+phage <- c(t0_phage, t1_phage, t4_phage, t7_phage, t10_phage, t20_phage)
+time_ <- c(0, 1, 4, 7, 10, 20)
+
+df_ <- data.frame(time_, Coli, phage)
+colnames(df_) <- c("Time", "E. coli", "T4 phage")
+
+# Melt the data frame for plotting
+df_final_ <- melt(df_, id = c("Time"))
+colnames(df_final_) <- c("Time", "Genome", "value")
+
+# Create a barplot
+ggplot(df_final_, aes(fill=Genome, y=value, x=Time)) + 
+  geom_bar(position="stack", stat="identity")+
+  xlab("Time point post-infection [min]")+
+  ylab("Number of detected NAD-RNAs")+
+  theme_minimal()+
+  scale_fill_manual(values = c("#66666F", "#009966"))+
+  geom_text(aes(label = value), size = 3, hjust = 0.5, vjust = 3, position = "stack")
+```
+
+## 11. Creation of the final list of enriched transcripts
+
+Here, we create a large table containing all genes with NAD-capped transcripts, the timepoints they are detected, the entity they come from and their function.
+
+We start with the extraction of all significant NAD-capped RNAs per timepoint as it was done above.
+
+```{r}
+t0_filtered <- (lfc_table_t0 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+t1_filtered <- (lfc_table_t1 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+t4_filtered <- (lfc_table_t4 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+t7_filtered <- (lfc_table_t7 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+t10_filtered <- (lfc_table_t10 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+t20_filtered <- (lfc_table_t20 %>% filter(Mean >= 0.0005) %>% filter(LFC >= 2.5))[,1]
+```
+
+Then we again generate a list of all NAD-RNAs and remove duplicates.
+
+```{r}
+NADcappedRNAs <- unique(c(t0_filtered, t1_filtered, t4_filtered, t7_filtered, t10_filtered, t20_filtered))
+```
+
+Finally, we create a table containing all needed information.
+
+NAD-RNAs will be searched at each timepoint using a loop. + or - will be added in the table depending on the presence or absence of that RNA, respectively.
+
+```{r}
+t0 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t0_filtered){
+    t0[i] <- "+"
+  } else {
+    t0[i] <- "-"
+  }
+  i <- i+1
+}
+
+t1 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t1_filtered){
+    t1[i] <- "+"
+  } else {
+    t1[i] <- "-"
+  }
+  i <- i+1
+}
+
+t4 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t4_filtered){
+    t4[i] <- "+"
+  } else {
+    t4[i] <- "-"
+  }
+  i <- i+1
+}
+
+t7 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t7_filtered){
+    t7[i] <- "+"
+  } else {
+    t7[i] <- "-"
+  }
+  i <- i+1
+}
+
+t10 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t10_filtered){
+    t10[i] <- "+"
+  } else {
+    t10[i] <- "-"
+  }
+  i <- i+1
+}
+
+t20 <- c(1:length(NADcappedRNAs))
+i <- 1
+while (i <= length(NADcappedRNAs)){
+  if (NADcappedRNAs[i] %in% t20_filtered){
+    t20[i] <- "+"
+  } else {
+    t20[i] <- "-"
+  }
+  i <- i+1
+}
+```
+
+Finally, we create a large table containing all needed information and sort the table according to the geneids.
+
+```{r}
+# Create the data frame
+final_df <- data.frame(NADcappedRNAs, normCounts$Chr[NADcappedRNAs], t0, t1, t4, t7, t10, t20, annotation_table$gene[match(NADcappedRNAs, annotation_table$Parent)], annotation_table$gene_biotype[match(NADcappedRNAs, annotation_table$ID)], annotation_table$product[match(NADcappedRNAs, annotation_table$Parent)])
+# Rename the columns
+colnames(final_df) <- c("Geneid", "Entity", "t0", "t1", "t4", "t7", "t10", "t20", "Gene", "Gene Type", "Funtion/Product")
+# Order based on Geneid
+final_df_ordered <- final_df[order(final_df$Geneid),]
+
+head(final_df_ordered)
+```
+
+```{r include=FALSE}
+#write_excel_csv(final_df_ordered, "Final_df_NAD_captureSeq_R1.csv", delim = ";")
+```
