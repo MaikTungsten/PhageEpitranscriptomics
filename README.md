@@ -35,7 +35,8 @@ This includes the raw concentration measurements from LC-MS targeting the metabo
 This repository and all analysis herein has been created by Maik Wolfram-Schauerte. For further acknowledgement see the original publication **LINK**.
 
 ## License
-For open source projects, say how it is licensed.
+This project is accompanied by an MIT License.
+Copyright (c) 2024 Maik Wolfram-Schauerte
 
 ## Project status
 This project is currently under development.
