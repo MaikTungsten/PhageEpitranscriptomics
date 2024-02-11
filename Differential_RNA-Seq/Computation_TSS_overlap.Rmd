@@ -1,0 +1,319 @@
+---
+title: "Computation_TSS_overlap"
+output: html_document
+keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "Q:/Lab Members/Maik/Project_NAD-captureSeq_final_data/Final_analysis_ONT-data/TSS_analysis")
+```
+
+```{r load-packages, include=FALSE}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(ggpubr)
+library(viridis)
+library(tidyverse)
+library(reshape)
+library(readxl)
+library(pheatmap)
+library (RColorBrewer)
+library(grid)
+library(gridExtra)
+library(VennDiagram)
+```
+
+# 1. Analysis for E. coli only
+
+First, we import the annotation for E. coli TSSs derived from dRNA-Seq, adjust columns and column names.
+
+```{r}
+
+ec_anno <- read.delim("U00096.3_TSS.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_anno <- ec_anno[,-c(2,6,8)]
+ec_anno[,3] <- as.numeric((as.character(ec_anno[,3])))
+ec_anno[,4] <- as.numeric((as.character(ec_anno[,4])))
+colnames(ec_anno) <- c("Genome", "Type", "Start", "End", "Strand", "ID")
+head(ec_anno, n=6)
+```
+
+Next, we import the annotations for NAD-RNA TSSs in E. coli for both runs (R1: ONTrun_061; R2: ONTrun_065).
+
+```{r}
+ec_061 <- read.delim("U00096-3_ONTrun_061.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_061 <- ec_061[,-c(2,6,8,9)]
+ec_061[,3] <- as.numeric((as.character(ec_061[,3])))
+ec_061[,4] <- as.numeric((as.character(ec_061[,4])))
+colnames(ec_061) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+head(ec_061, n=6)
+
+ec_065 <- read.delim("U00096-3_ONTrun_065.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_065 <- ec_065[,-c(2,6,8,9)]
+ec_065[,3] <- as.numeric((as.character(ec_065[,3])))
+ec_065[,4] <- as.numeric((as.character(ec_065[,4])))
+colnames(ec_065) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+head(ec_065, n=6)
+```
+
+## 1.1 Search for proximal TSS from E. coli annotation
+
+The TSS from NAD captureSeq data are sometimes annotated as short intervals instead of one distinct coordinate (start=end). In rare cases, this may also be true for the TSS determined with dRNA-Seq. Thus, the rowMeans for the NAD_TSS interval is taken to search within a window of +/- 8 bases of the true TSS. A match is then return by fusing the two rows by appending them in one data frame. This data fram can later be used to compare mean displacement of NAD_TSS and True_TSS.
+
+```{r}
+
+search_TSS <- function(x,y){
+  df <- as.data.frame(cbind(x,y[1:nrow(x),]))
+  i <- 1
+  while(i<=nrow(x)){
+    z <- rowMeans(x[i,3:4])
+    j <- 1
+    while(j<=nrow(y)){
+      a <- rowMeans(y[j,3:4])
+      if (z<=a+8 && z>=a-8) {
+        df[i,1:ncol(x)] <- x[i,]
+        df[i,(ncol(x)+1):(ncol(x)+ncol(y))] <- y[j,]
+        j <- nrow(y)+1
+      } else {
+        j <- j+1
+      }
+    }
+    if(df[i,9] == y[i,3]){
+      df[i,(ncol(x)+1):(ncol(x)+ncol(y))] <- c(NA, NA, 0, 0, NA, NA)
+    }
+    i <- i+1
+  }
+  colnames(df) <- c("Genome_NAD", "Type_NAD", "Start_NAD", "End_NAD", "Strand_NAD", "Gene_NAD", "Genome_TSS", "Type_TSS", "Start_TSS", "End_TSS", "Strand_TSS", "Gene_TSS")
+  return(df)
+}
+
+df_061 <- search_TSS(ec_061, ec_anno)
+head(df_061, n=6)
+df_065 <- search_TSS(ec_065, ec_anno)
+head(df_065, n=6)
+```
+
+## 1.2 Compute mean deviation for NAD_TSS from True_TSS
+
+Create a function which calculates the mean for each NAD_TSS and True_TSS and compare its mean deviation as a number.
+```{r}
+TSS_displacement <- function(x){
+  z <- as.data.frame(cbind(x,x[,3],x[,7],x[,7]))
+  z[,14] <- as.character(z[,14])
+  z[,15] <- as.character(z[,15])
+  i <- 1
+  while(i<=nrow(x)){
+    if(x[i,9]==0){
+      z[i,13] <- 9
+      z[i,14] <- NA
+      z[i,15] <- NA
+    }else if(x[i,9]!=0){
+      z[i,13] <- abs(rowMeans(x[i,3:4])-rowMeans(x[i,9:10]))
+      if(str_detect(str_split(str_split(x[i,12], ";")[[1]][3], "=")[[1]][2], ",")){
+        z[i,14] <- str_split(str_split(str_split(x[i,12], ";")[[1]][3], "=")[[1]][2], ",")[[1]][1]
+        z[i,15] <- str_split(str_split(str_split(x[i,12], ";")[[1]][3], "=")[[1]][2], ",")[[1]][2]
+      }else if (str_detect(str_split(str_split(x[i,12], ";")[[1]][3], "=")[[1]][2], ",") == FALSE){
+        z[i,14] <- str_split(str_split(x[i,12], ";")[[1]][3], "=")[[1]][2]
+        z[i,15] <- NA
+      }
+    }
+    i <- i+1
+  }
+  return(z)
+}
+
+df_061_calc <- TSS_displacement(df_061)
+colnames(df_061_calc) <- c("Genome_NAD", "Type_NAD", "Start_NAD", "End_NAD", "Strand_NAD", "Gene_NAD", "Genome_TSS", "Type_TSS", "Start_TSS", "End_TSS", "Strand_TSS", "Gene_TSS", "Displacement", "TSS_Kind", "TSS_2nd_Kind")
+head(df_061_calc, n=6)
+
+df_065_calc <- TSS_displacement(df_065)
+colnames(df_065_calc) <- c("Genome_NAD", "Type_NAD", "Start_NAD", "End_NAD", "Strand_NAD", "Gene_NAD", "Genome_TSS", "Type_TSS", "Start_TSS", "End_TSS", "Strand_TSS", "Gene_TSS", "Displacement", "TSS_Kind", "TSS_2nd_Kind")
+head(df_065_calc, n=6)
+```
+
+## 1.3 Plot information on overlapping of NAD_TSS and True_TSS
+
+Therefore, filter for relevant columns and then create plot.
+
+```{r}
+df_061_plot <- df_061_calc[,c(5,6,13,14)]
+head(df_061_plot, n=6)
+df_065_plot <- df_065_calc[,c(5,6,13,14)]
+head(df_065_plot, n=6)
+
+p061 <- ggplot(df_061_plot, aes(Displacement))+
+  geom_bar(aes(fill=TSS_Kind))+
+  theme_linedraw()
+p061
+
+p065 <- ggplot(df_065_plot, aes(Displacement))+
+  geom_bar(aes(fill=TSS_Kind))
+p065
+
+#Mean displacement
+r1 <- sum(df_061_plot$Displacement)/nrow(df_061_plot)
+r1
+r2 <- sum(df_065_plot$Displacement)/nrow(df_065_plot)
+r2
+```
+
+## 1.4 Plot information on TSS type abundance
+
+Therefore, count appearance of each TSS type and create a table for the pie chart.
+
+```{r}
+count_appearance <- function(x){
+  z <- data.frame(unique(x[,14]), x[length(unique(x[,14])),13])
+  z[,2] <- 0
+  i <- 1
+  while(i<=nrow(x)){
+    if(is.na(x[i,14])){
+      z[which(is.na(z[,1])),2] <- z[which(is.na(z[,1])),2]+1
+    } else if(x[i,14]=="Primary"){
+      z[which(z[,1] == "Primary"),2] <- z[which(z[,1] == "Primary"),2]+1
+    } else if(x[i,14] == "Secondary"){
+      z[which(z[,1] == "Secondary"),2] <- z[which(z[,1] == "Secondary"),2]+1
+    } else if(x[i,14] == "Antisense"){
+      z[which(z[,1] == "Antisense"),2] <- z[which(z[,1] == "Antisense"),2]+1
+    } else if(x[i,14] == "Orphan"){
+      z[which(z[,1] == "Orphan"),2] <- z[which(z[,1] == "Orphan"),2]+1
+    } else if(x[i,14] == "Internal"){
+      z[which(z[,1] == "Internal"),2] <- z[which(z[,1] == "Internal"),2]+1
+    }
+    i <- i+1
+  }
+  colnames(z) <- c("Type", "Count")
+  return(z)
+}
+
+df_pie_061 <- count_appearance(df_061_calc)
+df_pie_061
+
+pie061 <- ggplot(df_pie_061, aes(x="", y=Count, fill=Type))+
+  geom_bar(width = 1, stat = "identity")+
+  coord_polar("y", start=0)+
+  geom_text(aes(label = Count), position = position_stack(vjust = 0.5))+
+  theme_void()
+pie061
+
+df_pie_065 <- count_appearance(df_065_calc)
+df_pie_065
+
+pie065 <- ggplot(df_pie_065, aes(x="", y=Count, fill=Type))+
+  geom_bar(width = 1, stat = "identity")+
+  coord_polar("y", start=0)+
+  geom_text(aes(label = Count), position = position_stack(vjust = 0.5))+
+  theme_void()
+pie065
+```
+
+
+# 2. Analysis for T4 phage only
+
+First, we import the annotation for T4 phage TSSs derived from dRNA-Seq, adjust columns and column names.
+
+```{r}
+
+t4_anno <- read.delim("NC_000866.4_TSS.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_anno <- t4_anno[,-c(2,6,8)]
+t4_anno[,3] <- as.numeric((as.character(t4_anno[,3])))
+t4_anno[,4] <- as.numeric((as.character(t4_anno[,4])))
+colnames(t4_anno) <- c("Genome", "Type", "Start", "End", "Strand", "ID")
+head(t4_anno, n=6)
+```
+
+Next, we import the annotations for NAD-RNA TSSs in T4 for both runs (R1: ONTrun_061; R2: ONTrun_065).
+
+```{r}
+t4_061 <- read.delim("NC_000866-4_ONTrun_061.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_061 <- t4_061[,-c(2,6,8,9)]
+t4_061[,3] <- as.numeric((as.character(t4_061[,3])))
+t4_061[,4] <- as.numeric((as.character(t4_061[,4])))
+colnames(t4_061) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+head(t4_061, n=6)
+
+t4_065 <- read.delim("NC_000866-4_ONTrun_065.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_065 <- t4_065[,-c(2,6,8,9)]
+t4_065[,3] <- as.numeric((as.character(t4_065[,3])))
+t4_065[,4] <- as.numeric((as.character(t4_065[,4])))
+colnames(t4_065) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+head(t4_065, n=6)
+```
+
+## 2.1 Search for proximal TSS from T4 annotation
+
+The TSS from NAD captureSeq data are sometimes annotated as short intervals instead of one distinct coordinate (start=end). In rare cases, this may also be true for the TSS determined with dRNA-Seq. Thus, the rowMeans for the NAD_TSS interval is taken to search within a window of +/- 8 bases of the true TSS. A match is then return by fusing the two rows by appending them in one data frame. This data fram can later be used to compare mean displacement of NAD_TSS and True_TSS.
+
+```{r}
+t4_df_061 <- search_TSS(t4_061, t4_anno)
+head(t4_df_061, n=6)
+t4_df_065 <- search_TSS(t4_065, t4_anno)
+head(t4_df_065, n=6)
+```
+
+## 2.2 Compute mean deviation for NAD_TSS from True_TSS
+
+Create a function which calculates the mean for each NAD_TSS and True_TSS and compare its mean deviation as a number.
+```{r}
+t4_df_061_calc <- TSS_displacement(t4_df_061)
+colnames(t4_df_061_calc) <- c("Genome_NAD", "Type_NAD", "Start_NAD", "End_NAD", "Strand_NAD", "Gene_NAD", "Genome_TSS", "Type_TSS", "Start_TSS", "End_TSS", "Strand_TSS", "Gene_TSS", "Displacement", "TSS_Kind", "TSS_2nd_Kind")
+head(t4_df_061_calc, n=6)
+
+t4_df_065_calc <- TSS_displacement(t4_df_065)
+colnames(t4_df_065_calc) <- c("Genome_NAD", "Type_NAD", "Start_NAD", "End_NAD", "Strand_NAD", "Gene_NAD", "Genome_TSS", "Type_TSS", "Start_TSS", "End_TSS", "Strand_TSS", "Gene_TSS", "Displacement", "TSS_Kind", "TSS_2nd_Kind")
+head(t4_df_065_calc, n=6)
+```
+
+## 2.3 Plot information on overlapping of NAD_TSS and True_TSS
+
+Therefore, filter for relevant columns and then create plot.
+
+```{r}
+t4_df_061_plot <- t4_df_061_calc[,c(5,6,13,14)]
+head(t4_df_061_plot, n=6)
+t4_df_065_plot <- t4_df_065_calc[,c(5,6,13,14)]
+head(t4_df_065_plot, n=6)
+
+t4_p061 <- ggplot(t4_df_061_plot, aes(Displacement))+
+  geom_bar(aes(fill=TSS_Kind))+
+  theme_linedraw()
+t4_p061
+
+t4_p065 <- ggplot(t4_df_065_plot, aes(Displacement))+
+  geom_bar(aes(fill=TSS_Kind))
+t4_p065
+
+#Mean displacement
+r1 <- sum(t4_df_061_plot$Displacement)/nrow(t4_df_061_plot)
+r1
+r2 <- sum(t4_df_065_plot$Displacement)/nrow(t4_df_065_plot)
+r2
+```
+
+## 2.4 Plot information on TSS type abundance
+
+Therefore, count appearance of each TSS type and create a table for the pie chart.
+
+```{r}
+t4_df_pie_061 <- count_appearance(t4_df_061_calc)
+t4_df_pie_061
+
+t4_pie061 <- ggplot(t4_df_pie_061, aes(x="", y=Count, fill=Type))+
+  geom_bar(width = 1, stat = "identity")+
+  coord_polar("y", start=0)+
+  geom_text(aes(label = Count), position = position_stack(vjust = 0.5))+
+  theme_void()
+t4_pie061
+
+t4_df_pie_065 <- count_appearance(t4_df_065_calc)
+t4_df_pie_065
+
+t4_pie065 <- ggplot(t4_df_pie_065, aes(x="", y=Count, fill=Type))+
+  geom_bar(width = 1, stat = "identity")+
+  coord_polar("y", start=0)+
+  geom_text(aes(label = Count), position = position_stack(vjust = 0.5))+
+  theme_void()
+t4_pie065
+```
+
