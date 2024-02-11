@@ -1,0 +1,82 @@
+---
+title: "Comparison of NAD-RNA hits from both replicates"
+output: html_document
+keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "Q:/Lab Members/Maik/Project_NAD-captureSeq_final_data/Final_analysis_ONT-data")
+```
+
+```{r load-packages, include=FALSE}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(ggpubr)
+library(viridis)
+library(tidyverse)
+library(reshape)
+library(readxl)
+library(pheatmap)
+library (RColorBrewer)
+library(grid)
+library(gridExtra)
+library(VennDiagram)
+```
+
+# 1. Data import and formatting
+
+First, we import the data from both replicates (R1: ONTrun_061; R2: ONTrun_065) and filter for E. coli or T4 phage.
+
+```{r}
+df_061 <- as.data.frame(read_delim("Final_df_ONTrun_061.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE))
+df_065 <- as.data.frame(read_delim("Final_df_ONTrun_065.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE))
+
+ec061 <- df_061[which(df_061$Entity == "U00096.3"), 9]
+ec065 <- df_065[which(df_065$Entity == "U00096.3"), 9]
+t4061 <- df_061[which(df_061$Entity == "NC_000866.4"), 9]
+t4065 <- df_065[which(df_065$Entity == "NC_000866.4"), 9]
+
+```
+
+# 2. Compute Venn diagrams for overlaps
+
+Compute overlap for E. coli and T4 NAD-RNAs among both replicates separately.
+
+```{r}
+# E. coli
+x <- list(ec061, ec065)
+
+display_venn <- function(x, ...){
+  library(VennDiagram)
+  grid.newpage()
+  venn_object <- venn.diagram(x, filename = NULL, ...)
+  grid.draw(venn_object)
+}
+
+display_venn(
+  x,
+  category.names = c("R1" , "R2" ),
+  fill = c("#999999", "#E69F00")
+)
+
+# T4 phage
+x <- list(t4061, t4065)
+
+display_venn <- function(x, ...){
+  library(VennDiagram)
+  grid.newpage()
+  venn_object <- venn.diagram(x, filename = NULL, ...)
+  grid.draw(venn_object)
+}
+
+display_venn(
+  x,
+  category.names = c("R1" , "R2" ),
+  fill = c("#999999", "#E69F00")
+)
+```
+
