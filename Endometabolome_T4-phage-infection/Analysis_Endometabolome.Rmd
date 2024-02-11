@@ -1,0 +1,213 @@
+---
+title: "Analysis Endometabolome T4 phage infection"
+author: "MaikTungsten"
+date: "2024-01-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=FALSE}
+#Load packages
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(tidyverse)
+```
+
+## 1. Load the data and format
+
+```{r}
+df = read.csv("Endometabolome_Results.csv")
+head(df)
+
+#The data needs to be cleaned in order to be processed: select only the calculated concentrations for metabolites of interest and sample names and types
+df_format = df[,c(3, 5, 9, 12, 18)]
+df_format = df_format[-1,]
+colnames(df_format) = c("Sample", "Type", "FAD", "NAD", "UDP-GlcNAc")
+head(df_format)
+```
+
+## 2. Adjust some entries for data filtering and add annotation
+
+```{r}
+#H2O blanks and test standard are to be marked as such
+df_format[c(1,2, 3,31,45),2] = "blank"
+head(df_format)
+
+#Add information about infection, time point and replicate
+# We are dealing with 27 samples of interest in triplicates R1-R3, at three time point (t0, t10, t20) either uninfected (LB) or T4 infected T4_WT or T4_NudE1_M1
+
+infection = c(rep("LB", 9), rep("T4_WT",9), rep("T4_NudE1_M1",9))
+replicate = c(rep(c("R1", "R2", "R3"),9))
+time_point = c(rep(c(rep(0,3),rep(10,3),rep(20,3)),3))
+
+#Select only the 27 samples of interest
+df_1 = df_format[which(df_format$Type == "Sample"),]
+head(df_1)
+
+#Append these to the dataframe
+df_2 = as.data.frame(cbind(df_1, infection, replicate, time_point))
+colnames(df_2) = c("Sample", "Type", "FAD", "NAD", "UDP-GlcNAc", "Infection", "Replicate", "Time")
+head(df_2)
+```
+
+## 3. Adjust concentrations to cell volume
+
+```{r}
+# The measured volume is irrelevant as the concentration basically reflects the concentration of 1 ml cells in 200 µl extract
+# To obtain the cell volume normalized concentration, one needs to calculate the amount per cell and then consider the cell volume
+# Concentrations here are given in µM
+# Step 1: amount=c[pmol/µl]*10^-12*1000µl/cells_per_ml (cells per ml are 3*10^8)
+# Step 2: c_per_cell[M]=amount/(volume_per_cell[fl]*10^-15) (volume per cell is 1 fl)
+
+# In this experiment lowest OD600 was 0.77 - cells_per_ml=0.77/0.8*3*10^8 --> these have been analysed in 200 µl scale
+
+normalize_conc = function(x, y, cells_per_ml, volume_per_cell){
+  #x is the input dataframe
+  df = x
+  #y is the column ids with the concentrations input as vector
+  i=3
+  while (i<=y){
+    x[,i]=as.numeric(as.character(x[,i]))
+    amount=x[,i]*(10**-12)*200/cells_per_ml
+    c_per_cell=amount/(volume_per_cell*(10**-15))
+    df[,i] = c_per_cell
+    i = i+1
+  }
+  return(df)
+}
+
+df_3=normalize_conc(df_2, 5, (0.77/0.8*3*(10**8)), 1)
+head(df_3)
+
+
+
+```
+
+## 4. Plot concentrations
+
+```{r}
+df_3$Time = as.character(df_3$Time)
+
+# Select a metabolite of interest
+
+# NAD
+nad = as.data.frame(cbind(df_3[,c(6,7,8)], df_3$NAD))
+colnames(nad) = c("Infection", "Replicate", "Time", "Metabolite")
+
+#FAD
+fad = as.data.frame(cbind(df_3[,c(6,7,8)], df_3$FAD))
+colnames(fad) = c("Infection", "Replicate", "Time", "Metabolite")
+
+#UDP-GlcNAc
+udp_glcnac = as.data.frame(cbind(df_3[,c(6,7,8)], df_3$`UDP-GlcNAc`))
+colnames(udp_glcnac) = c("Infection", "Replicate", "Time", "Metabolite")
+
+# Function for plotting
+
+plot_metabolite = function(df_select, a="Time", c="Header"){
+  df_select[,4] = df_select[,4]*1000
+  b=0.001*mean(df_select[,4])
+  if (a == "Time"){
+    # Create a barplot - Time on x
+    p = ggplot(df_select, aes(x=Time, y=Metabolite, fill=Infection, group=interaction(Time, Infection)))+
+          geom_bar(color="black", position=position_dodge(), stat = "summary", fun = "mean")+
+          theme_minimal()+
+          scale_fill_brewer(palette="Blues")+
+          ylab("concentration [mM]")+
+          xlab("Time point [min]")+
+          geom_dotplot(binaxis='y', stackdir='center', dotsize=50, position=position_dodge(), binwidth=b)+
+          ggtitle(c)
+  }
+
+  else if (a == "Infection") {
+    # Create a barplot - Infection on x
+    p = ggplot(df_select, aes(x=Infection, y=Metabolite, fill=Time, group=interaction(Time, Infection)))+
+          geom_bar(color="black", position=position_dodge(), stat = "summary", fun = "mean")+
+          theme_minimal()+
+          scale_fill_brewer(palette="Blues")+
+          ylab("concentration [mM]")+
+          xlab("Infection")+
+          geom_dotplot(binaxis='y', stackdir='center', dotsize=50, position=position_dodge(), binwidth=b)+
+          ggtitle(c)
+  }
+return(p)
+}
+```
+
+## 5. Plots for individual metabolites
+
+```{r}
+# NAD over time
+plot_metabolite(nad, "Time", "NAD")
+
+# NAD by separate conditions
+plot_metabolite(nad, "Infection", "NAD")
+
+# FAD over time
+plot_metabolite(fad, "Time", "FAD")
+
+# FAD by separate conditions
+plot_metabolite(fad, "Infection", "FAD")
+
+# UDP-GlcNAc over time
+plot_metabolite(udp_glcnac, "Time", "UDP-GlcNAc")
+
+# UDP-GlcNAc by separate conditions
+plot_metabolite(udp_glcnac, "Infection", "UDP-GlcNAc")
+
+```
+
+## 6. Statistical tests comparing t0 and t20 for each condition (e.g. LB, T4 WT or T4 NudE.1 M1)
+
+```{r}
+# Test for NAD
+# Filter for t0 and t20 and LB
+nad_lb <- t.test((nad %>% filter(Infection == "LB") %>% filter(Time == 20))[,4], (nad %>% filter(Infection == "LB") %>% filter(Time == 0))[,4])
+nad_lb
+
+# Filter for t0 and t20 and WT
+nad_wt <- t.test((nad %>% filter(Infection == "T4_WT") %>% filter(Time == 20))[,4], (nad %>% filter(Infection == "T4_WT") %>% filter(Time == 0))[,4])
+nad_wt
+
+# Filter for t0 and t20 and M1
+nad_m1 <- t.test((nad %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 20))[,4], (nad %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 0))[,4])
+nad_m1
+
+
+# Test for FAD
+# Filter for t0 and t20 and LB
+fad_lb <- t.test((fad %>% filter(Infection == "LB") %>% filter(Time == 20))[,4], (fad %>% filter(Infection == "LB") %>% filter(Time == 0))[,4])
+fad_lb
+
+# Filter for t0 and t20 and WT
+fad_wt <- t.test((fad %>% filter(Infection == "T4_WT") %>% filter(Time == 20))[,4], (fad %>% filter(Infection == "T4_WT") %>% filter(Time == 0))[,4])
+fad_wt
+
+# Filter for t0 and t20 and M1
+fad_m1 <- t.test((fad %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 20))[,4], (fad %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 0))[,4])
+fad_m1
+
+# Test for UDP-GlcNAc
+# Filter for t0 and t20 and LB
+udpglcnac_lb <- t.test((udp_glcnac %>% filter(Infection == "LB") %>% filter(Time == 20))[,4], (udp_glcnac %>% filter(Infection == "LB") %>% filter(Time == 0))[,4])
+udpglcnac_lb
+
+# Filter for t0 and t20 and WT
+udpglcnac_wt <- t.test((udp_glcnac %>% filter(Infection == "T4_WT") %>% filter(Time == 20))[,4], (udp_glcnac %>% filter(Infection == "T4_WT") %>% filter(Time == 0))[,4])
+udpglcnac_wt
+
+# Filter for t0 and t20 and M1
+udpglcnac_m1 <- t.test((udp_glcnac %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 20))[,4], (udp_glcnac %>% filter(Infection == "T4_NudE1_M1") %>% filter(Time == 0))[,4])
+udpglcnac_m1
+
+```
+
+
+
+
+
