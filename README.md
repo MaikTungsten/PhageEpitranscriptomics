@@ -29,6 +29,10 @@ This includes reference genomes as fasta and their annotations as gff3 files for
 
 This includes the raw concentration measurements from LC-MS targeting the metabolites NAD, FAD and UDP-GlcNAc. Further, it contains an RMarkdown file and HTML document laying out detailed steps of the analysis.
 
+## NudE.1 phage mutant
+
+This contains the Index Combinations for the 144 screened phage plaques for demultiplexing with minibar.
+
 ***
 
 ## Authors and acknowledgment
