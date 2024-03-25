@@ -1,0 +1,557 @@
+LOCUS       pBA560_NudE             6948 bp    DNA     circular UNA 06-FEB-2024
+DEFINITION  .
+ACCESSION   urn.local...n-hcl90zz
+VERSION     urn.local...n-hcl90zz
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+FEATURES             Location/Qualifiers
+     source          1..6948
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     protein_bind    7..10
+                     /standard_name="BsmBI"
+     misc_feature    7..31
+                     /standard_name="ConS scar"
+     primer_bind     complement(7..36)
+                     /standard_name="oBFC2045"
+     primer_bind     10..31
+                     /standard_name="oBFC1841"
+     primer_bind     30..59
+                     /standard_name="oBFC2036"
+     misc_feature    32..35
+                     /standard_name="BsmBI_OH"
+     misc_feature    32..39
+                     /standard_name="Not on PCR assembled transcript"
+     misc_feature    32..656
+                     /standard_name="gBlock 2 (guide RNA)"
+     primer_bind     38..66
+                     /standard_name="oBFC0910"
+     misc_feature    40..43
+                     /standard_name="BsaI Junction Scar"
+     primer_bind     40..76
+                     /standard_name="oBFC0166"
+     regulatory      44..104
+                     /note="Geneious type: terminator"
+                     /note="Strongest synthetic promoter from Voigt's
+                     Nature<br>Methods paper<br>Also used by Alex Nielsen as a
+                     dSpyCas9 sgRNA terminator in his CRISPRi logic gates
+                     paper<br>"
+                     /standard_name="L3S2P21 Terminator (Voigt)"
+     primer_bind     complement(81..108)
+                     /standard_name="oBFC0169"
+     protein_bind    105..108
+                     /standard_name="BsaI"
+     protein_bind    109..112
+                     /standard_name="BsmBI"
+     misc_feature    109..133
+                     /standard_name="Con1 scar"
+     primer_bind     complement(109..137)
+                     /standard_name="oBFC1766"
+     primer_bind     complement(111..133)
+                     /standard_name="oBFC1305"
+     misc_feature    134..137
+                     /standard_name="BsaI Pt2 OH"
+     regulatory      138..181
+                     /note="Geneious type: terminator"
+                     /note="putative bacterial transcription terminator"
+                     /standard_name="bacterial terminator"
+     primer_bind     172..201
+                     /standard_name="oBA1606_crRNA_check_BFC_F"
+     primer_bind     188..209
+                     /standard_name="oBFC0271"
+     primer_bind     190..212
+                     /standard_name="oBFC0973"
+     primer_bind     complement(190..219)
+                     /standard_name="oBFC0971"
+     regulatory      190..224
+                     /note="Geneious type: promoter"
+                     /standard_name="J23119"
+     primer_bind     191..212
+                     /standard_name="oBFC1338"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0386"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0375"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0179"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0553"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0537"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0201"
+     primer_bind     complement(193..219)
+                     /standard_name="oBFC0545"
+     primer_bind     complement(194..223)
+                     /standard_name="oBFC1913"
+     misc_feature    225..259
+                     /standard_name="miscellaneous"
+     source          225..231
+                     /mol_type="genomic DNA"
+                     /organism="unspecified"
+     misc_feature    complement(230)
+                     /standard_name="Processing"
+     source          232..259
+                     /mol_type="genomic DNA"
+                     /organism="unspecified"
+     misc_feature    256..259
+                     /standard_name="BsaI"
+     primer_bind     256..259
+                     /standard_name="Guide_F"
+     misc_feature    260..290
+                     /standard_name="NudE gRNA"
+     misc_feature    291
+                     /standard_name="a>t removes HindIII"
+     misc_feature    291..294
+                     /standard_name="BsaI"
+     regulatory      291..656
+                     /note="Geneious type: terminator"
+                     /standard_name="TrrnB terminator (BBa_K1893035)"
+     primer_bind     complement(291..294)
+                     /standard_name="Guide_R"
+     primer_bind     complement(339..364)
+                     /standard_name="oBA1607_crRNA_check_BFC_R"
+     misc_feature    join(377,390)
+                     /standard_name="covariant muts to remove BsaI"
+     misc_feature    join(559,576)
+                     /standard_name="covariant muts to remove BsaI"
+     primer_bind     complement(579..605)
+                     /standard_name="Primer 1"
+     primer_bind     581..605
+                     /standard_name="oBFC1711"
+     primer_bind     582..613
+                     /standard_name="oBFC0174"
+     primer_bind     590..611
+                     /standard_name="oBFC0177"
+     regulatory      590..635
+                     /note="Geneious type: terminator"
+                     /note="transcription terminator T1 from the E. coli
+                     rrnB<br>gene"
+                     /standard_name="rrnB T1 terminator"
+     primer_bind     599..622
+                     /standard_name="Primer 2"
+     primer_bind     599..625
+                     /standard_name="Primer 4"
+     primer_bind     complement(599..630)
+                     /standard_name="Primer 3"
+     primer_bind     599..630
+                     /standard_name="Primer 3"
+     misc_feature    601..604
+                     /standard_name="BsmBI OH?"
+     primer_bind     complement(618..655)
+                     /standard_name="oBFC0177"
+     primer_bind     complement(629..658)
+                     /standard_name="oBFC2037"
+     primer_bind     652..681
+                     /standard_name="oBFC2038"
+     misc_feature    653..656
+                     /standard_name="BsmBI_OH"
+     primer_bind     653..681
+                     /standard_name="oBFC0336"
+     primer_bind     667..690
+                     /standard_name="oBFC1697"
+     CDS             complement(674..1297)
+                     /codon_start=1
+                     /gene="tetR from transposon Tn10"
+                     /note="TetR binds to the tetracycline operator tetO
+                     to<br>inhibit transcription. This inhibition can be
+                     relieved by adding tetracycline or doxycycline."
+                     /product="tetracycline repressor TetR"
+                     /transl_table=1
+                     /translation="MSRLDKSKVINSALELLNEVGIEGLTTRKLAQKLGVEQPTLYWH
+                     VKNKRALLDALAIEMLDRHHTHFCPLEGESWQDFLRNNAKSFRCALLSHRDGAKVHLG
+                     TRPTEKQYETLENQLAFLCQQGFSLENALYALSAVGHFTLGCVLEDQEHQVAKEERET
+                     PTTDSMPPLLRQAIELFDHQGAEPAFLFGLELIICGLEKQLKCESGS*"
+                     /standard_name="TetR"
+     primer_bind     1190..1216
+                     /standard_name="KEW.A01"
+     primer_bind     1241..1263
+                     /standard_name="oBFC0419"
+     primer_bind     complement(1260..1297)
+                     /standard_name="oBFC0604"
+     primer_bind     1301..1344
+                     /standard_name="oBFC1701"
+     regulatory      1316..1371
+                     /note="Geneious type: promoter"
+                     /gene="tetR"
+                     /note="overlapping promoters for bacterial tetR and tetA"
+                     /standard_name="tetR/tetA promoters"
+     primer_bind     complement(1337..1371)
+                     /standard_name="oBFC0338"
+     primer_bind     complement(1337..1371)
+                     /standard_name="oBFC0337"
+     primer_bind     complement(1349..1373)
+                     /standard_name="oBFC1704"
+     primer_bind     1351..1369
+                     /standard_name="oBFC1899"
+     protein_bind    1352..1370
+                     /bound_moiety="tetracycline repressor TetR"
+                     /gene="tetO"
+                     /note="bacterial operator O2 for the tetR and tetA genes"
+                     /standard_name="tet operator"
+     primer_bind     complement(1353..1370)
+                     /standard_name="oBFC1708"
+     primer_bind     complement(1367..1388)
+                     /standard_name="oBFC1698"
+     primer_bind     complement(1367..1412)
+                     /standard_name="oBA1595_Cas13_BB_CommonGib_R"
+     primer_bind     1379..1438
+                     /standard_name="oBA1598_Cas13a_p1_Common_F"
+     primer_bind     complement(1388..1402)
+                     /standard_name="oBFC0283"
+     misc_feature    1389..1400
+                     /note="Geneious type: RBS"
+                     /standard_name="RBS (strong)"
+     primer_bind     1403..1428
+                     /standard_name="EJC078"
+     CDS             1410..4889
+                     /codon_start=1
+                     /transl_table=1
+                     /translation="MKVTKVGGISHKKYTSEGRLVKSESDENRTDERLSALLNMRLDM
+                     YIKNPSSTETKENQKRIGKLKKFFSNKMVYLKDNTLSLKNGKKENIDREYSETDILES
+                     DVRDKKNFAVLKKIYLNENVNSEELEVFRNDIKKKLNKINSLKYSFEKNKANYQKINE
+                     NNIEKVEGKSKRNIIYDYYRESAKRDAYVSNVKEAFDKLYKEEDIAKLVLEIENLTKS
+                     EKYKIREFYHEIIGRKNDKENFAKIIYEEIQNVNNMKELIEKVPDISELKKSQVFYKY
+                     YLDKEELNDKNIKYAFSHFVEIEMSQLLKNYVYKRLSNISNDKIKRIFEYQNLKKLIE
+                     NKLLNKLDTYVRNSGKYNYYLQDGEIATSDFIARNRQNEAFLRNIIGVSSVAYFSLRN
+                     ILETENENDITGRMRGKTVKNNKGEEKYVSGEVDKIYNENKKNKVKENLKMFYSYDFN
+                     MDNKNEIEDFFANIDEAISSIRHGIVHFNLESEGKDIFAFKNIAPSEISKKMFQNEIN
+                     EKKLKLKIFRQLNSANVFRYLEKYKILNYLKRTRFEFVNKNIPFVPSFTKLYSRIDDL
+                     KNSLGIYWKTPKTNDDNKTKEIIDAQIYLLKNIYYGEFLNYFMSNNGNFFEISKEIIE
+                     LNKNDKRNLKTGFYKLQKFEDIQEKTPKEYLANIQSLYMINAGNQDEEEKDTYIDFIQ
+                     KIFLKGFMTYLANNGRLSLIYIGSDEETNTSLAEKKQEFDKFLKKYEQNNNIKIPYEI
+                     NEFLREIKLGNIPKYTERLNMFYLILKLLNHKELTNLKGSLEKYQSANKEEAFSDQLE
+                     LINLLNLDNNRVTEDFELEADEIGKFLDFNGNKVKDNKELKKFDTNKIYFDGENIIKH
+                     RAFYNIKKYGMLNLLEKIADKAGYKISIEELKKYSNKKNEIEKNHKMQENLHRKYARP
+                     RKDEKFTDEDYESYKQAIENIEEYTHLKNKVEFNELNLLQGLLLRILHRLVGYTSIWE
+                     RDLRFRLKGEFPENQYIEEIFNFENKKNVKYKGGQIVEKYIKFYKELHQNDEVKINKY
+                     SSANIKVLKQEKKDLYIRNYIAHFNYIPHAEISLLEVLENLRKLLSYDRKLKNAVMKS
+                     VVDILKEYGFVATFKIGADKKIGIQTLESEKIVHLKNLKKKKLMTDRNSEELSKLVKI
+                     MFEYKMEEKKSEN*"
+                     /standard_name="LbuCas13 variant A12 (Emeric's - includes
+                     type II)"
+     source          1410..4886
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_feature    1485..1487
+                     /standard_name="E>D"
+     primer_bind     1880..1907
+                     /standard_name="EJC039"
+     misc_feature    2061..2063
+                     /standard_name="L>S"
+     misc_feature    2199..2201
+                     /standard_name="M>I"
+     misc_feature    2286..2288
+                     /standard_name="C>S"
+     misc_feature    2451..2453
+                     /standard_name="C>S"
+     primer_bind     2472..2490
+                     /standard_name="EJC040"
+     misc_feature    2715..2717
+                     /standard_name="E>K"
+     misc_feature    2825..2837
+                     /standard_name="Active Site 1"
+     misc_feature    2853..2855
+                     /standard_name="L>S"
+     primer_bind     3086..3105
+                     /standard_name="EJC041"
+     misc_feature    3257
+                     /standard_name="silent t>c in Emeric's A12 mutant"
+     primer_bind     complement(3316..3348)
+                     /standard_name="oBFC2039"
+     primer_bind     3345..3375
+                     /standard_name="oBFC2040"
+     misc_feature    3357..3359
+                     /standard_name="I>T"
+     misc_feature    3666..3668
+                     /standard_name="L>P"
+     primer_bind     3711..3733
+                     /standard_name="EJC042"
+     primer_bind     3795..3827
+                     /standard_name="oBA1600_Cas13a_p2_Common_F"
+     primer_bind     complement(3795..3827)
+                     /standard_name="oBA1599_Cas13a_p1_Common_R"
+     primer_bind     complement(4041..4063)
+                     /standard_name="oBFC2041"
+     primer_bind     4061..4101
+                     /standard_name="oBFC2042"
+     misc_feature    4062..4065
+                     /standard_name="BsmBI_OH"
+     primer_bind     4260..4277
+                     /standard_name="EJC043"
+     misc_feature    4554..4571
+                     /standard_name="Active Site 2"
+     misc_feature    4830..4832
+                     /standard_name="C>S"
+     primer_bind     complement(4850..4893)
+                     /standard_name="oBFC2043"
+     primer_bind     complement(4854..4913)
+                     /standard_name="oBA1601_Cas13a_p2_Common_R"
+     primer_bind     4886..4923
+                     /standard_name="oBA1597_Cas13_BB_CommonGib_F"
+     primer_bind     4888..4912
+                     /standard_name="oBFC2044"
+     misc_feature    4889..4892
+                     /standard_name="BsmBI_OH"
+     primer_bind     4890..4912
+                     /standard_name="oBFC1105"
+     primer_bind     4890..4915
+                     /standard_name="oBFC1093"
+     primer_bind     4890..4924
+                     /standard_name="oBFC1103"
+     primer_bind     4892..4912
+                     /standard_name="oBFC0811"
+     primer_bind     4892..4921
+                     /standard_name="oBFC0908"
+     primer_bind     4892..4921
+                     /standard_name="oBFC0902"
+     primer_bind     4892..4928
+                     /standard_name="oBFC0170"
+     misc_feature    4893..4896
+                     /standard_name="BsaI Junction Scar"
+     misc_feature    4893..31
+                     /standard_name="PCR from pBFC0335 or similar"
+     primer_bind     4897..4924
+                     /standard_name="oBFC1193"
+     primer_bind     4897..4924
+                     /standard_name="oBFC0427"
+     primer_bind     4897..4924
+                     /standard_name="oBFC0423"
+     primer_bind     4897..4924
+                     /standard_name="oBFC0683"
+     primer_bind     4897..4928
+                     /standard_name="oBFC0370"
+     regulatory      4897..4953
+                     /note="Geneious type: terminator"
+                     /note="A strong synthetic promoter from Voigt's
+                     Nature<br>Methods paper<br>Also used by Alex Nielsen as a
+                     dSpyCas9 sgRNA terminator in his CRISPRi logic gates
+                     paper<br>"
+                     /standard_name="L3S2P55 Terminator (Voigt)"
+     primer_bind     complement(4933..4957)
+                     /standard_name="oBFC0173"
+     protein_bind    4954..4957
+                     /standard_name="BsaI"
+     primer_bind     complement(4954..4978)
+                     /standard_name="oBFC1842"
+     primer_bind     complement(4959..4982)
+                     /standard_name="oBFC1633"
+     misc_feature    4980..4999
+                     /standard_name="corrected after full plasmid sequencing"
+     primer_bind     5032..5079
+                     /standard_name="oBFC0058"
+     primer_bind     complement(5034..5059)
+                     /standard_name="oBFC0585"
+     primer_bind     5057..5084
+                     /standard_name="oBFC0635"
+     primer_bind     5057..5084
+                     /standard_name="oBFC0631"
+     primer_bind     5058..5079
+                     /standard_name="oBFC1833"
+     primer_bind     5058..5084
+                     /standard_name="oBFC0404"
+     primer_bind     5059..5078
+                     /standard_name="oBFC1447"
+     primer_bind     5059..5078
+                     /standard_name="oBFC1062_fixed"
+     primer_bind     5059..5078
+                     /standard_name="oBFC1060_fixed"
+     primer_bind     5059..5078
+                     /standard_name="oBFC1058_fixed"
+     primer_bind     5059..5084
+                     /standard_name="oBFC0458"
+     primer_bind     5059..5084
+                     /standard_name="oBFC1615"
+     misc_feature    complement(5059..5167)
+                     /standard_name="CamR Terminator"
+     primer_bind     complement(5080..5104)
+                     /standard_name="oBFC0402"
+     primer_bind     complement(5119..5148)
+                     /standard_name="oBFC0063"
+     primer_bind     5168..5192
+                     /standard_name="oBFC1613"
+     primer_bind     5168..5192
+                     /standard_name="oBFC1541"
+     CDS             complement(5168..5827)
+                     /standard_name="CamR"
+     primer_bind     complement(5568..5599)
+                     /standard_name="oBFC0581"
+     primer_bind     complement(5573..5597)
+                     /standard_name="oBFC1138_fixed"
+     primer_bind     5592..5623
+                     /standard_name="oBFC0580"
+     primer_bind     5593..5623
+                     /standard_name="oBFC1133"
+     misc_feature    5594..5597
+                     /standard_name="BbsI OH"
+     primer_bind     complement(5798..5839)
+                     /standard_name="oBFC1540"
+     regulatory      complement(5828..5932)
+                     /note="Geneious type: promoter"
+                     /standard_name="CamR Promoter"
+     primer_bind     5899..5924
+                     /standard_name="oBFC0401"
+     primer_bind     complement(5909..5932)
+                     /standard_name="oBFC1832"
+     primer_bind     complement(5909..5932)
+                     /standard_name="oBFC1446"
+     primer_bind     complement(5909..5932)
+                     /standard_name="oBFC1061_fixed"
+     primer_bind     complement(5909..5932)
+                     /standard_name="oBFC1059_fixed"
+     primer_bind     complement(5909..5932)
+                     /standard_name="oBFC1057_fixed"
+     primer_bind     complement(5909..5933)
+                     /standard_name="oBFC0630"
+     primer_bind     complement(5909..5935)
+                     /standard_name="oBFC0059"
+     primer_bind     complement(5913..5933)
+                     /standard_name="oBFC0634"
+     primer_bind     complement(5913..5933)
+                     /standard_name="oBFC0403"
+     primer_bind     complement(5913..5933)
+                     /standard_name="oBFC0457"
+     primer_bind     5926..5954
+                     /standard_name="oBFC0060"
+     primer_bind     5933..5954
+                     /standard_name="oBFC0584"
+     rep_origin      complement(6200..6745)
+     misc_feature    6301
+                     /standard_name="corrected after full plasmid sequencing"
+     misc_feature    6301
+                     /standard_name="PCR from pBFC0335 or similar"
+     rep_origin      complement(6301)
+     primer_bind     6815..6841
+                     /standard_name="oBFC0066"
+     primer_bind     complement(6821..6845)
+                     /standard_name="oBFC1614"
+     primer_bind     complement(6821..6900)
+                     /standard_name="oBFC0061"
+     regulatory      6846..6935
+                     /note="Geneious type: terminator"
+                     /note="rho-independent terminator of spheroplast protein Y
+                     transcript"
+                     /standard_name="ECK120029600 Terminator (Voigt)"
+     primer_bind     complement(6933..10)
+                     /standard_name="oBFC1312"
+     primer_bind     complement(6933..10)
+                     /standard_name="oBFC1293"
+ORIGIN      
+        1 tctagactga actggccgat aattgcagac ggtttaaaca tccctcggta ccaaattcca
+       61 gaaaagaggc ctcccgaaag gggggccttt tttcgttttg gtccgctgcc aaaccagatg
+      121 tcaacacagc tacaacgatt tcagataaaa aaaatcctta gctttcgcta aggatgattt
+      181 ctggaattct tgacagctag ctcagtccta ggtataatac tagtatttag accaccccaa
+      241 aaatgaaggg gactaaaacg ctaaaaccag tctcttctaa acattctctt tgcttgggcc
+      301 cgaacaaaaa ctcatctcag aagaggatct gaatagcgcc gtcgaccatc atcatcatca
+      361 tcattgagtt taaacgctct ccagcttggg tgttttggcg gatgagagaa gattttcagc
+      421 ctgatacaga ttaaatcaga acgcagaagc ggtctgataa aacagaattt gcctggcggc
+      481 agtagcgcgg tggtcccacc tgaccccatg ccgaactcag aagtgaaacg ccgtagcgcc
+      541 gatggtagtg tggggtctgc ccatgcgaga gtaggcaact gccaggcatc aaataaaacg
+      601 aaaggctcag tcgaaagact gggcctttcg ttttatctgt tgtttgtcgg tgaactcgcc
+      661 agatatcgac gtcttaagac ccactttcac atttaagttg tttttctaat ccgcatatga
+      721 tcaattcaag gccgaataag aaggctggct ctgcaccttg gtgatcaaat aattcgatag
+      781 cttgtcgtaa taatggcggc atactatcag tagtaggtgt ttccctttct tctttagcga
+      841 cttgatgctc ttgatcttcc aatacgcaac ctaaagtaaa atgccccaca gcgctgagtg
+      901 catataatgc attctctagt gaaaaacctt gttggcataa aaaggctaat tgattttcga
+      961 gagtttcata ctgtttttct gtaggccgtg tacctaaatg tacttttgct ccatcgcgat
+     1021 gacttagtaa agcacatcta aaacttttag cgttattacg taaaaaatct tgccagcttt
+     1081 ccccttctaa agggcaaaag tgagtatggt gcctatctaa catctcaatg gctaaggcgt
+     1141 cgagcaaagc ccgcttattt tttacatgcc aatacaatgt aggctgctct acacctagct
+     1201 tctgggcgag tttacgggtt gttaaacctt cgattccgac ctcattaagc agctctaatg
+     1261 cgctgttaat cactttactt ttatctaatc tagacatcat taattcctaa tttttgttga
+     1321 cactctatcg ttgatagagt tattttacca ctccctatca gtgatagaga aaagaattca
+     1381 aaagatctaa agaggagaaa ggatcttaca tgaaagtgac gaaggtagga ggcatttcgc
+     1441 ataagaagta cacgtccgaa ggccgcttag tgaagtcaga atcggacgaa aatcgcacag
+     1501 acgaacgtct gtcggcgttg cttaatatgc gccttgacat gtatatcaag aatcccagca
+     1561 gcacggaaac caaggaaaat caaaaacgca ttgggaaatt aaagaaattc ttctcaaaca
+     1621 aaatggtcta tcttaaagac aataccttga gtttgaagaa tgggaaaaag gagaacattg
+     1681 atcgtgagta ttctgagact gacatccttg agagcgatgt ccgtgacaag aaaaacttcg
+     1741 ccgtgttgaa aaagatctat ctgaatgaaa acgtgaactc ggaggaattg gaagtttttc
+     1801 gtaacgacat taagaagaaa ctgaacaaaa tcaacagcct gaagtactca tttgaaaaga
+     1861 ataaggcgaa ttatcaaaag attaatgaga ataacatcga gaaggttgaa ggtaagtcaa
+     1921 agcgtaacat tatttacgat tattatcgtg agtcagcgaa acgtgacgct tatgtaagca
+     1981 atgtgaaaga agcctttgat aagctttaca aggaagagga cattgcaaaa cttgttcttg
+     2041 aaattgagaa ccttacgaag tcagagaaat acaagattcg cgagttctac cacgaaatta
+     2101 ttggacgtaa gaatgacaag gaaaactttg caaaaatcat ctacgaagaa atccagaatg
+     2161 ttaataacat gaaagagttg atcgagaagg taccggacat cagtgagttg aaaaagagcc
+     2221 aagtatttta caagtattac ttagacaaag aagagttgaa cgacaagaac atcaaatacg
+     2281 cgttttcgca tttcgtggaa atcgaaatga gtcagttgct gaagaactac gtatataagc
+     2341 gcttaagtaa tatctcgaat gacaaaatta agcgtatctt tgaataccag aacttgaaaa
+     2401 aattgatcga aaataagctg ttaaacaaac ttgacacgta cgtccgtaat agcggaaagt
+     2461 ataattatta tttgcaagac ggcgaaattg ccacttcaga tttcatcgcc cgcaaccgtc
+     2521 agaatgaagc gtttcttcgc aacatcattg gggtgtcatc tgtggcctac ttttctcttc
+     2581 gcaacattct tgaaacggag aacgagaatg atattactgg gcgtatgcgc ggcaaaacag
+     2641 ttaagaacaa taaaggtgaa gagaagtacg tgtccggaga agttgataag atctataatg
+     2701 aaaataagaa gaacaaggtt aaggagaact taaaaatgtt ctattcgtac gatttcaata
+     2761 tggacaacaa gaatgaaatc gaagatttct tcgccaacat cgacgaggcg atttcttcca
+     2821 tccgtcacgg tattgtccac ttcaacttgg aatcagaagg taaggatatc tttgcgttca
+     2881 agaacattgc gccatccgaa atctcaaaga agatgtttca gaatgagatt aacgagaaaa
+     2941 aactgaaatt gaagatcttt cgtcaactga actctgccaa cgtgttccgc tatctcgaaa
+     3001 agtataaaat tctgaattac cttaaacgta cacgcttcga gtttgtcaat aaaaatatcc
+     3061 cattcgtccc gtctttcacc aaattatatt cgcgcattga tgacctgaag aatagtcttg
+     3121 ggatttactg gaaaactccg aaaacaaacg acgacaataa gactaaggag attattgatg
+     3181 cccaaatcta tttgcttaaa aacatctatt acggggagtt cctgaattat ttcatgtcga
+     3241 acaatggtaa tttcttcgag atttctaaag aaatcatcga attgaacaag aacgataaac
+     3301 gcaacttaaa gactgggttt tacaagctgc aaaagtttga agacatccag gagaagactc
+     3361 caaaggaata cttggcgaat atccagtccc tgtacatgat taatgccggt aatcaggacg
+     3421 aagaagaaaa ggacacttat attgatttca ttcaaaagat cttcttaaag ggatttatga
+     3481 cgtatcttgc taataacggt cgtttaagtc tgatttacat cggctcggat gaagaaacaa
+     3541 atacgtcatt agcagaaaag aagcaagagt ttgacaagtt cttgaagaag tacgagcaga
+     3601 acaataatat caagatcccc tatgagatca atgaattcct gcgtgagatc aaactgggaa
+     3661 acatcccgaa gtatactgag cgtttaaaca tgttctacct tatcttaaag cttttgaatc
+     3721 acaaggagct gacaaatctg aagggtagtc ttgaaaaata tcagtctgcc aataaggaag
+     3781 aagcgttctc tgaccaattg gagttaatta acctgcttaa ccttgacaac aaccgcgtga
+     3841 cggaagactt cgaattagag gccgacgaga ttggaaaatt tcttgatttc aatggcaaca
+     3901 aagttaagga taacaaggaa ctgaaaaagt tcgatacaaa caagatctac tttgacggcg
+     3961 agaacattat caaacaccgt gccttctaca atattaagaa atatggcatg ttaaacttac
+     4021 tggagaaaat tgccgacaag gctggataca agatctcgat cgaagagctg aagaaatact
+     4081 ccaataaaaa gaatgagatc gagaagaacc ataagatgca ggaaaatctg caccgcaaat
+     4141 acgctcgtcc ccgtaaagac gagaagttta cagatgagga ctatgaaagt tacaagcaag
+     4201 ctattgagaa tattgaggag tacacccacc ttaagaacaa ggtagaattc aatgagctga
+     4261 atttactgca gggcctgttg ctgcgcattt tacatcgttt agtcggatat acctcaattt
+     4321 gggaacgcga tctgcgcttc cgccttaaag gtgagttccc agaaaaccaa tacatcgaag
+     4381 agatcttcaa ctttgaaaat aagaagaacg tgaagtacaa agggggtcag attgtagaga
+     4441 aatacattaa attctacaag gaattacatc aaaatgatga agttaagatc aacaagtaca
+     4501 gttccgcgaa tatcaaggtg ttgaagcaag aaaagaagga cctttatatt cgaaattaca
+     4561 tcgcccactt caattatatt cctcacgccg agatctcact gctggaagtc cttgaaaatt
+     4621 tgcgtaaatt gctgtcctac gatcgcaaac tgaaaaatgc cgtaatgaaa tcagtagttg
+     4681 atatccttaa ggagtatggt tttgtagcca cattcaaaat cggggcggac aagaagatcg
+     4741 gtattcagac actggagagc gaaaaaatcg tgcatcttaa gaatcttaag aagaagaagt
+     4801 taatgactga ccgcaattcc gaggaacttt caaaattggt gaagattatg tttgaataca
+     4861 aaatggaaga gaaaaagtct gaaaactaat aaatccctcg gtaccaaaga cgaacaataa
+     4921 gacgctgaaa agcgtctttt ttcgttttgg tccgctgagc agttacagag atgttacgaa
+     4981 ccactagtgc actgcagtac acctttggtc gaaaaaaaaa gcccgcactg tcaggtgcgg
+     5041 gcttttttct gtgtttccac caataaaaaa cgcccggcgg caaccgagcg ttctgaacaa
+     5101 atccagatgg agttctgagg tcattactgg atctatcaac aggagtccaa gcgagctcga
+     5161 tatcaaatta cgccccgccc tgccactcat cgcagtactg ttgtaattca ttaagcattc
+     5221 tgccgacatg gaagccatca caaacggcat gatgaacctg aatcgccagc ggcatcagca
+     5281 ccttgtcgcc ttgcgtataa tatttgccca tggtgaaaac gggggcgaag aagttgtcca
+     5341 tattggccac gtttaaatca aaactggtga aactcaccca gggattggct gaaacgaaaa
+     5401 acatattctc aataaaccct ttagggaaat aggccaggtt ttcaccgtaa cacgccacat
+     5461 cttgcgaata tatgtgtaga aactgccgga aatcgtcgtg gtattcactc cagagcgatg
+     5521 aaaacgtttc agtttgctca tggaaaacgg tgtaacaagg gtgaacacta tcccatatca
+     5581 ccagctcacc gtctttcatt gccatacgaa attccggatg agcattcatc aggcgggcaa
+     5641 gaatgtgaat aaaggccgga taaaacttgt gcttattttt ctttacggtc tttaaaaagg
+     5701 ccgtaatatc cagctgaacg gtctggttat aggtacattg agcaactgac tgaaatgcct
+     5761 caaaatgttc tttacgatgc cattgggata tatcaacggt ggtatatcca gtgatttttt
+     5821 tctccatttt agcttcctta gctcctgaaa atctcgataa ctcaaaaaat acgcccggta
+     5881 gtgatcttat ttcattatgg tgaaagttgg aacctcttac gtgcccgatc aagcgctagc
+     5941 ggagtgtata ctggcttact atgttggcac tgatgagggt gtcagtgaag tgcttcatgt
+     6001 ggcaggagaa aaaaggctgc accggtgcgt cagcagaata tgtgatacag gatatattcc
+     6061 gcttcctcgc tcactgactc gctacgctcg gtcgttcgac tgcggcgagc ggaaatggct
+     6121 tacgaacggg gcggagattt cctggaagat gccaggaaga tacttaacag ggaagtgaga
+     6181 gggccgcggc aaagccgttt ttccataggc tccgcccccc tgacaagcat cacgaaatct
+     6241 gacgctcaaa tcagtggtgg cgaaacccga caggactata aagataccag gcgtttcccc
+     6301 ctggcggctc cctcgtgcgc tctcctgttc ctgcctttcg gtttaccggt gtcattccgc
+     6361 tgttatggcc gcgtttgtct cattccacgc ctgacactca gttccgggta ggcagttcgc
+     6421 tccaagctgg actgtatgca cgaacccccc gttcagtccg accgctgcgc cttatccggt
+     6481 aactatcgtc ttgagtccaa cccggaaaga catgcaaaag caccactggc agcagccact
+     6541 ggtaattgat ttagaggagt tagtcttgaa gtcatgcgcc ggttaaggct aaactgaaag
+     6601 gacaagtttt ggtgactgcg ctcctccaag ccagttacct cggttcaaag agttggtagc
+     6661 tcagagaacc ttcgaaaaac cgccctgcaa ggcggttttt tcgttttcag agcaagagat
+     6721 tacgcgcaga ccaaaacgat ctcaagaaga tcatcttatt aatcagataa aatatttcta
+     6781 gatttcagtg caatttatct cttcaaatgt agcacctgaa gtcagcccca tacgatataa
+     6841 gttgtttcag ccaaaaaact taagaccgcc ggtcttgtcc actaccttgc agtaatgcgg
+     6901 tggacaggat cggcggtttt cttttctctt ctcaaccctg aattcgca
+//
