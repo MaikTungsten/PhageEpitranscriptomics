@@ -33,6 +33,11 @@ This includes the raw concentration measurements from LC-MS targeting the metabo
 
 This contains the Index Combinations for the 144 screened phage plaques for demultiplexing with minibar.
 
+## Plasmid maps
+
+This contains all plasmids used in the study including those for protein expression and phage mutagenesis.
+
+
 ***
 
 ## Authors and acknowledgment
