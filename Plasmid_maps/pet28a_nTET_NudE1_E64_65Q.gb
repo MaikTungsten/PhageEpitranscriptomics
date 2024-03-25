@@ -1,0 +1,350 @@
+LOCUS       pet28a_nTET_NudE        6676 bp    DNA     circular UNA 24-JUN-2022
+DEFINITION  Restriction Cloning ligation product.
+ACCESSION   urn.local...r-hcl9k77
+VERSION     urn.local...r-hcl9k77
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+FEATURES             Location/Qualifiers
+     misc_feature    1..5034
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pet28a_42_NudE_Mut - pet28a_ModA_E165A
+                     (digested by XbaI, XhoI) Fragment 2 (concatenated sequence
+                     1) (concatenated sequence 1)"
+     rep_origin      12..467
+     CDS             complement(560..1375)
+                     /note="confers kanamycin resistance"
+                     /product="aminoglycoside phosphotransferase"
+                     /gene="aph(3)-Ia"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="kanR"
+     rep_origin      1497..2085
+     regulatory      2271..2413
+                     /note="basis of mobility (bom) from pBR322"
+                     /regulatory_class="other"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="bom"
+     CDS             complement(2515..2739)
+                     /note="repressor of primer (Rop) RNA-binding protein from
+                     Escherichia coli involved in low copy number maintenance"
+                     /product="regulatory protein rop"
+                     /gene="rop"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on protein similarity"
+                     /standard_name="ROP"
+     regulatory      3481..3502
+                     /note="catabolite activator protein binding site"
+                     /regulatory_class="other"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="CAP BS"
+     CDS             complement(3515..4597)
+                     /note="lactose operon repressor"
+                     /product="Lac repressor (DNA-binding protein)"
+                     /gene="lacI"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="lacI"
+     regulatory      complement(4598..4675)
+                     /note="Geneious type: promoter"
+                     /note="lacIq promoter region"
+                     /regulatory_class="promoter"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="lacIq"
+     regulatory      4984..5001
+                     /note="Geneious type: promoter"
+                     /note="T7 RNA polymerase promoter"
+                     /regulatory_class="promoter"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="T7"
+     primer_bind     4984..5003
+                     /standard_name="T7 Primer"
+     misc_feature    5007..5023
+                     /note="Lac operon operator"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="lacO"
+     primer_bind     complement(5013..5029)
+                     /standard_name="NP156_pet28_XbaI_rev"
+     misc_feature    5031..5034
+                     /note="Geneious type: ligation"
+                     /standard_name="Ligation"
+     misc_feature    5031..6060
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pET-28a(+)_ nTET PCR Product 2
+                     (concatenated sequence 2)"
+     misc_feature    join(5031..>5034,<6057..6060)
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="42 PCR Product (digested by BamHI, XbaI)
+                     Fragment 2 (concatenated sequence 2)"
+     misc_feature    join(6002..>6004,<5031..5037)
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pET-28a(+) (reversed) Copy (concatenated
+                     sequence 1)"
+     misc_feature    5031
+                     /note="Geneious type: mismatch"
+                     /standard_name="T/C"
+     misc_feature    5032
+                     /note="Geneious type: mismatch"
+                     /standard_name="A/T"
+     misc_feature    5033
+                     /note="Geneious type: mismatch"
+                     /standard_name="C/A"
+     misc_feature    5034..5037
+                     /note="Geneious type: ligation"
+                     /standard_name="Ligation"
+     misc_feature    5034..>6004
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="nTET_IDT (concatenated sequence 2)"
+     misc_feature    5034
+                     /note="Geneious type: mismatch"
+                     /standard_name="C/G"
+     gene            5035..>6004
+                     /standard_name="nTET"
+     CDS             5035..5037
+                     /codon_start=1
+                     /product="start codon"
+                     /transl_table=1
+                     /translation="M"
+                     /standard_name="ATG"
+     primer_bind     complement(5976..6004)
+                     /standard_name="primer_BamHI_new"
+     misc_feature    5998
+                     /note="Geneious type: mismatch"
+                     /standard_name="T/A"
+     misc_feature    6001
+                     /note="Geneious type: mismatch"
+                     /standard_name="G/C"
+     misc_feature    6001
+                     /note="Geneious type: mismatch"
+                     /standard_name="G/A"
+     misc_feature    <6002..>6004
+                     /note="multiple cloning site"
+                     /standard_name="MCS"
+     misc_feature    6002..>6004
+                     /note="Geneious type: ligation"
+                     /standard_name="Ligation"
+     misc_feature    6002
+                     /note="Geneious type: mismatch"
+                     /standard_name="A/C"
+     misc_feature    6002
+                     /note="Geneious type: mismatch"
+                     /standard_name="A/T"
+     misc_feature    6003
+                     /note="Geneious type: mismatch"
+                     /standard_name="G/T"
+     misc_feature    6004
+                     /note="Geneious type: mismatch"
+                     /standard_name="C/A"
+     misc_feature    6004
+                     /note="Geneious type: mismatch"
+                     /standard_name="C/G"
+     misc_feature    6005..>6060
+                     /note="Geneious type: Editing History Insertion"
+                     /standard_name
+     misc_feature    6057..6060
+                     /note="Geneious type: ligation"
+                     /standard_name="Ligation"
+     misc_feature    6057..6676
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pet28a_42_NudE_Mut extraction
+                     (concatenated sequence 3)"
+     misc_feature    6057..6518
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pet28a_NudE_Mut PCR Product (digested by
+                     BamHI, XhoI) Fragment 2 (concatenated sequence 3)"
+     gene            <6062..>6513
+                     /gene="nudE"
+                     /locus_tag="T4p124"
+                     /gene_synonym="e.1"
+                     /db_xref="GeneID:1258692"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="nudE gene"
+     CDS             <6062..>6513
+                     /codon_start=3
+                     /gene="nudE"
+                     /locus_tag="T4p124"
+                     /gene_synonym="e.1"
+                     /note="nudix hydrolase active on FAD, diadenosine
+                     polyphosphates, ADP-ribose and NADH"
+                     /transl_table=11
+                     /product="NUDIX hydrolase"
+                     /protein_id="NP_049737.1"
+                     /db_xref="GI:9632738"
+                     /db_xref="GeneID:1258692"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="nudE CDS"
+     primer_bind     6062..6092
+                     /standard_name="NP153_NudE_bamHI_fw"
+     misc_feature    6250
+                     /note="Geneious type: Editing History Replacement"
+                     /standard_name="G"
+     misc_feature    6253
+                     /note="Geneious type: Editing History Replacement"
+                     /standard_name="G"
+     primer_bind     complement(6487..6513)
+                     /standard_name="NP154_NudE_xhoI_rev"
+     gene            <6515..6540
+                     /gene="modA"
+                     /locus_tag="T4p020"
+                     /gene_synonym="dda.3"
+                     /db_xref="GeneID:1258568"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="modA gene"
+     CDS             <6515..6540
+                     /codon_start=3
+                     /gene="modA"
+                     /locus_tag="T4p020"
+                     /gene_synonym="dda.3"
+                     /note="ADP-ribosylates both alpha subunits of RNA
+                     polymerase"
+                     /transl_table=11
+                     /product="ModA RNA polymerase ADP-ribosylase"
+                     /protein_id="NP_049635.1"
+                     /db_xref="GI:9632770"
+                     /db_xref="GeneID:1258568"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="modA CDS"
+     misc_feature    6515..6518
+                     /note="Geneious type: ligation"
+                     /standard_name="Ligation"
+     misc_feature    6515..5034
+                     /note="Geneious type: Concatenated sequence"
+                     /standard_name="pet28a_ModA_E165A (digested by XbaI, XhoI)
+                     Fragment 2 (concatenated sequence 1)"
+     misc_feature    6520..6537
+                     /note="6X polyhistidine tag used for protein purification"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on protein similarity"
+                     /standard_name="polyhistidine"
+     primer_bind     complement(6590..6609)
+                     /standard_name="T7term Primer"
+     regulatory      6604..6651
+                     /note="Geneious type: terminator"
+                     /note="bacteriophage T7 terminator"
+                     /regulatory_class="terminator"
+                     /note="Derived using Geneious Prime 2020.2.4 'Annotate
+                     from Database' based on nucleotide similarity"
+                     /standard_name="T7"
+ORIGIN      
+        1 tggcgaatgg gacgcgccct gtagcggcgc attaagcgcg gcgggtgtgg tggttacgcg
+       61 cagcgtgacc gctacacttg ccagcgccct agcgcccgct cctttcgctt tcttcccttc
+      121 ctttctcgcc acgttcgccg gctttccccg tcaagctcta aatcgggggc tccctttagg
+      181 gttccgattt agtgctttac ggcacctcga ccccaaaaaa cttgattagg gtgatggttc
+      241 acgtagtggg ccatcgccct gatagacggt ttttcgccct ttgacgttgg agtccacgtt
+      301 ctttaatagt ggactcttgt tccaaactgg aacaacactc aaccctatct cggtctattc
+      361 ttttgattta taagggattt tgccgatttc ggcctattgg ttaaaaaatg agctgattta
+      421 acaaaaattt aacgcgaatt ttaacaaaat attaacgttt acaatttcag gtggcacttt
+      481 tcggggaaat gtgcgcggaa cccctatttg tttatttttc taaatacatt caaatatgta
+      541 tccgctcatg aattaattct tagaaaaact catcgagcat caaatgaaac tgcaatttat
+      601 tcatatcagg attatcaata ccatattttt gaaaaagccg tttctgtaat gaaggagaaa
+      661 actcaccgag gcagttccat aggatggcaa gatcctggta tcggtctgcg attccgactc
+      721 gtccaacatc aatacaacct attaatttcc cctcgtcaaa aataaggtta tcaagtgaga
+      781 aatcaccatg agtgacgact gaatccggtg agaatggcaa aagtttatgc atttctttcc
+      841 agacttgttc aacaggccag ccattacgct cgtcatcaaa atcactcgca tcaaccaaac
+      901 cgttattcat tcgtgattgc gcctgagcga gacgaaatac gcgatcgctg ttaaaaggac
+      961 aattacaaac aggaatcgaa tgcaaccggc gcaggaacac tgccagcgca tcaacaatat
+     1021 tttcacctga atcaggatat tcttctaata cctggaatgc tgttttcccg gggatcgcag
+     1081 tggtgagtaa ccatgcatca tcaggagtac ggataaaatg cttgatggtc ggaagaggca
+     1141 taaattccgt cagccagttt agtctgacca tctcatctgt aacatcattg gcaacgctac
+     1201 ctttgccatg tttcagaaac aactctggcg catcgggctt cccatacaat cgatagattg
+     1261 tcgcacctga ttgcccgaca ttatcgcgag cccatttata cccatataaa tcagcatcca
+     1321 tgttggaatt taatcgcggc ctagagcaag acgtttcccg ttgaatatgg ctcataacac
+     1381 cccttgtatt actgtttatg taagcagaca gttttattgt tcatgaccaa aatcccttaa
+     1441 cgtgagtttt cgttccactg agcgtcagac cccgtagaaa agatcaaagg atcttcttga
+     1501 gatccttttt ttctgcgcgt aatctgctgc ttgcaaacaa aaaaaccacc gctaccagcg
+     1561 gtggtttgtt tgccggatca agagctacca actctttttc cgaaggtaac tggcttcagc
+     1621 agagcgcaga taccaaatac tgtccttcta gtgtagccgt agttaggcca ccacttcaag
+     1681 aactctgtag caccgcctac atacctcgct ctgctaatcc tgttaccagt ggctgctgcc
+     1741 agtggcgata agtcgtgtct taccgggttg gactcaagac gatagttacc ggataaggcg
+     1801 cagcggtcgg gctgaacggg gggttcgtgc acacagccca gcttggagcg aacgacctac
+     1861 accgaactga gatacctaca gcgtgagcta tgagaaagcg ccacgcttcc cgaagggaga
+     1921 aaggcggaca ggtatccggt aagcggcagg gtcggaacag gagagcgcac gagggagctt
+     1981 ccagggggaa acgcctggta tctttatagt cctgtcgggt ttcgccacct ctgacttgag
+     2041 cgtcgatttt tgtgatgctc gtcagggggg cggagcctat ggaaaaacgc cagcaacgcg
+     2101 gcctttttac ggttcctggc cttttgctgg ccttttgctc acatgttctt tcctgcgtta
+     2161 tcccctgatt ctgtggataa ccgtattacc gcctttgagt gagctgatac cgctcgccgc
+     2221 agccgaacga ccgagcgcag cgagtcagtg agcgaggaag cggaagagcg cctgatgcgg
+     2281 tattttctcc ttacgcatct gtgcggtatt tcacaccgca tatatggtgc actctcagta
+     2341 caatctgctc tgatgccgca tagttaagcc agtatacact ccgctatcgc tacgtgactg
+     2401 ggtcatggct gcgccccgac acccgccaac acccgctgac gcgccctgac gggcttgtct
+     2461 gctcccggca tccgcttaca gacaagctgt gaccgtctcc gggagctgca tgtgtcagag
+     2521 gttttcaccg tcatcaccga aacgcgcgag gcagctgcgg taaagctcat cagcgtggtc
+     2581 gtgaagcgat tcacagatgt ctgcctgttc atccgcgtcc agctcgttga gtttctccag
+     2641 aagcgttaat gtctggcttc tgataaagcg ggccatgtta agggcggttt tttcctgttt
+     2701 ggtcactgat gcctccgtgt aagggggatt tctgttcatg ggggtaatga taccgatgaa
+     2761 acgagagagg atgctcacga tacgggttac tgatgatgaa catgcccggt tactggaacg
+     2821 ttgtgagggt aaacaactgg cggtatggat gcggcgggac cagagaaaaa tcactcaggg
+     2881 tcaatgccag cgcttcgtta atacagatgt aggtgttcca cagggtagcc agcagcatcc
+     2941 tgcgatgcag atccggaaca taatggtgca gggcgctgac ttccgcgttt ccagacttta
+     3001 cgaaacacgg aaaccgaaga ccattcatgt tgttgctcag gtcgcagacg ttttgcagca
+     3061 gcagtcgctt cacgttcgct cgcgtatcgg tgattcattc tgctaaccag taaggcaacc
+     3121 ccgccagcct agccgggtcc tcaacgacag gagcacgatc atgcgcaccc gtggggccgc
+     3181 catgccggcg ataatggcct gcttctcgcc gaaacgtttg gtggcgggac cagtgacgaa
+     3241 ggcttgagcg agggcgtgca agattccgaa taccgcaagc gacaggccga tcatcgtcgc
+     3301 gctccagcga aagcggtcct cgccgaaaat gacccagagc gctgccggca cctgtcctac
+     3361 gagttgcatg ataaagaaga cagtcataag tgcggcgacg atagtcatgc cccgcgccca
+     3421 ccggaaggag ctgactgggt tgaaggctct caagggcatc ggtcgagatc ccggtgccta
+     3481 atgagtgagc taacttacat taattgcgtt gcgctcactg cccgctttcc agtcgggaaa
+     3541 cctgtcgtgc cagctgcatt aatgaatcgg ccaacgcgcg gggagaggcg gtttgcgtat
+     3601 tgggcgccag ggtggttttt cttttcacca gtgagacggg caacagctga ttgcccttca
+     3661 ccgcctggcc ctgagagagt tgcagcaagc ggtccacgct ggtttgcccc agcaggcgaa
+     3721 aatcctgttt gatggtggtt aacggcggga tataacatga gctgtcttcg gtatcgtcgt
+     3781 atcccactac cgagatatcc gcaccaacgc gcagcccgga ctcggtaatg gcgcgcattg
+     3841 cgcccagcgc catctgatcg ttggcaacca gcatcgcagt gggaacgatg ccctcattca
+     3901 gcatttgcat ggtttgttga aaaccggaca tggcactcca gtcgccttcc cgttccgcta
+     3961 tcggctgaat ttgattgcga gtgagatatt tatgccagcc agccagacgc agacgcgccg
+     4021 agacagaact taatgggccc gctaacagcg cgatttgctg gtgacccaat gcgaccagat
+     4081 gctccacgcc cagtcgcgta ccgtcttcat gggagaaaat aatactgttg atgggtgtct
+     4141 ggtcagagac atcaagaaat aacgccggaa cattagtgca ggcagcttcc acagcaatgg
+     4201 catcctggtc atccagcgga tagttaatga tcagcccact gacgcgttgc gcgagaagat
+     4261 tgtgcaccgc cgctttacag gcttcgacgc cgcttcgttc taccatcgac accaccacgc
+     4321 tggcacccag ttgatcggcg cgagatttaa tcgccgcgac aatttgcgac ggcgcgtgca
+     4381 gggccagact ggaggtggca acgccaatca gcaacgactg tttgcccgcc agttgttgtg
+     4441 ccacgcggtt gggaatgtaa ttcagctccg ccatcgccgc ttccactttt tcccgcgttt
+     4501 tcgcagaaac gtggctggcc tggttcacca cgcgggaaac ggtctgataa gagacaccgg
+     4561 catactctgc gacatcgtat aacgttactg gtttcacatt caccaccctg aattgactct
+     4621 cttccgggcg ctatcatgcc ataccgcgaa aggttttgcg ccattcgatg gtgtccggga
+     4681 tctcgacgct ctcccttatg cgactcctgc attaggaagc agcccagtag taggttgagg
+     4741 ccgttgagca ccgccgccgc aaggaatggt gcatgcaagg agatggcgcc caacagtccc
+     4801 ccggccacgg ggcctgccac catacccacg ccgaaacaag cgctcatgag cccgaagtgg
+     4861 cgagcccgat cttccccatc ggtgatgtcg gcgatatagg cgccagcaac cgcacctgtg
+     4921 gcgccggtga tgccggccac gatgcgtccg gcgtagagga tcgagatctc gatcccgcga
+     4981 aattaatacg actcactata ggggaattgt gagcggataa caattcccct ctagatggga
+     5041 acgacattta aacagcagac gattaaagaa aaagagacaa agcgtaaata ctgtatcaaa
+     5101 gggaccactg cgaatctgac acaaacccat cccaatgggc cagtgtgtgt taaccgcggg
+     5161 gaggaagtag caaatacgac tactctgttg gactcagggg gcgggattaa caaaaaatcg
+     5221 ctgttgcaga atctgttgtc caaatgtaaa actacatttc agcagtcatt tacaaacgcc
+     5281 aacattactt taaaggatga aaagtggctt aaaaacgtcc gtactgctta ttttgtttgc
+     5341 gatcatgacg ggagcgtcga acttgcatac cttcctaacg tgcttcccaa agaattagtc
+     5401 gaagaattca ccgagaaatt tgaatcgatc cagaccggac gtaagaaaga cacaggttac
+     5461 tcaggtattc tggacaactc gatgccgttc aattacgtca ctgcggattt atcacaggag
+     5521 ttaggacagt atctgtctga gattgtgaat cctcagatca actattacat cagtaaattg
+     5581 ctgacttgcg ttagttcacg tacaatcaat tacctggtat ctttgaatga ctcgtactat
+     5641 gcccttaaca actgtttgta tccttcaacc gccttcaact cattaaagcc gtccaacgac
+     5701 ggccaccgca tccgtaaacc tcataaggac aatttggaca ttaccccgtc gagccttttc
+     5761 tattttggaa attttcaaaa tacggaagga tatcttgagt taacagacaa gaattgcaaa
+     5821 gttttcgtcc aaccggggga tgtattattt ttcaaaggca atgaatataa acacgtcgtg
+     5881 gccaatatca cctcgggctg gcgcattgga ttggtctact tcgcacacaa ggggagtaaa
+     5941 actaaaccgt attatgaaga cacgcagaag aactccctga aaattcataa agaaacgaaa
+     6001 taacaatcta gcataacccc ttggggcctc taaacgggtc ttgaggggtt ttttgggatc
+     6061 cgacaggaaa ttaaaatgaa aacattatca gctggtatta tctttatgac agaagataaa
+     6121 gatttattta tgggtcgggt tactggttct cgtaagactg gaatgatggc acatcgttgg
+     6181 gatattccaa agggccgtgt agaaaattct gatttaagcg cattagatgc agcacgaaga
+     6241 gaatgtttac aacagactgg ttttagcaat tataatccag accttctaga agacctaggt
+     6301 gtatttaaat attctagtaa taaagaccta cagttatttt attacacgat tccagtagag
+     6361 catgagatgt tcagaaattg ccgttgcgag tcttattttg aaaataaaga tggcgttatg
+     6421 attccagaga tggacgcttt tgctcttatt cctcgtactc agtggcaata tgtgatgggt
+     6481 ccttcacttt accgaataat gaacaacctc tttctcgagc accaccacca ccaccactga
+     6541 gatccggctg ctaacaaagc ccgaaaggaa gctgagttgg ctgctgccac cgctgagcaa
+     6601 taactagcat aaccccttgg ggcctctaaa cgggtcttga ggggtttttt gctgaaagga
+     6661 ggaactatat ccggat
+//
