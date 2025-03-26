@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository provides code and data derived from _Wolfram-Schauerte et al., NAR, 2024_ **LINK**. This work describes the NAD-capped epitranscriptome of T4 phage infection of E. coli. Therefore, NAD captureSeq, differential RNA-Seq and endometabolomics are employed. For detailed information, please see above mentioned publication. Here, custom R Scripts and associated data are provided.
+This repository provides code and data derived from _Wolfram-Schauerte et al., bioRxiv, 2024 (https://www.biorxiv.org/content/10.1101/2024.04.04.588121v1). This work describes the NAD-capped epitranscriptome of T4 phage infection of E. coli. Therefore, NAD captureSeq, differential RNA-Seq and endometabolomics are employed. For detailed information, please see above mentioned publication. Here, custom R Scripts and associated data are provided.
 
 ## NAD captureSeq
 
