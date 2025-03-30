@@ -6,7 +6,7 @@ keep_md: TRUE
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = "Q:/Lab Members/Maik/Project_NAD-captureSeq_final_data/Final_analysis_ONT-data/TSS_analysis")
+knitr::opts_knit$set(root.dir = "/Users/maikschauerte/Desktop/NAR_Revision/PhageEpitranscriptomics-main/")
 ```
 
 ```{r load-packages, include=FALSE}
@@ -31,7 +31,7 @@ First, we import the annotation for E. coli TSSs derived from dRNA-Seq, adjust c
 
 ```{r}
 
-ec_anno <- read.delim("U00096.3_TSS.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_anno <- read.delim("Differential_RNA-Seq/U00096.3_TSS_dRNA-Seq.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 ec_anno <- ec_anno[,-c(2,6,8)]
 ec_anno[,3] <- as.numeric((as.character(ec_anno[,3])))
 ec_anno[,4] <- as.numeric((as.character(ec_anno[,4])))
@@ -42,14 +42,14 @@ head(ec_anno, n=6)
 Next, we import the annotations for NAD-RNA TSSs in E. coli for both runs (R1: ONTrun_061; R2: ONTrun_065).
 
 ```{r}
-ec_061 <- read.delim("U00096-3_ONTrun_061.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_061 <- read.delim("../Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/TSS_U00096-3_R1.gff3", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 ec_061 <- ec_061[,-c(2,6,8,9)]
 ec_061[,3] <- as.numeric((as.character(ec_061[,3])))
 ec_061[,4] <- as.numeric((as.character(ec_061[,4])))
 colnames(ec_061) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
 head(ec_061, n=6)
 
-ec_065 <- read.delim("U00096-3_ONTrun_065.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+ec_065 <- read.delim("../Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/TSS_U00096-3_R2.gff3", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 ec_065 <- ec_065[,-c(2,6,8,9)]
 ec_065[,3] <- as.numeric((as.character(ec_065[,3])))
 ec_065[,4] <- as.numeric((as.character(ec_065[,4])))
@@ -215,7 +215,7 @@ First, we import the annotation for T4 phage TSSs derived from dRNA-Seq, adjust 
 
 ```{r}
 
-t4_anno <- read.delim("NC_000866.4_TSS.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_anno <- read.delim("Differential_RNA-Seq/NC_000866.4_TSS_dRNA-Seq.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 t4_anno <- t4_anno[,-c(2,6,8)]
 t4_anno[,3] <- as.numeric((as.character(t4_anno[,3])))
 t4_anno[,4] <- as.numeric((as.character(t4_anno[,4])))
@@ -226,18 +226,20 @@ head(t4_anno, n=6)
 Next, we import the annotations for NAD-RNA TSSs in T4 for both runs (R1: ONTrun_061; R2: ONTrun_065).
 
 ```{r}
-t4_061 <- read.delim("NC_000866-4_ONTrun_061.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_061 <- read.delim("/Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/TSS_NC_000866-4_R1.gff3", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 t4_061 <- t4_061[,-c(2,6,8,9)]
 t4_061[,3] <- as.numeric((as.character(t4_061[,3])))
 t4_061[,4] <- as.numeric((as.character(t4_061[,4])))
 colnames(t4_061) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+t4_061 <- t4_061[,1:6]
 head(t4_061, n=6)
 
-t4_065 <- read.delim("NC_000866-4_ONTrun_065.gff", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
+t4_065 <- read.delim("/Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/TSS_NC_000866-4_R2.gff3", comment.char="#", stringsAsFactors=TRUE, header = FALSE)
 t4_065 <- t4_065[,-c(2,6,8,9)]
 t4_065[,3] <- as.numeric((as.character(t4_065[,3])))
 t4_065[,4] <- as.numeric((as.character(t4_065[,4])))
 colnames(t4_065) <- c("Genome", "Type", "Start", "End", "Strand", "Gene")
+t4_065 <- t4_065[,1:6]
 head(t4_065, n=6)
 ```
 
