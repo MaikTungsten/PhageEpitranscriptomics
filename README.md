@@ -13,6 +13,8 @@ NAD captureSeq is a technology to specifically enrich for NAD-capped RNAs from t
 - Counts Tables for both replicates derived from featureCounts
 - Transcription start sites of NAD-RNAs separately for T4 phage and E. coli
 - RMarkdown code and HTML file for calculating overlap between replicates
+- Scripts and data used to test different thresholds for NAD-RNA calling from ONT count data
+- MEME analysis commands used to generate promoter motifs
 
 ## Differential RNA-Seq
 
@@ -20,6 +22,12 @@ Differential RNA-Seq is used to enrich primary transcripts and infer transcripti
 
 - Transcription start site annotations based on analysis with READemption and annogesic for T4 phage and E. coli
 - RMarkdown file and HTML for analysis of TSS overlap with TSSs of NAD-RNAs
+- Code for MEME analysis of diverse sets of promoters
+- Code for inspection of tRNA promoters
+
+## Enzyme kinetics
+
+Code used to fit generalized linear models to enzyme kinetics.
 
 ## References
 
