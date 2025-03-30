@@ -49,7 +49,7 @@ This contains all plasmids used in the study including those for protein express
 ***
 
 ## Authors and acknowledgment
-This repository and all analysis herein has been created by Maik Wolfram-Schauerte. For further acknowledgement see the original publication **LINK**.
+This repository and all analysis herein has been created by Maik Wolfram-Schauerte. For further acknowledgement see the original publication (https://www.biorxiv.org/content/10.1101/2024.04.04.588121v1).
 
 ## License
 This project is accompanied by an MIT License.
