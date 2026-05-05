@@ -1,0 +1,623 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.5.3 (Release date: Sat Jun 10 16:19:38 2023 -0700)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/All_tRNA_Ec_promoters_dRNA.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+alaV                     1.0000     51  aspU                     1.0000     51  
+aspU_2                   1.0000     51  aspV                     1.0000     51  
+aspV_2                   1.0000     51  thrW                     1.0000     51  
+argU                     1.0000     51  glnX                     1.0000     51  
+glnV                     1.0000     51  glnW                     1.0000     51  
+glnU                     1.0000     51  metT                     1.0000     51  
+'lysT',                  1.0000     51  lysT                     1.0000     51  
+valZ                     1.0000     51  serW                     1.0000     51  
+serW_2                   1.0000     51  serT                     1.0000     51  
+serX                     1.0000     51  'rttR',                  1.0000     51  
+tyrT                     1.0000     51  valV                     1.0000     51  
+'ydhR',                  1.0000     51  "3'ETS-leuZ",            1.0000     51  
+glyW                     1.0000     51  glyW_2                   1.0000     51  
+serU                     1.0000     51  'serU',                  1.0000     51  
+'mtfA',                  1.0000     51  asnT                     1.0000     51  
+asnW                     1.0000     51  'asnU',                  1.0000     51  
+asnV                     1.0000     51  proL                     1.0000     51  
+argW                     1.0000     51  alaX                     1.0000     51  
+alaW                     1.0000     51  valU                     1.0000     51  
+'rrlG',                  1.0000     51  'argY',                  1.0000     51  
+serV                     1.0000     51  'metZ',                  1.0000     51  
+metZ                     1.0000     51  metW                     1.0000     51  
+metV                     1.0000     51  glyU                     1.0000     51  
+pheV                     1.0000     51  ileX                     1.0000     51  
+metY                     1.0000     51  metY_2                   1.0000     51  
+leuU                     1.0000     51  alaU                     1.0000     51  
+proK                     1.0000     51  'proK',                  1.0000     51  
+'selC',                  1.0000     51  selC                     1.0000     51  
+selC_2                   1.0000     51  selC_3                   1.0000     51  
+'rrlC',                  1.0000     51  aspT                     1.0000     51  
+aspT_2                   1.0000     51  trpT                     1.0000     51  
+trpT_2                   1.0000     51  'argX',                  1.0000     51  
+argX                     1.0000     51  leuT                     1.0000     51  
+alaT                     1.0000     51  'rrlB',                  1.0000     51  
+thrU                     1.0000     51  thrU_2                   1.0000     51  
+glyT                     1.0000     51  pheU                     1.0000     51  
+glyV                     1.0000     51  glyV_2                   1.0000     51  
+glyX                     1.0000     51  glyY                     1.0000     51  
+leuX                     1.0000     51  leuV                     1.0000     51  
+leuP                     1.0000     51  leuQ                     1.0000     51  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/2024-11-17_T4_promoters_dRNA_all_tRNA -nmotifs 1 -mod oops -dna -minw 51 -maxw 51 /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/All_tRNA_Ec_promoters_dRNA.fasta 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=           51    maxw=           51
+nsites: minsites=       80    maxsites=       80    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            4080    N=              80
+sample: seed=            0    hsfrac=          0
+        searchsize=   4080    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.276 C 0.238 G 0.23 T 0.256 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.276 C 0.238 G 0.23 T 0.256 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1	width =  51  sites =  80  llr = 217  E-value = 8.3e-025
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  222243444333321223324452232232323233244555232222213
+pos.-specific     C  233323322323333223433223233332222222221211324354352
+probability       G  222232122343341232222322333324233223312122123322415
+matrix            T  333322222223225442232223222222332432443233533213131
+
+         bits    2.1                                                    
+                 1.9                                                    
+                 1.7                                                    
+                 1.5                                                    
+Relative         1.3                                                    
+Entropy          1.1                                                    
+(3.9 bits)       0.8                                                    
+                 0.6                                                    
+                 0.4                                                    
+                 0.2               ***     *               *****   * ***
+                 0.0 ---------------------------------------------------
+
+Multilevel           TCTCAAAAAAGACGTTTACCAAATGCGGAGATATTGTAAAAATTCCCCGCG
+consensus            ATCTGCCTTCACACCAGCATCGTCTGCCCCTGGAAAGTTTTTCAGGATCTA
+sequence             CGAGCTT  GTGGA   G ATT GAAAATTGATGCCA     AGTA G   
+                       GA G   T TT      G   ACT TG   C  T       C       
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                                   Site                      
+-------------             ----- ---------            ---------------------------------------------------
+pheU                          1  9.14e-11          . TTACTGAAATTAGGTTGACGAGATGTGCAGATTACGGTTTAATGCGCCCCG           
+metT                          1  3.57e-09          . CCTTGAAAAAGAGGTTGACGCTGCAAGGCTCTATACGCATAATGCGCCCCG           
+serX                          1  9.54e-09          . TTTCAAAAAGTTTGTTGACCTCAGGTCATGATTTCCCTAAATTAGCGCCCG           
+aspV                          1  7.02e-08          . GATGAGAAAAACCGTTGACGAAGGTCGAGGCAATCCGTAATATTCGCCTCG           
+alaW                          1  1.67e-07          . GTTGCAATTTGCCGTTGACACATTCGGGCGGAATTCATATGATGCCGCCCG           
+metY_2                        1  2.01e-07          . ATTAGCAATAAACGTTGACAAAATGTGGCGTGGATCACTATAATGCCTGCA           
+asnT                          1  3.99e-07          . TATGAAATTTAGTGTTGACAGACAAGGTACCGCTAAGTAATATTCGCCCCG           
+asnW                          1  7.43e-07          . TTAAAAAACAGGCTTTGACATTGTGGGTGGGCATCGCTAATATTCGCCTCG           
+proK                          1  2.43e-06          . TTGCTATTAAGGGATTGACGAGGGCGTATCTGCGCAGTAAGATGCGCCCCG           
+'asnU',                       1  8.62e-06          . ATTTAAAAATCGGGTTTGACAAAAGATTTTTCGCCGTTAAGATGTGCCTCA           
+serV                          1  9.67e-06          . TGTAGGAAAAATTGTTTGACTTATAAGTCTCAGAAAGTAATATGTGCGCCA           
+'metZ',                       1  2.80e-05          . TTTACCCAACGTCCTTTCATTGTTCTCTTCTTCAGGTTAAAAAATAAGGCG           
+leuX                          1  3.59e-05          . CGAGCAAGCTGGCGCTTGCATGGTGGCGTGCGACAGGTATAATCCACAACG           
+glyW                          1  4.12e-05          . TGGTGAAAAATATCGTTGACTCATCGCGCCAGGTAAGTAGAATGCAACGCA           
+tyrT                          1  4.73e-05          . TTCTCAACGTAACACTTTACAGCGGCGCGTCATTTGATATGATGCGCCCCG           
+serT                          1  4.73e-05          . AAACAAATTAGGGGTTTACACGCCGCATCGGGATGTTTATAGTGCGCGTCA           
+asnV                          1  5.61e-05          . ATGCATTTCACCCTTTGACATCACCATGCACTGCCATTAATATGCGCCCCG           
+valU                          1  8.66e-05          . CTTTAGAAAATGCGTTGACTCATTTTGAACTCTCCCTATAATGCGACTCCA           
+thrU_2                        1  1.02e-04          . ATGCAATTTTTTAGTTGCATGAACTCGCATGTCTCCATAGAATGCGCGCTA           
+thrW                          1  1.55e-04          . GATTCACAAGGCCATTGACGCATCGCCCGGTTAGTTTTAACCTTGTCCACC           
+lysT                          1  2.11e-04          . CATCGAAATTTTTGTTGCGCTCAAGTCTGAAATCAGTAATATATGCCGCCG           
+leuQ                          1  3.43e-04          . TCGATAATTAACTATTGACGAAAAGCTGAAAACCACTAGAATGCGCCTCCG           
+argU                          1  3.97e-04          . CCAGATCAAAAGCCATTGACTCAGCAAGGGTTGACCGTATAATTCACGCGA           
+alaT                          1  4.87e-04          . GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG           
+alaU                          1  4.87e-04          . GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG           
+alaV                          1  4.87e-04          . GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG           
+aspT_2                        1  5.31e-04          . AATTAAGCAGTAAGCCGGTCATAAAACCGGTGGTTGTAAAAGAATTCGGTG           
+aspU_2                        1  5.31e-04          . AATTAAGCAGTAAGCCGGTCATAAAACCGGTGGTTGTAAAAGAATTCGGTG           
+metZ                          1  1.18e-03          . GGGTAAAAAAAAGGTTGCATGAAAACGCGAGCGGAGTATAGTGCGCATCCA           
+'mtfA',                       1  1.21e-03          . CTCCGTTCAGATGGTTGCCATGATGCCAGGAAATTTGGCATTTTAACAGTC           
+metY                          1  2.04e-03          . AATCCCAGCAGTATTTGCATTTTTTACCCAAAACGAGTAGAATTTGCCACG           
+argX                          1  2.88e-03          . TTTAAAAAGGGACTAGACAGAGGGGTGGGAAGTCCGTATTATCCACCCCCG           
+valZ                          1  3.25e-03          . GTAGGATAACGTTGCGTCAGCAACGGCCCGTAGGGCGAGCGAAGCGAGTCA           
+glyU                          1  4.22e-03          . AGTCAGCAGCGTGGCACTTGCTAAGGAGAGCGTAAGGTTTATAATGCCTTA           
+'proK',                       1  5.95e-03          . ACGTAGAGCTGTACGATACCATCATGGGTTGTCTTGGCTATACTTCACCGG           
+alaX                          1  7.26e-03          . TAGCTCCACCAAATTTTGCACCCAGCAAACTTGGTACGTAAACGCATCGTG           
+glnX                          1  8.27e-03          . CGTACCCCAGCCAATTTATTCAAGACGCTTACCTTGTAAGTGCACCCAGTT           
+ileX                          1  1.21e-02          . GCGCGGTAATGGCTGGATTGCGACACGGAGTTACTTTATAATCCGCTACCA           
+'rttR',                       1  1.23e-02          . TTCCCCCACCACCATCTCAAGCATTACCTCAAAATTTGAATTACCCCTGGT           
+argW                          1  1.26e-02          . AGCGGCAGCGTACTTACCCCGCACTCCATTAGCGGGTATACTCATGCCGCA           
+serW                          1  1.42e-02          . CTATAGTAGCGCCCCGTTGCCACCCATGAGGTTTGGTAGCAAAACAATTTG           
+'serU',                       1  1.44e-02          . GCACGGACAGGGACTGTTAAAATGCCAAATTTCCTGGCATCATGGCAACCA           
+pheV                          1  1.69e-02          . TTTGCCTGACAATGCGTGCAATATCGGCAAAGTGATGATAGATTGTGCAGT           
+leuV                          1  1.79e-02          . CCCCCCCCTCGCACCAAACGAGGCGATATCAAAAAAAGTAAGATGACTGTG           
+leuU                          1  2.05e-02          . TCCGGCTAAGCCGACCAGCGATATCCCGAACTAAAAAGTAGTATCCGTGCC           
+glyV                          1  2.25e-02          . AGCGCCGGAATCCACTTGCGGCGGCGTGATTTTGACGCTAAATTGAACGTC           
+proL                          1  2.29e-02          . GCGAAATATCTTACTTGCAATCGGTGTGGAAAACGGTAGTATTAGCAGCCA           
+selC_2                        1  2.95e-02          . TTCCGCTCATATATCATTGTAAAATATGGGTTTTATATGAACTATAATGCT           
+valV                          1  3.06e-02          . TACGTTTTGCCTCTTGCCACCTTCCCACTCTGCCGCTAATATTCGTCCCCG           
+thrU                          1  3.28e-02          . GCGCATTGTTGAGCACAATGATGTTGAAAAAGTGTGCTAATCTGCCCTCCG           
+metV                          1  3.39e-02          . TCCGGCCCCCGCAACCAATCAAATTTGATGAAGTAAAAGCAGTACGGTGAC           
+leuP                          1  3.70e-02          . TCAAGTCCCCCCCCTCGCACCAAAAACCACGTTGATATTGCTCGCACTGGG           
+aspV_2                        1  3.76e-02          . AGGTCGAGGCAATCCGTAATATTCGCCTCGTTCCCAACGGAACACAACGCG           
+glyT                          1  3.82e-02          . TCTCTCGATATTCAGTGCAGAATGAAAATCAGGTAGCCGAGTTCCAGGATG           
+'ydhR',                       1  4.30e-02          . TGACATGGTGGGGGTCGTTGGTTCGAGTCCAATTGAACGCACCATCCTGCG           
+selC_3                        1  5.14e-02          . AAACTGATCTGGGGGATGTAGAAACTCAAGGAAGTAGCTATAATGCGCCCC           
+serU                          1  9.57e-02          . ATCGAACAGAAAACAGTGACGATCTAACCCTTCAAGAATATTCTACGATTG           
+glyV_2                        1  9.96e-02          . AAACTTTTTTGGGGGGTTGCAGAGGGAAAGATTTCTCGTATAATGCGCCTC           
+trpT_2                        1  1.04e-01          . CGCGATCTTTTGAAAATTAACGTGCTGGATGAAGTGTATTAATATGAATGG           
+selC                          1  1.08e-01          . TGTGATCGTGGTAGCGTTAATTCCGCTCATATATCATTGTAAAATATGGGT           
+serW_2                        1  1.20e-01          . AGTAAAAGGTCGGTTTAACCGGCCTTTTTATTTTGTGATATGTATGAAGTA           
+'selC',                       1  1.21e-01          . TTAACGGACAACACTTCACTCTTCATCTGCTTTTCCTTGATGCTATAGGGG           
+metW                          1  1.25e-01          . TCCGGCCCCCGCAACCAATTAAAATTTGATGAAGTAAAGCAGTACGGTGAC           
+leuT                          1  1.41e-01          . TCGTGGGTTCGAATCCCATTAGCCACCCCATTATTAGAAGTTGTGACAATG           
+'rrlB',                       1  1.87e-01          . CTCACCCTACACGAAAATATCACGCAACGCGTGATAAGCAATTTTCGTGTC           
+'rrlG',                       1  1.87e-01          . CTCACCCTACACGAAAATATCACGCAACGCGTGATAAGCAATTTTCGTGTC           
+glnV                          1  2.17e-01          . CCAAATTCTGAATGTATCGAATATGTTCGGCAAATTCAAAACCAATTTGTT           
+"3'ETS-leuZ",                 1  2.21e-01          . CCGTCTAGTCCGGTTCGACTCCGGAACGCGCCTCCACTTTCTTCCCGAGCC           
+'rrlC',                       1  2.26e-01          . GTCTGATAGGAAGTGAAAAGCAAGGCGTCTTGCGAAGCAGACTGATACGTC           
+glyY                          1  3.95e-01          . TCGTTTCCCGCTCCAAAATTTGAAAGTGCTGTAAGGCACAGACCACCCAAG           
+'argX',                       1  4.73e-01          . CAATGGCATTCCTGATTTGCGTTTTGATCGGCATGTACTTTAATGAAGATA           
+glyX                          1  4.95e-01          . CGTTTCCCGCTCCAAAATTTGAAAAGTGCTGCAAAGCACAGACCACCCAAG           
+'lysT',                       1  5.41e-01          . ACCCTGGTACTGATGGCGCTAAACAGGCACAAAAACGTCTGAACGCGATGT           
+glyW_2                        1  5.56e-01          . AAAGTGGTGAAAAATATCGTTGACTCATCGCGCCAGGTAAGTAGAATGCAA           
+glnU                          1  6.01e-01          . CGAGTTCAAGTCTCGCCTCCCGCACCATTCACCAGAAAGCGTTGTACGGAT           
+trpT                          1  6.79e-01          . TCACGCAGGGGGTCGCGGGTTCGAGTCCCGTCCGTTCCGCCACCCTAATTA           
+'argY',                       1  7.54e-01          . CGGTCAAAAGCTGCATCCGGGGTTCGAATCCCCGCCTCACCGCCATTTGCA           
+glnW                          1  7.64e-01          . CCAGGTACCCCAGCCATCTTCTTCGAGTAAGCGGTTCACCGCCCGGTTATT           
+aspT                          1  9.37e-01          . GGTAGTGTGGGGTCTCCCCATGCGAGAGTAGGGAACTGCCAGGCATCAAAT           
+aspU                          1  9.37e-01          . GGTAGTGTGGGGTCTCCCCATGCGAGAGTAGGGAACTGCCAGGCATCAAAT           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+pheU                              9.1e-11  [+1]
+metT                              3.6e-09  [+1]
+serX                              9.5e-09  [+1]
+aspV                                7e-08  [+1]
+alaW                              1.7e-07  [+1]
+metY_2                              2e-07  [+1]
+asnT                                4e-07  [+1]
+asnW                              7.4e-07  [+1]
+proK                              2.4e-06  [+1]
+'asnU',                           8.6e-06  [+1]
+serV                              9.7e-06  [+1]
+'metZ',                           2.8e-05  [+1]
+leuX                              3.6e-05  [+1]
+glyW                              4.1e-05  [+1]
+tyrT                              4.7e-05  [+1]
+serT                              4.7e-05  [+1]
+asnV                              5.6e-05  [+1]
+valU                              8.7e-05  [+1]
+thrU_2                             0.0001  [+1]
+thrW                              0.00015  [+1]
+lysT                              0.00021  [+1]
+leuQ                              0.00034  [+1]
+argU                               0.0004  [+1]
+alaT                              0.00049  [+1]
+alaU                              0.00049  [+1]
+alaV                              0.00049  [+1]
+aspT_2                            0.00053  [+1]
+aspU_2                            0.00053  [+1]
+metZ                               0.0012  [+1]
+'mtfA',                            0.0012  [+1]
+metY                                0.002  [+1]
+argX                               0.0029  [+1]
+valZ                               0.0033  [+1]
+glyU                               0.0042  [+1]
+'proK',                            0.0059  [+1]
+alaX                               0.0073  [+1]
+glnX                               0.0083  [+1]
+ileX                                0.012  [+1]
+'rttR',                             0.012  [+1]
+argW                                0.013  [+1]
+serW                                0.014  [+1]
+'serU',                             0.014  [+1]
+pheV                                0.017  [+1]
+leuV                                0.018  [+1]
+leuU                                 0.02  [+1]
+glyV                                0.022  [+1]
+proL                                0.023  [+1]
+selC_2                               0.03  [+1]
+valV                                0.031  [+1]
+thrU                                0.033  [+1]
+metV                                0.034  [+1]
+leuP                                0.037  [+1]
+aspV_2                              0.038  [+1]
+glyT                                0.038  [+1]
+'ydhR',                             0.043  [+1]
+selC_3                              0.051  [+1]
+serU                                0.096  [+1]
+glyV_2                                0.1  [+1]
+trpT_2                                0.1  [+1]
+selC                                 0.11  [+1]
+serW_2                               0.12  [+1]
+'selC',                              0.12  [+1]
+metW                                 0.12  [+1]
+leuT                                 0.14  [+1]
+'rrlB',                              0.19  [+1]
+'rrlG',                              0.19  [+1]
+glnV                                 0.22  [+1]
+"3'ETS-leuZ",                        0.22  [+1]
+'rrlC',                              0.23  [+1]
+glyY                                 0.39  [+1]
+'argX',                              0.47  [+1]
+glyX                                 0.49  [+1]
+'lysT',                              0.54  [+1]
+glyW_2                               0.56  [+1]
+glnU                                  0.6  [+1]
+trpT                                 0.68  [+1]
+'argY',                              0.75  [+1]
+glnW                                 0.76  [+1]
+aspT                                 0.94  [+1]
+aspU                                 0.94  [+1]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR width=51 seqs=80
+pheU                     (    1) TTACTGAAATTAGGTTGACGAGATGTGCAGATTACGGTTTAATGCGCCCCG  1 
+metT                     (    1) CCTTGAAAAAGAGGTTGACGCTGCAAGGCTCTATACGCATAATGCGCCCCG  1 
+serX                     (    1) TTTCAAAAAGTTTGTTGACCTCAGGTCATGATTTCCCTAAATTAGCGCCCG  1 
+aspV                     (    1) GATGAGAAAAACCGTTGACGAAGGTCGAGGCAATCCGTAATATTCGCCTCG  1 
+alaW                     (    1) GTTGCAATTTGCCGTTGACACATTCGGGCGGAATTCATATGATGCCGCCCG  1 
+metY_2                   (    1) ATTAGCAATAAACGTTGACAAAATGTGGCGTGGATCACTATAATGCCTGCA  1 
+asnT                     (    1) TATGAAATTTAGTGTTGACAGACAAGGTACCGCTAAGTAATATTCGCCCCG  1 
+asnW                     (    1) TTAAAAAACAGGCTTTGACATTGTGGGTGGGCATCGCTAATATTCGCCTCG  1 
+proK                     (    1) TTGCTATTAAGGGATTGACGAGGGCGTATCTGCGCAGTAAGATGCGCCCCG  1 
+'asnU',                  (    1) ATTTAAAAATCGGGTTTGACAAAAGATTTTTCGCCGTTAAGATGTGCCTCA  1 
+serV                     (    1) TGTAGGAAAAATTGTTTGACTTATAAGTCTCAGAAAGTAATATGTGCGCCA  1 
+'metZ',                  (    1) TTTACCCAACGTCCTTTCATTGTTCTCTTCTTCAGGTTAAAAAATAAGGCG  1 
+leuX                     (    1) CGAGCAAGCTGGCGCTTGCATGGTGGCGTGCGACAGGTATAATCCACAACG  1 
+glyW                     (    1) TGGTGAAAAATATCGTTGACTCATCGCGCCAGGTAAGTAGAATGCAACGCA  1 
+tyrT                     (    1) TTCTCAACGTAACACTTTACAGCGGCGCGTCATTTGATATGATGCGCCCCG  1 
+serT                     (    1) AAACAAATTAGGGGTTTACACGCCGCATCGGGATGTTTATAGTGCGCGTCA  1 
+asnV                     (    1) ATGCATTTCACCCTTTGACATCACCATGCACTGCCATTAATATGCGCCCCG  1 
+valU                     (    1) CTTTAGAAAATGCGTTGACTCATTTTGAACTCTCCCTATAATGCGACTCCA  1 
+thrU_2                   (    1) ATGCAATTTTTTAGTTGCATGAACTCGCATGTCTCCATAGAATGCGCGCTA  1 
+thrW                     (    1) GATTCACAAGGCCATTGACGCATCGCCCGGTTAGTTTTAACCTTGTCCACC  1 
+lysT                     (    1) CATCGAAATTTTTGTTGCGCTCAAGTCTGAAATCAGTAATATATGCCGCCG  1 
+leuQ                     (    1) TCGATAATTAACTATTGACGAAAAGCTGAAAACCACTAGAATGCGCCTCCG  1 
+argU                     (    1) CCAGATCAAAAGCCATTGACTCAGCAAGGGTTGACCGTATAATTCACGCGA  1 
+alaT                     (    1) GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG  1 
+alaU                     (    1) GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG  1 
+alaV                     (    1) GCCTACCAAATTTGCACGGCAAATTTGAAGAGGTTTTAACTACATGTTATG  1 
+aspT_2                   (    1) AATTAAGCAGTAAGCCGGTCATAAAACCGGTGGTTGTAAAAGAATTCGGTG  1 
+aspU_2                   (    1) AATTAAGCAGTAAGCCGGTCATAAAACCGGTGGTTGTAAAAGAATTCGGTG  1 
+metZ                     (    1) GGGTAAAAAAAAGGTTGCATGAAAACGCGAGCGGAGTATAGTGCGCATCCA  1 
+'mtfA',                  (    1) CTCCGTTCAGATGGTTGCCATGATGCCAGGAAATTTGGCATTTTAACAGTC  1 
+metY                     (    1) AATCCCAGCAGTATTTGCATTTTTTACCCAAAACGAGTAGAATTTGCCACG  1 
+argX                     (    1) TTTAAAAAGGGACTAGACAGAGGGGTGGGAAGTCCGTATTATCCACCCCCG  1 
+valZ                     (    1) GTAGGATAACGTTGCGTCAGCAACGGCCCGTAGGGCGAGCGAAGCGAGTCA  1 
+glyU                     (    1) AGTCAGCAGCGTGGCACTTGCTAAGGAGAGCGTAAGGTTTATAATGCCTTA  1 
+'proK',                  (    1) ACGTAGAGCTGTACGATACCATCATGGGTTGTCTTGGCTATACTTCACCGG  1 
+alaX                     (    1) TAGCTCCACCAAATTTTGCACCCAGCAAACTTGGTACGTAAACGCATCGTG  1 
+glnX                     (    1) CGTACCCCAGCCAATTTATTCAAGACGCTTACCTTGTAAGTGCACCCAGTT  1 
+ileX                     (    1) GCGCGGTAATGGCTGGATTGCGACACGGAGTTACTTTATAATCCGCTACCA  1 
+'rttR',                  (    1) TTCCCCCACCACCATCTCAAGCATTACCTCAAAATTTGAATTACCCCTGGT  1 
+argW                     (    1) AGCGGCAGCGTACTTACCCCGCACTCCATTAGCGGGTATACTCATGCCGCA  1 
+serW                     (    1) CTATAGTAGCGCCCCGTTGCCACCCATGAGGTTTGGTAGCAAAACAATTTG  1 
+'serU',                  (    1) GCACGGACAGGGACTGTTAAAATGCCAAATTTCCTGGCATCATGGCAACCA  1 
+pheV                     (    1) TTTGCCTGACAATGCGTGCAATATCGGCAAAGTGATGATAGATTGTGCAGT  1 
+leuV                     (    1) CCCCCCCCTCGCACCAAACGAGGCGATATCAAAAAAAGTAAGATGACTGTG  1 
+leuU                     (    1) TCCGGCTAAGCCGACCAGCGATATCCCGAACTAAAAAGTAGTATCCGTGCC  1 
+glyV                     (    1) AGCGCCGGAATCCACTTGCGGCGGCGTGATTTTGACGCTAAATTGAACGTC  1 
+proL                     (    1) GCGAAATATCTTACTTGCAATCGGTGTGGAAAACGGTAGTATTAGCAGCCA  1 
+selC_2                   (    1) TTCCGCTCATATATCATTGTAAAATATGGGTTTTATATGAACTATAATGCT  1 
+valV                     (    1) TACGTTTTGCCTCTTGCCACCTTCCCACTCTGCCGCTAATATTCGTCCCCG  1 
+thrU                     (    1) GCGCATTGTTGAGCACAATGATGTTGAAAAAGTGTGCTAATCTGCCCTCCG  1 
+metV                     (    1) TCCGGCCCCCGCAACCAATCAAATTTGATGAAGTAAAAGCAGTACGGTGAC  1 
+leuP                     (    1) TCAAGTCCCCCCCCTCGCACCAAAAACCACGTTGATATTGCTCGCACTGGG  1 
+aspV_2                   (    1) AGGTCGAGGCAATCCGTAATATTCGCCTCGTTCCCAACGGAACACAACGCG  1 
+glyT                     (    1) TCTCTCGATATTCAGTGCAGAATGAAAATCAGGTAGCCGAGTTCCAGGATG  1 
+'ydhR',                  (    1) TGACATGGTGGGGGTCGTTGGTTCGAGTCCAATTGAACGCACCATCCTGCG  1 
+selC_3                   (    1) AAACTGATCTGGGGGATGTAGAAACTCAAGGAAGTAGCTATAATGCGCCCC  1 
+serU                     (    1) ATCGAACAGAAAACAGTGACGATCTAACCCTTCAAGAATATTCTACGATTG  1 
+glyV_2                   (    1) AAACTTTTTTGGGGGGTTGCAGAGGGAAAGATTTCTCGTATAATGCGCCTC  1 
+trpT_2                   (    1) CGCGATCTTTTGAAAATTAACGTGCTGGATGAAGTGTATTAATATGAATGG  1 
+selC                     (    1) TGTGATCGTGGTAGCGTTAATTCCGCTCATATATCATTGTAAAATATGGGT  1 
+serW_2                   (    1) AGTAAAAGGTCGGTTTAACCGGCCTTTTTATTTTGTGATATGTATGAAGTA  1 
+'selC',                  (    1) TTAACGGACAACACTTCACTCTTCATCTGCTTTTCCTTGATGCTATAGGGG  1 
+metW                     (    1) TCCGGCCCCCGCAACCAATTAAAATTTGATGAAGTAAAGCAGTACGGTGAC  1 
+leuT                     (    1) TCGTGGGTTCGAATCCCATTAGCCACCCCATTATTAGAAGTTGTGACAATG  1 
+'rrlB',                  (    1) CTCACCCTACACGAAAATATCACGCAACGCGTGATAAGCAATTTTCGTGTC  1 
+'rrlG',                  (    1) CTCACCCTACACGAAAATATCACGCAACGCGTGATAAGCAATTTTCGTGTC  1 
+glnV                     (    1) CCAAATTCTGAATGTATCGAATATGTTCGGCAAATTCAAAACCAATTTGTT  1 
+"3'ETS-leuZ",            (    1) CCGTCTAGTCCGGTTCGACTCCGGAACGCGCCTCCACTTTCTTCCCGAGCC  1 
+'rrlC',                  (    1) GTCTGATAGGAAGTGAAAAGCAAGGCGTCTTGCGAAGCAGACTGATACGTC  1 
+glyY                     (    1) TCGTTTCCCGCTCCAAAATTTGAAAGTGCTGTAAGGCACAGACCACCCAAG  1 
+'argX',                  (    1) CAATGGCATTCCTGATTTGCGTTTTGATCGGCATGTACTTTAATGAAGATA  1 
+glyX                     (    1) CGTTTCCCGCTCCAAAATTTGAAAAGTGCTGCAAAGCACAGACCACCCAAG  1 
+'lysT',                  (    1) ACCCTGGTACTGATGGCGCTAAACAGGCACAAAAACGTCTGAACGCGATGT  1 
+glyW_2                   (    1) AAAGTGGTGAAAAATATCGTTGACTCATCGCGCCAGGTAAGTAGAATGCAA  1 
+glnU                     (    1) CGAGTTCAAGTCTCGCCTCCCGCACCATTCACCAGAAAGCGTTGTACGGAT  1 
+trpT                     (    1) TCACGCAGGGGGTCGCGGGTTCGAGTCCCGTCCGTTCCGCCACCCTAATTA  1 
+'argY',                  (    1) CGGTCAAAAGCTGCATCCGGGGTTCGAATCCCCGCCTCACCGCCATTTGCA  1 
+glnW                     (    1) CCAGGTACCCCAGCCATCTTCTTCGAGTAAGCGGTTCACCGCCCGGTTATT  1 
+aspT                     (    1) GGTAGTGTGGGGTCTCCCCATGCGAGAGTAGGGAACTGCCAGGCATCAAAT  1 
+aspU                     (    1) GGTAGTGTGGGGTCTCCCCATGCGAGAGTAGGGAACTGCCAGGCATCAAAT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 51 n= 80 bayes= -664.386 E= 8.3e-025 
+   -22      0    -29     40 
+   -66     34     -3     23 
+   -22      7    -20     29 
+   -46     27      5     10 
+    34    -16     26    -66 
+    18     21    -20    -27 
+    44     27    -74    -36 
+    62    -34    -50    -19 
+    54    -34    -39    -11 
+    -1     14     12    -27 
+    -7    -66     61    -11 
+   -14      7     12     -4 
+   -14     21     12    -19 
+   -46      7     71    -55 
+  -100     14    -88     89 
+   -29    -34    -62     77 
+   -76    -55     50     45 
+    29      7     -3    -45 
+    12     66    -62    -55 
+   -22     27     -3     -4 
+    34     14    -50    -19 
+    39    -66     12    -11 
+    78    -44    -62    -36 
+   -29     14      5     10 
+   -29     -8     44    -11 
+   -14     14     19    -19 
+   -29     14     50    -45 
+   -29     21     38    -36 
+    18      7    -11    -19 
+   -56      0     71    -36 
+    18    -55      5     17 
+   -22    -66     26     40 
+    12    -16     19    -19 
+   -22    -34    -11     50 
+    12    -16    -50     34 
+    -7    -16     44    -27 
+   -38    -66     32     45 
+    39    -55    -88     45 
+    66   -108    -39     10 
+    86    -44   -120    -19 
+    74   -144    -29      3 
+    78   -144    -62     17 
+   -38      7   -162     85 
+    -7     -8      5     10 
+   -88     56     12     -4 
+   -22     39     38    -77 
+   -38    104    -39   -104 
+   -66     56    -20     10 
+   -56     39     66    -90 
+  -146    100   -103     29 
+   -14    -66    101    -90 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 51 nsites= 80 E= 8.3e-025 
+ 0.237500  0.237500  0.187500  0.337500 
+ 0.175000  0.300000  0.225000  0.300000 
+ 0.237500  0.250000  0.200000  0.312500 
+ 0.200000  0.287500  0.237500  0.275000 
+ 0.350000  0.212500  0.275000  0.162500 
+ 0.312500  0.275000  0.200000  0.212500 
+ 0.375000  0.287500  0.137500  0.200000 
+ 0.425000  0.187500  0.162500  0.225000 
+ 0.400000  0.187500  0.175000  0.237500 
+ 0.275000  0.262500  0.250000  0.212500 
+ 0.262500  0.150000  0.350000  0.237500 
+ 0.250000  0.250000  0.250000  0.250000 
+ 0.250000  0.275000  0.250000  0.225000 
+ 0.200000  0.250000  0.375000  0.175000 
+ 0.137500  0.262500  0.125000  0.475000 
+ 0.225000  0.187500  0.150000  0.437500 
+ 0.162500  0.162500  0.325000  0.350000 
+ 0.337500  0.250000  0.225000  0.187500 
+ 0.300000  0.375000  0.150000  0.175000 
+ 0.237500  0.287500  0.225000  0.250000 
+ 0.350000  0.262500  0.162500  0.225000 
+ 0.362500  0.150000  0.250000  0.237500 
+ 0.475000  0.175000  0.150000  0.200000 
+ 0.225000  0.262500  0.237500  0.275000 
+ 0.225000  0.225000  0.312500  0.237500 
+ 0.250000  0.262500  0.262500  0.225000 
+ 0.225000  0.262500  0.325000  0.187500 
+ 0.225000  0.275000  0.300000  0.200000 
+ 0.312500  0.250000  0.212500  0.225000 
+ 0.187500  0.237500  0.375000  0.200000 
+ 0.312500  0.162500  0.237500  0.287500 
+ 0.237500  0.150000  0.275000  0.337500 
+ 0.300000  0.212500  0.262500  0.225000 
+ 0.237500  0.187500  0.212500  0.362500 
+ 0.300000  0.212500  0.162500  0.325000 
+ 0.262500  0.212500  0.312500  0.212500 
+ 0.212500  0.150000  0.287500  0.350000 
+ 0.362500  0.162500  0.125000  0.350000 
+ 0.437500  0.112500  0.175000  0.275000 
+ 0.500000  0.175000  0.100000  0.225000 
+ 0.462500  0.087500  0.187500  0.262500 
+ 0.475000  0.087500  0.150000  0.287500 
+ 0.212500  0.250000  0.075000  0.462500 
+ 0.262500  0.225000  0.237500  0.275000 
+ 0.150000  0.350000  0.250000  0.250000 
+ 0.237500  0.312500  0.300000  0.150000 
+ 0.212500  0.487500  0.175000  0.125000 
+ 0.175000  0.350000  0.200000  0.275000 
+ 0.187500  0.312500  0.362500  0.137500 
+ 0.100000  0.475000  0.112500  0.312500 
+ 0.250000  0.150000  0.462500  0.137500 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNNNVNHWWNDNNVYWKNMNHDANNNNNNNNDNNNNDWWAWWYNBVCNVYR MEME-1 regular expression
+--------------------------------------------------------------------------------
+[TAC][CTG][TCAG][CTGA][AGC][ACTG][ACT][AT][AT][ACGT][GAT][ACGT][CAGT][GCA][TC][TA][TG][ACG][CA][CTAG][ACT][AGT][AT][TCGA][GTAC][CGAT][GCA][GCAT][ACTG][GCT][ATG][TGA][AGTC][TAG][TAC][GACT][TGA][AT][AT][AT][AT][AT][TCA][TAGC][CGT][CGA][CA][CTG][GC][CT][GA]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.02 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+alaV                             4.87e-04  51
+aspU                             9.37e-01  51
+aspU_2                           5.31e-04  51
+aspV                             7.02e-08  [+1(7.02e-08)]
+aspV_2                           3.76e-02  51
+thrW                             1.55e-04  51
+argU                             3.97e-04  51
+glnX                             8.27e-03  51
+glnV                             2.17e-01  51
+glnW                             7.64e-01  51
+glnU                             6.01e-01  51
+metT                             3.57e-09  [+1(3.57e-09)]
+'lysT',                          5.41e-01  51
+lysT                             2.11e-04  51
+valZ                             3.25e-03  51
+serW                             1.42e-02  51
+serW_2                           1.20e-01  51
+serT                             4.73e-05  [+1(4.73e-05)]
+serX                             9.54e-09  [+1(9.54e-09)]
+'rttR',                          1.23e-02  51
+tyrT                             4.73e-05  [+1(4.73e-05)]
+valV                             3.06e-02  51
+'ydhR',                          4.30e-02  51
+"3'ETS-leuZ",                    2.21e-01  51
+glyW                             4.12e-05  [+1(4.12e-05)]
+glyW_2                           5.56e-01  51
+serU                             9.57e-02  51
+'serU',                          1.44e-02  51
+'mtfA',                          1.21e-03  51
+asnT                             3.99e-07  [+1(3.99e-07)]
+asnW                             7.43e-07  [+1(7.43e-07)]
+'asnU',                          8.62e-06  [+1(8.62e-06)]
+asnV                             5.61e-05  [+1(5.61e-05)]
+proL                             2.29e-02  51
+argW                             1.26e-02  51
+alaX                             7.26e-03  51
+alaW                             1.67e-07  [+1(1.67e-07)]
+valU                             8.66e-05  [+1(8.66e-05)]
+'rrlG',                          1.87e-01  51
+'argY',                          7.54e-01  51
+serV                             9.67e-06  [+1(9.67e-06)]
+'metZ',                          2.80e-05  [+1(2.80e-05)]
+metZ                             1.18e-03  51
+metW                             1.25e-01  51
+metV                             3.39e-02  51
+glyU                             4.22e-03  51
+pheV                             1.69e-02  51
+ileX                             1.21e-02  51
+metY                             2.04e-03  51
+metY_2                           2.01e-07  [+1(2.01e-07)]
+leuU                             2.05e-02  51
+alaU                             4.87e-04  51
+proK                             2.43e-06  [+1(2.43e-06)]
+'proK',                          5.95e-03  51
+'selC',                          1.21e-01  51
+selC                             1.08e-01  51
+selC_2                           2.95e-02  51
+selC_3                           5.14e-02  51
+'rrlC',                          2.26e-01  51
+aspT                             9.37e-01  51
+aspT_2                           5.31e-04  51
+trpT                             6.79e-01  51
+trpT_2                           1.04e-01  51
+'argX',                          4.73e-01  51
+argX                             2.88e-03  51
+leuT                             1.41e-01  51
+alaT                             4.87e-04  51
+'rrlB',                          1.87e-01  51
+thrU                             3.28e-02  51
+thrU_2                           1.02e-04  51
+glyT                             3.82e-02  51
+pheU                             9.14e-11  [+1(9.14e-11)]
+glyV                             2.25e-02  51
+glyV_2                           9.96e-02  51
+glyX                             4.95e-01  51
+glyY                             3.95e-01  51
+leuX                             3.59e-05  [+1(3.59e-05)]
+leuV                             1.79e-02  51
+leuP                             3.70e-02  51
+leuQ                             3.43e-04  51
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: iMac-3.local
+
+********************************************************************************

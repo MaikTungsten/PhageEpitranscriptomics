@@ -1,0 +1,938 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.5.3 (Release date: Sat Jun 10 16:19:38 2023 -0700)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/All_dRNA_T4_promoters.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+rIIA.1                   1.0000     51  60                       1.0000     51  
+'60',                    1.0000     51  '60A',                   1.0000     51  
+'39',                    1.0000     51  cef                      1.0000     51  
+motB                     1.0000     51  'motB.1',                1.0000     51  
+motB.2                   1.0000     51  'dda.1',                 1.0000     51  
+srd                      1.0000     51  modA                     1.0000     51  
+modB                     1.0000     51  mrh.2                    1.0000     51  
+soc                      1.0000     51  56                       1.0000     51  
+56A                      1.0000     51  dam                      1.0000     51  
+damA                     1.0000     51  sp                       1.0000     51  
+61.4                     1.0000     51  dmd                      1.0000     51  
+'41',                    1.0000     51  uvsX                     1.0000     51  
+'uvsX',                  1.0000     51  42                       1.0000     51  
+imm.1                    1.0000     51  43                       1.0000     51  
+45                       1.0000     51  45.2                     1.0000     51  
+'45.2',                  1.0000     51  46                       1.0000     51  
+'46',                    1.0000     51  '46.2',                  1.0000     51  
+'47',                    1.0000     51  55                       1.0000     51  
+55.6                     1.0000     51  nrdG                     1.0000     51  
+'mobC',                  1.0000     51  'I-TevII',               1.0000     51  
+'I-TevIIA',              1.0000     51  49                       1.0000     51  
+'nrdC',                  1.0000     51  nrdC.4                   1.0000     51  
+nrdC.7                   1.0000     51  nrdC.7A                  1.0000     51  
+nrdC.8                   1.0000     51  nrdC.10                  1.0000     51  
+'nrdC.11',               1.0000     51  mobD.2                   1.0000     51  
+'mobD.2',                1.0000     51  mobD.5                   1.0000     51  
+rI.1                     1.0000     51  'tk.3',                  1.0000     51  
+'vs',                    1.0000     51  regB                     1.0000     51  
+'vs.5',                  1.0000     51  'vs.7',                  1.0000     51  
+denV                     1.0000     51  'ipIII',                 1.0000     51  
+e                        1.0000     51  eA                       1.0000     51  
+'e',                     1.0000     51  e.8                      1.0000     51  
+T4s001                   1.0000     51  'T4s002',                1.0000     51  
+T4t008                   1.0000     51  trna.4                   1.0000     51  
+trna.4A                  1.0000     51  ipI                      1.0000     51  
+'57A',                   1.0000     51  1                        1.0000     51  
+1A                       1.0000     51  3                        1.0000     51  
+'4',                     1.0000     51  '53',                    1.0000     51  
+5.1                      1.0000     51  '5.4',                   1.0000     51  
+6                        1.0000     51  6A                       1.0000     51  
+7                        1.0000     51  8                        1.0000     51  
+'10',                    1.0000     51  10                       1.0000     51  
+11                       1.0000     51  wac                      1.0000     51  
+'13',                    1.0000     51  17                       1.0000     51  
+18                       1.0000     51  19                       1.0000     51  
+20                       1.0000     51  '67',                    1.0000     51  
+68                       1.0000     51  22                       1.0000     51  
+'segD',                  1.0000     51  '24',                    1.0000     51  
+24.3                     1.0000     51  'inh',                   1.0000     51  
+'segE',                  1.0000     51  'uvsW',                  1.0000     51  
+uvsW                     1.0000     51  uvsY.-2                  1.0000     51  
+uvsY                     1.0000     51  '48',                    1.0000     51  
+alt.-3                   1.0000     51  alt.-3A                  1.0000     51  
+'alt.-1',                1.0000     51  alt                      1.0000     51  
+'30',                    1.0000     51  30.6                     1.0000     51  
+30.7                     1.0000     51  30.8                     1.0000     51  
+rIII                     1.0000     51  31                       1.0000     51  
+cd.2                     1.0000     51  'pseT.1',                1.0000     51  
+alc                      1.0000     51  rnlA                     1.0000     51  
+'I-TevIII',              1.0000     51  'I-TevIIIA',             1.0000     51  
+'nrdB',                  1.0000     51  td                       1.0000     51  
+'I-TevI',                1.0000     51  'I-TevIA',               1.0000     51  
+'I-TevIB',               1.0000     51  'td',                    1.0000     51  
+frd.1                    1.0000     51  frd.3                    1.0000     51  
+'32',                    1.0000     51  '33',                    1.0000     51  
+'dsbA',                  1.0000     51  'rnh',                   1.0000     51  
+'34',                    1.0000     51  34                       1.0000     51  
+34A                      1.0000     51  34B                      1.0000     51  
+35                       1.0000     51  '37',                    1.0000     51  
+37                       1.0000     51  37A                      1.0000     51  
+t                        1.0000     51  tA                       1.0000     51  
+'asiA',                  1.0000     51  'arn.1',                 1.0000     51  
+arn.4                    1.0000     51  motA                     1.0000     51  
+'52',                    1.0000     51  'ndd.3',                 1.0000     51  
+ndd.4                    1.0000     51  ndd.6                    1.0000     51  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/2024-11-03_T4_promoters_dRNA_all -nmotifs 1 -mod oops -dna -minw 51 -maxw 51 /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/All_dRNA_T4_promoters.fasta 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=           51    maxw=           51
+nsites: minsites=      150    maxsites=      150    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            7650    N=             150
+sample: seed=            0    hsfrac=          0
+        searchsize=   7650    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.356 C 0.139 G 0.166 T 0.34 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.356 C 0.139 G 0.166 T 0.34 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1	width =  51  sites = 150  llr = 633  E-value = 3.7e-157
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  333344434453233243424322334444442232233647825454326
+pos.-specific     C  12112223121231111113122222212221221:1:::1::::212321
+probability       G  22222221211312321111322212221221223353:::11:1211113
+matrix            T  444433233332443455332343432332344435246442173332361
+
+         bits    2.8                                                    
+                 2.6                                                    
+                 2.3                                                    
+                 2.0                                                    
+Relative         1.7                                                    
+Entropy          1.4                                                    
+(6.1 bits)       1.1                                                    
+                 0.9                                                    
+                 0.6                                           **       
+                 0.3                    *               ***** ****    **
+                 0.0 ---------------------------------------------------
+
+Multilevel           TTTTAAAAAAAATTGTTTACATTTTAAAAAATTTATGTTATAATAAAATTA
+consensus            AAAATTTTTTTGCATAAATTGAAAATTTTGTAAATGTGATAT ATTTTAAG
+sequence             G G    C   TAGAG   ATC CCCG  T  GGG AA         CC  
+                                            G                           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                                   Site                      
+-------------             ----- ---------            ---------------------------------------------------
+ndd.6                         1  1.83e-12          . AATTTCACAAAACAGTTTACATACCACAAGGACCGTGGTACTATACAACTA           
+motA                          1  2.43e-12          . TTTTTCACAAAACGGTTTACAACCAAAGCATACTGTGGTACTATACAACTA           
+e.8                           1  1.09e-11          . TTTTTCACAAAACTGTTTACATCCTTGTTCTTCCATGGTACTATACAACTA           
+frd.3                         1  1.25e-11          . TTTTTCACAAAACGGTTTACAAGCATAAAGCTTTATGGTACTATACAACTA           
+nrdC.10                       1  1.25e-11          . TTTTTCACAAAACGGTTTACAAGCATAAAGCTTTATGGTACTATACAACTA           
+imm.1                         1  9.57e-11          . TTTTTCACAAAACTGTTTACAAGACTGTTCTTCCATGGTACTATACAACTA           
+ndd.4                         1  8.90e-10          . TTTTTAAAAAAGTTGTTTACAAGACTGTTCTTCCGTGGTACTATTACCCTA           
+55.6                          1  8.90e-10          . TTTTTCACAAAGTTGTTTACAACAAGTTCAAACCGTGGTATTATTAACATA           
+mobD.5                        1  1.24e-09          . TTTTCATTTTACCGGTTTACTTTCCGTTTGAGCTGTGGTACTATACAACCA           
+nrdC.8                        1  1.73e-09          . AGTTTCTTTTAGTTGTTTACAAGACCGTTCCTCTGTGGTACTATACAACTA           
+mrh.2                         1  2.40e-09          . TTTTCATTTAAATGGTTTACTTTCCAAAATGAGTATGGTATAATAGAATTA           
+alc                           1  9.34e-09          . AAGGATACTAAGTTGTTTACAAGTCCCTCGTGTTGTGTTATAGTAGTCTTA           
+nrdC.4                        1  9.34e-09          . AATGCACTGAACTAGTTTACTTTGCCACAAGGATGTGGTATAATGTTCTTA           
+frd.1                         1  2.52e-08          . ACTTTCAAAAAGTAGTTTACATCAGGGTAGTAGTGTGATACTATTACCCTA           
+motB.2                        1  2.52e-08          . AACGATAAAAAGTTGTTTACTTCCTCGGTTAGTTGTGGTACTATAACACCA           
+alt.-3A                       1  3.06e-08          . AAGTTCAAAATGTAGTTTACAAGTCCCTCGTGTTGTGTTATAGTAGTCTTA           
+regB                          1  3.06e-08          . TTTAAAGAATAACTGTTTACTTTTCCTCTTGACTGTGGTATAATTTTTCTA           
+30.8                          1  1.13e-07          . GATTGCACAAAGTTGTTTACAGTATAGTTCCTTTGTGATAGTATTATCTTA           
+trna.4                        1  1.35e-07          . TATTTCACAAAGTTGTTTACATAGGGTTTTAGCTGTGATACTATTACCCTA           
+ipI                           1  1.77e-07          . AATTTCACAAAGTTGTTTACATACTGATGAGGTAGTGATACTATTACCTCA           
+nrdC.7A                       1  3.85e-07          . AATACGGTACTCGCATAACCGCTTTATACCAAGGATGGTATAATGGTTCTA           
+cd.2                          1  4.55e-07          . AAAGCGATTTAATGGTTTACTTTACGGTAGAGTTGTGATATTATAGCTCTA           
+motB                          1  6.90e-07          . ATTTTGAATTAATAGTTTACAAACTCTTGGGACCAGAGTATAATGGTCCCG           
+dmd                           1  1.67e-06          . GAATTAAAATTTTAGTTTACAAGCTGACAAGACTATGGTATAGTAGTCTTG           
+modA                          1  1.80e-06          . TAAACAACTTTATGAAAAATGCTTTAAAACTTTCATGGTATAATGAATCTA           
+'asiA',                       1  2.65e-06          . AATTACACAGACCAGTTTACAAATCAAGCGTCTGATGATATTATAACAAAG           
+mobD.2                        1  3.32e-06          . AACGTCATTTAATGGTTTACAAGTTGACAAGATTATGGTATAGTAATCTTG           
+'segD',                       1  4.48e-06          . CTATTTATAAAGTTATTTACAAGACCAAAGTAATATGATATTATAATCATA           
+alt.-3                        1  1.13e-05          . GCGTTATTCCTGCTGATAATGCTTTTAACGAAGCGGTTTACGATGAATTTA           
+T4t008                        1  1.22e-05          . TCATCATAAATGGTAAATATGCTTTAAGAATTATTTGTTATTATTAACTCA           
+cef                           1  1.49e-05          . TTTTTCATAAAACTATATACATCAGTAGTTGATTATGGTACTATATCAATA           
+'60A',                        1  1.49e-05          . CTGCAAAAGCAGCTGAACTTGAAAAAGCGAAACCATGGTATAATAAATCAG           
+68                            1  2.09e-05          . GCTTTGACGAATTGTCTTCTGCTTTAAATAAAGACGATATAAATACAATTG           
+modB                          1  3.11e-05          . TAATTCAAAAAGTTGTTTACTTTCCTTTCTAACGATGATATGATAGCTTCT           
+'33',                         1  3.77e-05          . TTAAAGAAGCATCTGATCATAAACTGAAAATTTCCGGTTATAATGAACTGA           
+uvsY                          1  3.77e-05          . TCCAGTAATAGAGTATAATGCTTCACGTTAAAACGTGGTATAATGAATCTA           
+sp                            1  4.28e-05          . ATTTTAAAATAACTGTTTACTTTTGTTGGAAATTGAGATACTATATAAACA           
+'32',                         1  4.56e-05          . TTGGAAATTATCTCATATTGCTTACGAGAATTATGTGTTATTATTATCCTC           
+'nrdB',                       1  4.56e-05          . GCTGCTGCTAAAGTCGGCGTGCTTAATCCGATGTATGGTACAATTTCTCCG           
+'4',                          1  7.48e-05          . TCGGATCAAAAAATGTAAAGAGCATGGGCCCTCCTGTTTATAAATATATTA           
+'vs',                         1  7.48e-05          . ATTCAGCTTCCTGGGCGTACATTGAACTTTCTTATTGGTTAAATATACATA           
+'41',                         1  8.44e-05          . AGAAAAGCTGAGTTAGCTCCTCATGTAGAAAAATGTATTACAATGCAACTG           
+e                             1  8.96e-05          . TTCGCGGAATTCTGAGAAATGCTAAATTAAAACCGGTTTATGATTCTCTTG           
+nrdG                          1  1.14e-04          . TCTTCGTCACTGGATGTTTGCATAAATGCGAAGGTTGTTATAATCGTAGTA           
+'dda.1',                      1  1.28e-04          . AAGTTGTCAGAAGCAGAAATGCAATATGATATGTGTGATAAAATTATTCAA           
+'I-TevIIIA',                  1  1.43e-04          . AAACTAGCAGCCAAGGTTTTGCTTGCACCTTTAATTAGTATAATATAAATA           
+'60',                         1  1.43e-04          . ATTATAAACGAACGGGAGTTGCTAAATGGAAATCAGTTAATAATATAACTG           
+43                            1  2.38e-04          . TGGTAATTAAGCAAGGGGCTTCGGCCCCTTATTTGGAGTATAATATATCAA           
+denV                          1  2.52e-04          . TAAAGATAAATAACAGTTTACATCTCCTGTAGGTATGATACTATAGACCTA           
+10                            1  2.66e-04          . GACAAACAGACTTTTTAGATGTTTTCCGTGGAACTAGTTATAATGTAAATA           
+'48',                         1  2.81e-04          . GCCTATGAAGACCTTAAAAAACGGATGGATGACCCGGATTTAAATAATTCA           
+dam                           1  3.13e-04          . AGTGAAAAACAATATAATCACTTTAAACAAAATTGTGATAAAATAATCTTT           
+'ndd.3',                      1  3.48e-04          . AAAATGAAAAAGATTATTAAAGCTATATGGAATGTAGTTATAATACTAATA           
+'rnh',                        1  3.88e-04          . AAGTATTTATACTTGTTTACTTTAAGATTTGGATGGTATATAATAGAAATC           
+'nrdC',                       1  3.88e-04          . ACTCGTTCATATAAAAATATGCTATCAGAAGTAAGTGATATTATATACAAG           
+'13',                         1  4.08e-04          . GTAATAACAGCGCAGGAATTAAAGGGCAAGTTGTAGCGTTAAATACTTTAG           
+wac                           1  4.08e-04          . TTGTAGGAAATCCTAGTAGTGGAATGAAGCATCGCATTATTAATAATACTG           
+3                             1  4.30e-04          . GACATATATTCCTCATAATGCTTTATAACTGTTGGTGGTATAATGGGTCTA           
+55                            1  5.03e-04          . ATCCTCTATGCTTTAAGATAGGTCTTCAAATATTATGATATAATAGATCTA           
+'52',                         1  5.58e-04          . TTCGGATTAATTCAAGTCGTGCTTTTCATTTCTGATGTTATTATGGCACTA           
+30.7                          1  6.49e-04          . AGTAGTAAAATAATTGTTTACTTTGGTACAGGATATGATATTATATACCTG           
+46                            1  7.17e-04          . GTCAAGAAGCATTTTTAATTAAATCAAAAATTGACTCGTATAATAAAGTCA           
+24.3                          1  8.74e-04          . TTTTGAAAGCACACAAAACACAATCAGAAAATGATGTATATAATGGCACCA           
+'mobC',                       1  9.18e-04          . TTGAGGCCGTGTGGGATTATGCTGCACAGCATTTAGATTATTTTGGTGTTA           
+6A                            1  9.63e-04          . TGAAGTACAAAACTTCTATAAAACGCCTGAAGCGGGTATTAAATACAATAA           
+rIII                          1  1.01e-03          . CTGTCACTATAAAGCTATTCCGTGTCTTTATAAGTGATATAAATAATAATA           
+'47',                         1  1.06e-03          . TAAAGGGCTTCGGCCCTTTAGCTTTATACGGAGTTTGATATAATGATATTT           
+8                             1  1.17e-03          . TGTGGGAATATCTATTTGAGATTCCGCCTGATGTATCTATAAATAGATGCA           
+'I-TevII',                    1  1.22e-03          . TCTGAACTGCATGGTGACATGCAGCTGTTTATCCTCGTATAAATATGAATA           
+37                            1  1.34e-03          . TCATCAGCCAGGCCTGTTTGTGCAGTAACAATTTCATGATAAATTGTACCA           
+45                            1  1.69e-03          . GCTGATTTTAATCGTTAATTGCTTTATTAAATTAGTTATAAAATTAAATCT           
+11                            1  1.77e-03          . TGATATGTATTATTACTCATGCTGTTCTCTCAAAATGATAAAATACTGTAG           
+soc                           1  1.77e-03          . CTTAAGAATTTAATTTACTTATTCAGAAAAGAAGATGTATAAATAATCATG           
+7                             1  1.85e-03          . TGTTGGTTTAACTCTTAAACATACAGAGACTATAATTAATAAATACAAAAA           
+'pseT.1',                     1  2.03e-03          . TGATGTAAAACGATATGTACATGACCAGAAAACTATGARATGTTATTATCG           
+'5.4',                        1  2.64e-03          . TATATAAAAGTATTAAAATCGCAGCTAAAGCTCTTAATATAAATTATAGTA           
+31                            1  2.75e-03          . CAATTTATTGGTAAATAAATGCTTTAAGAACTATTTGTTATTATTAATTCA           
+uvsY.-2                       1  2.75e-03          . TCTAAAGATATGGGCATTGATATGCATATGAGAGTTGTATAAATAGATATA           
+5.1                           1  3.13e-03          . TTACCGCTCAATTAGAAACAGGTGAAACGTTAGTATCTATAAATATAACTA           
+trna.4A                       1  3.40e-03          . TGCGGCACATCTCAAGATTATTGCTAAAAATCTTTTGTAATAAATATTTCA           
+'motB.1',                     1  3.40e-03          . GTAGCTCTTTATCATTTTGCTTTTGCTAGCGAATATGATATGATGAAATGG           
+'uvsW',                       1  3.70e-03          . CGACTACCACAGGAACTTTTTGGGTCAATAATGGCGCAATAAATAAATTAA           
+17                            1  3.70e-03          . ATTTAGTAGAATACAATGAATGCCCAGTTTATATTGAATTAAATAGTACTG           
+'30',                         1  3.86e-03          . ACCACAGGTCTTTGACTGAGCTTAATGATGAATTGATTTATAATAGAGCTG           
+1                             1  3.86e-03          . CAGTTAATTTCGTAGCATTTAATAAGATTACTGACGTTATAAATAATATTG           
+56A                           1  3.86e-03          . AAGTGAGCCATTAGTTTTCCTTTCAATTCATTAATAAGTTAAATAATTATA           
+37A                           1  4.36e-03          . GGATAATCATTCTGCCATCGTCACGAATACCGTATAGTTTAAATACTGGTG           
+42                            1  4.54e-03          . AGCAAAATTATAGCAGCATTGCTTTTAATCTTGATGATTATAATAAGTATA           
+'24',                         1  4.73e-03          . TTATAATATCATATTACTTTGGTCTTGTAAATAACTTTATAAATAGTATTA           
+22                            1  4.92e-03          . GCCTATATGGCTCTCGCAGAGGCCATGAAAAAAGCGTTATAAATATTATTA           
+35                            1  5.33e-03          . GATTGCCAACTTCAGCTGCTATAAGTAAATTATCTGATTATAATTTAATTC           
+'37',                         1  6.23e-03          . CGAATGACCTTACTAGAAAGGACTATGTTGATGGAGCAATAAATACTGTTA           
+'e',                          1  6.23e-03          . GCAATTATAATCCAGACCTTCTAGAAGACCTAGGTGTATTTAAATATTCTA           
+'vs.7',                       1  6.23e-03          . AGCAAGTTCAGAGGTTTAAAGCTTTCGCGAATTTTGTATATAATTGATGAG           
+rI.1                          1  6.99e-03          . GAATGAATTAACTAAAAAGCTCGGTTAGTGCAAAAGTTATAAATAGGTTTA           
+tA                            1  8.43e-03          . ACAGAAGCCTTGGTATAAGCGTTTATTCAAGCATTACGTATAAATATCTTA           
+'I-TevIII',                   1  8.43e-03          . GCAGCCAAGGTTTTGCTTGCACCTTTAATTAGTATAATATAAATATGATTA           
+'10',                         1  8.43e-03          . GCCAATCGGTAGATGGAAGAAAAATTAAAACAGCAGAAATAAATATTCTTG           
+'tk.3',                       1  8.43e-03          . GGCCAAATTTTGAGTATTCCGCTTTAATGAATTGTATGTTAGAATTAAATG           
+56                            1  8.43e-03          . GTATATATTTTTAATTAATTGCTTACATACTCAAATGATATAATTATTTAA           
+'T4s002',                     1  9.42e-03          . AATTCCAGAAGGATGGTTTAAAGGTCGAAAAATGAAATTTTAAATTACGTC           
+'46',                         1  9.77e-03          . ATGGCTGAATTTGATGAATACTTTTTAGATTATGATGATATGATAGAATGG           
+'I-TevI',                     1  1.05e-02          . AGTAGACAATCCCGTGCTAAATTGTAGGACTTGCCCTTTAATAAATACTTC           
+'nrdC.11',                    1  1.13e-02          . CATTGGCAAGACTATGACTTACTTTATAAGTTATGGATTAAATTAAATAGA           
+'67',                         1  1.17e-02          . TTAAAGGTATAATCACAGAAGATGAGTGGAATGATGAAATAAATAATATTA           
+'57A',                        1  1.21e-02          . ATGTACTGGGTAAAATTATTTGCTTTAGATTATCTTGATAAATTTAACTCA           
+34                            1  1.30e-02          . AATTCAGAGCAGAAGATGGTCTGGACGCAGGTGGTGATAAAATAATCAACG           
+20                            1  1.49e-02          . GAGAAATCCCCATCCTGCTTAAAGCAGAGAAGTCCATTATAAATATAACTA           
+61.4                          1  1.65e-02          . TTGAATTGCGTATTTTTCCTGACGTTATACGGAGTAGGTTTAAATAAAACA           
+30.6                          1  1.94e-02          . TATTTTCCTCAGTAAGGGGCTGAAGCCCCTCATTTTATTTTAAATATCAAA           
+arn.4                         1  2.28e-02          . ATTGAAGCTGTAATCACTGTAGCATCTGAACTGTGAGGAATAAATAATAAA           
+45.2                          1  2.50e-02          . GTTTAATTTATAAGAGATTATGCTTTAATTTATTAGAGTATAATCTCTATG           
+34B                           1  2.66e-02          . CTGGAACGTCAGCAAATACTGCTGTATCTCCAAAAAATTTAAAATGGATTG           
+18                            1  2.66e-02          . TTAAGGTAATGTAGTTAATGCTTCTAGCCGGTTGGATGTAGAATGTTGCAA           
+uvsW                          1  3.28e-02          . AATGATAAAGAAAATTGGTGGCGGAGCATCAAAAGATGATAAATATAAAAA           
+rIIA.1                        1  3.47e-02          . ATGGATGAGCCAGTAGTTTACTTTACCACAAGGATGTGGTATAATTAATTG           
+rnlA                          1  4.01e-02          . TATCGTTCAACTAGATACGGACGAAGAGTAGCATCTTTATAAATATCATCG           
+eA                            1  4.24e-02          . CTTCACTTTACCGAATAATGAACAACCTCTTTTAATTTTATAAATACCTTC           
+alt                           1  4.48e-02          . ACACCAATGTTTCAAAAATTTGAGGCTTCAGCGGCCGAATTAAATAAACCA           
+'td',                         1  4.86e-02          . ATATAAGCAAGCGTGAAATGGTTGAAACGCATTGGTATAAAATAGATGAAG           
+1A                            1  6.64e-02          . TACTACTGCTGATTTTATCATGAGCAATTATTCTGCAGTTAAATACCAACT           
+'segE',                       1  6.97e-02          . TCTGCAATATAATCTTTATCTATCATAATATTTCCTCAGTATAAATATAGA           
+'53',                         1  6.97e-02          . AGGAACCCATTTTCCAGAATATGCCATTGGATTCTCCTTATAAATAGATAA           
+'45.2',                       1  7.69e-02          . TTTACTTGGCGTGATATTGCTTCTATCGTATCTGGTGTTAGTATTAGTACA           
+19                            1  8.06e-02          . GTTAATACGGTGCATTCTAAAGGCCTGTTTCGGCAGGCCATATAAATACAC           
+49                            1  9.92e-02          . AAGCGATTGCATCAAATGTTTTACAATACTTGAAAATAATAAATACCCTTA           
+'inh',                        1  1.06e-01          . TTGTTTCATATACAAAGTGGTACATACTATTTTCCGAGTAATAAATATATC           
+'ipIII',                      1  1.13e-01          . GGATGAAGCAGCAGTTAACTTAGCTAAAAGTATATGGTATAATCAAACACC           
+'46.2',                       1  1.31e-01          . TTGACTATAAAGATTTTACAAATCTATCAGTACGTGTTATAGTAACTGAAG           
+34A                           1  1.48e-01          . TAGAAGCTGGAGTAGCACCTGCAGTAGATACAAAGGTTACAATACCAGATA           
+td                            1  1.63e-01          . TCGAAACGATAGACAACTTGCTTTAACAAGTTGGAGATATAGTCTGCTCTG           
+'34',                         1  1.72e-01          . ATTTCTATTATATACCATCCAAATCTTAAAGTAAACAAGTATAAATACTTA           
+'mobD.2',                     1  1.89e-01          . GGAATAATGAAAACTGAAAAACAGATGTTTTTAATGAAGCTAATTGAAGAA           
+t                             1  1.92e-01          . AAAGAACAGAAGCCTTGGTATAAGCGTTTATTCAAGCATTACGTATAAATA           
+'dsbA',                       1  2.03e-01          . GATTATATTCCTGATAATATTGCTTCAAACATTGTGAATTACTATAATTCA           
+uvsX                          1  2.10e-01          . AACAATGAAAAGCTTATTTCGTATCGTAACTCCCTATTTTAGTACTAAAAA           
+'39',                         1  2.13e-01          . TTGCAGCATTAGTATTAGCAGTGTCTTTAATTAATAGTACTGATGCTGATT           
+'I-TevIA',                    1  2.88e-01          . TGGCTATTTGGATTTGCAGTGGTATCAACGCTCAGTAGATGTTTTCTTGGG           
+srd                           1  3.01e-01          . TTTTCATAAAGTTGTTTACAAGTTAAAGTAAAAATGTTATAGTATAAGTAG           
+damA                          1  3.32e-01          . CATCATATGTATTTGATAGTAATACTAACACGTTTTGCGATAAATATTAAT           
+6                             1  3.59e-01          . ACAGCAGCATTACCAAACTGCTGAATGTATAATGTATTATAAGCTAAAAGG           
+60                            1  3.73e-01          . CAATTCTGGCCAATTACTAAAAAATCCGAGCAGAGAAGGATAAATAGAACC           
+'I-TevIB',                    1  5.03e-01          . TGATTTTGGTGGTGTAGACCAAATTATAGAAGTTATTGATCGTATTAAAAA           
+T4s001                        1  5.72e-01          . AGGAAATATCTTTGCCGTAAGCCGAGTAGCGTTTTTGACGGAACGTTCGGA           
+'vs.5',                       1  5.86e-01          . GCAGTTAAGCATCCGGAAAAATATCCGCAGCTGACCATCCGTGTATCCGGT           
+'I-TevIIA',                   1  5.96e-01          . GCTCAATCTAAAACAGAAAAAGACGTATACGATGCATTCCAAGCTTATGAG           
+'alt.-1',                     1  6.24e-01          . CAGTTAAAACTAACAACAAGCTTATTCAAGCTGAAGTTATGACCACAGAAG           
+nrdC.7                        1  7.73e-01          . GTAATTGCATATGGTTATTACGCAATTAATGATTATATGCATTATAAAGAT           
+'arn.1',                      1  8.49e-01          . GGATTTCAGTTCTGTGATATGGAATTCACTAAAAAGCTCGTAGGAAAAGAT           
+'uvsX',                       1  9.95e-01          . TAAAAAATTAGCAATTGAAGCTGGATTTCCAAATAAATCTTATGCAAGAAT           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+ndd.6                             1.8e-12  [+1]
+motA                              2.4e-12  [+1]
+e.8                               1.1e-11  [+1]
+frd.3                             1.2e-11  [+1]
+nrdC.10                           1.2e-11  [+1]
+imm.1                             9.6e-11  [+1]
+ndd.4                             8.9e-10  [+1]
+55.6                              8.9e-10  [+1]
+mobD.5                            1.2e-09  [+1]
+nrdC.8                            1.7e-09  [+1]
+mrh.2                             2.4e-09  [+1]
+alc                               9.3e-09  [+1]
+nrdC.4                            9.3e-09  [+1]
+frd.1                             2.5e-08  [+1]
+motB.2                            2.5e-08  [+1]
+alt.-3A                           3.1e-08  [+1]
+regB                              3.1e-08  [+1]
+30.8                              1.1e-07  [+1]
+trna.4                            1.4e-07  [+1]
+ipI                               1.8e-07  [+1]
+nrdC.7A                           3.8e-07  [+1]
+cd.2                              4.6e-07  [+1]
+motB                              6.9e-07  [+1]
+dmd                               1.7e-06  [+1]
+modA                              1.8e-06  [+1]
+'asiA',                           2.6e-06  [+1]
+mobD.2                            3.3e-06  [+1]
+'segD',                           4.5e-06  [+1]
+alt.-3                            1.1e-05  [+1]
+T4t008                            1.2e-05  [+1]
+cef                               1.5e-05  [+1]
+'60A',                            1.5e-05  [+1]
+68                                2.1e-05  [+1]
+modB                              3.1e-05  [+1]
+'33',                             3.8e-05  [+1]
+uvsY                              3.8e-05  [+1]
+sp                                4.3e-05  [+1]
+'32',                             4.6e-05  [+1]
+'nrdB',                           4.6e-05  [+1]
+'4',                              7.5e-05  [+1]
+'vs',                             7.5e-05  [+1]
+'41',                             8.4e-05  [+1]
+e                                   9e-05  [+1]
+nrdG                              0.00011  [+1]
+'dda.1',                          0.00013  [+1]
+'I-TevIIIA',                      0.00014  [+1]
+'60',                             0.00014  [+1]
+43                                0.00024  [+1]
+denV                              0.00025  [+1]
+10                                0.00027  [+1]
+'48',                             0.00028  [+1]
+dam                               0.00031  [+1]
+'ndd.3',                          0.00035  [+1]
+'rnh',                            0.00039  [+1]
+'nrdC',                           0.00039  [+1]
+'13',                             0.00041  [+1]
+wac                               0.00041  [+1]
+3                                 0.00043  [+1]
+55                                 0.0005  [+1]
+'52',                             0.00056  [+1]
+30.7                              0.00065  [+1]
+46                                0.00072  [+1]
+24.3                              0.00087  [+1]
+'mobC',                           0.00092  [+1]
+6A                                0.00096  [+1]
+rIII                                0.001  [+1]
+'47',                              0.0011  [+1]
+8                                  0.0012  [+1]
+'I-TevII',                         0.0012  [+1]
+37                                 0.0013  [+1]
+45                                 0.0017  [+1]
+11                                 0.0018  [+1]
+soc                                0.0018  [+1]
+7                                  0.0019  [+1]
+'pseT.1',                           0.002  [+1]
+'5.4',                             0.0026  [+1]
+31                                 0.0028  [+1]
+uvsY.-2                            0.0028  [+1]
+5.1                                0.0031  [+1]
+trna.4A                            0.0034  [+1]
+'motB.1',                          0.0034  [+1]
+'uvsW',                            0.0037  [+1]
+17                                 0.0037  [+1]
+'30',                              0.0039  [+1]
+1                                  0.0039  [+1]
+56A                                0.0039  [+1]
+37A                                0.0044  [+1]
+42                                 0.0045  [+1]
+'24',                              0.0047  [+1]
+22                                 0.0049  [+1]
+35                                 0.0053  [+1]
+'37',                              0.0062  [+1]
+'e',                               0.0062  [+1]
+'vs.7',                            0.0062  [+1]
+rI.1                                0.007  [+1]
+tA                                 0.0084  [+1]
+'I-TevIII',                        0.0084  [+1]
+'10',                              0.0084  [+1]
+'tk.3',                            0.0084  [+1]
+56                                 0.0084  [+1]
+'T4s002',                          0.0094  [+1]
+'46',                              0.0098  [+1]
+'I-TevI',                            0.01  [+1]
+'nrdC.11',                          0.011  [+1]
+'67',                               0.012  [+1]
+'57A',                              0.012  [+1]
+34                                  0.013  [+1]
+20                                  0.015  [+1]
+61.4                                0.016  [+1]
+30.6                                0.019  [+1]
+arn.4                               0.023  [+1]
+45.2                                0.025  [+1]
+34B                                 0.027  [+1]
+18                                  0.027  [+1]
+uvsW                                0.033  [+1]
+rIIA.1                              0.035  [+1]
+rnlA                                 0.04  [+1]
+eA                                  0.042  [+1]
+alt                                 0.045  [+1]
+'td',                               0.049  [+1]
+1A                                  0.066  [+1]
+'segE',                              0.07  [+1]
+'53',                                0.07  [+1]
+'45.2',                             0.077  [+1]
+19                                  0.081  [+1]
+49                                  0.099  [+1]
+'inh',                               0.11  [+1]
+'ipIII',                             0.11  [+1]
+'46.2',                              0.13  [+1]
+34A                                  0.15  [+1]
+td                                   0.16  [+1]
+'34',                                0.17  [+1]
+'mobD.2',                            0.19  [+1]
+t                                    0.19  [+1]
+'dsbA',                               0.2  [+1]
+uvsX                                 0.21  [+1]
+'39',                                0.21  [+1]
+'I-TevIA',                           0.29  [+1]
+srd                                   0.3  [+1]
+damA                                 0.33  [+1]
+6                                    0.36  [+1]
+60                                   0.37  [+1]
+'I-TevIB',                            0.5  [+1]
+T4s001                               0.57  [+1]
+'vs.5',                              0.59  [+1]
+'I-TevIIA',                           0.6  [+1]
+'alt.-1',                            0.62  [+1]
+nrdC.7                               0.77  [+1]
+'arn.1',                             0.85  [+1]
+'uvsX',                                 1  [+1]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA width=51 seqs=150
+ndd.6                    (    1) AATTTCACAAAACAGTTTACATACCACAAGGACCGTGGTACTATACAACTA  1 
+motA                     (    1) TTTTTCACAAAACGGTTTACAACCAAAGCATACTGTGGTACTATACAACTA  1 
+e.8                      (    1) TTTTTCACAAAACTGTTTACATCCTTGTTCTTCCATGGTACTATACAACTA  1 
+frd.3                    (    1) TTTTTCACAAAACGGTTTACAAGCATAAAGCTTTATGGTACTATACAACTA  1 
+nrdC.10                  (    1) TTTTTCACAAAACGGTTTACAAGCATAAAGCTTTATGGTACTATACAACTA  1 
+imm.1                    (    1) TTTTTCACAAAACTGTTTACAAGACTGTTCTTCCATGGTACTATACAACTA  1 
+ndd.4                    (    1) TTTTTAAAAAAGTTGTTTACAAGACTGTTCTTCCGTGGTACTATTACCCTA  1 
+55.6                     (    1) TTTTTCACAAAGTTGTTTACAACAAGTTCAAACCGTGGTATTATTAACATA  1 
+mobD.5                   (    1) TTTTCATTTTACCGGTTTACTTTCCGTTTGAGCTGTGGTACTATACAACCA  1 
+nrdC.8                   (    1) AGTTTCTTTTAGTTGTTTACAAGACCGTTCCTCTGTGGTACTATACAACTA  1 
+mrh.2                    (    1) TTTTCATTTAAATGGTTTACTTTCCAAAATGAGTATGGTATAATAGAATTA  1 
+alc                      (    1) AAGGATACTAAGTTGTTTACAAGTCCCTCGTGTTGTGTTATAGTAGTCTTA  1 
+nrdC.4                   (    1) AATGCACTGAACTAGTTTACTTTGCCACAAGGATGTGGTATAATGTTCTTA  1 
+frd.1                    (    1) ACTTTCAAAAAGTAGTTTACATCAGGGTAGTAGTGTGATACTATTACCCTA  1 
+motB.2                   (    1) AACGATAAAAAGTTGTTTACTTCCTCGGTTAGTTGTGGTACTATAACACCA  1 
+alt.-3A                  (    1) AAGTTCAAAATGTAGTTTACAAGTCCCTCGTGTTGTGTTATAGTAGTCTTA  1 
+regB                     (    1) TTTAAAGAATAACTGTTTACTTTTCCTCTTGACTGTGGTATAATTTTTCTA  1 
+30.8                     (    1) GATTGCACAAAGTTGTTTACAGTATAGTTCCTTTGTGATAGTATTATCTTA  1 
+trna.4                   (    1) TATTTCACAAAGTTGTTTACATAGGGTTTTAGCTGTGATACTATTACCCTA  1 
+ipI                      (    1) AATTTCACAAAGTTGTTTACATACTGATGAGGTAGTGATACTATTACCTCA  1 
+nrdC.7A                  (    1) AATACGGTACTCGCATAACCGCTTTATACCAAGGATGGTATAATGGTTCTA  1 
+cd.2                     (    1) AAAGCGATTTAATGGTTTACTTTACGGTAGAGTTGTGATATTATAGCTCTA  1 
+motB                     (    1) ATTTTGAATTAATAGTTTACAAACTCTTGGGACCAGAGTATAATGGTCCCG  1 
+dmd                      (    1) GAATTAAAATTTTAGTTTACAAGCTGACAAGACTATGGTATAGTAGTCTTG  1 
+modA                     (    1) TAAACAACTTTATGAAAAATGCTTTAAAACTTTCATGGTATAATGAATCTA  1 
+'asiA',                  (    1) AATTACACAGACCAGTTTACAAATCAAGCGTCTGATGATATTATAACAAAG  1 
+mobD.2                   (    1) AACGTCATTTAATGGTTTACAAGTTGACAAGATTATGGTATAGTAATCTTG  1 
+'segD',                  (    1) CTATTTATAAAGTTATTTACAAGACCAAAGTAATATGATATTATAATCATA  1 
+alt.-3                   (    1) GCGTTATTCCTGCTGATAATGCTTTTAACGAAGCGGTTTACGATGAATTTA  1 
+T4t008                   (    1) TCATCATAAATGGTAAATATGCTTTAAGAATTATTTGTTATTATTAACTCA  1 
+cef                      (    1) TTTTTCATAAAACTATATACATCAGTAGTTGATTATGGTACTATATCAATA  1 
+'60A',                   (    1) CTGCAAAAGCAGCTGAACTTGAAAAAGCGAAACCATGGTATAATAAATCAG  1 
+68                       (    1) GCTTTGACGAATTGTCTTCTGCTTTAAATAAAGACGATATAAATACAATTG  1 
+modB                     (    1) TAATTCAAAAAGTTGTTTACTTTCCTTTCTAACGATGATATGATAGCTTCT  1 
+'33',                    (    1) TTAAAGAAGCATCTGATCATAAACTGAAAATTTCCGGTTATAATGAACTGA  1 
+uvsY                     (    1) TCCAGTAATAGAGTATAATGCTTCACGTTAAAACGTGGTATAATGAATCTA  1 
+sp                       (    1) ATTTTAAAATAACTGTTTACTTTTGTTGGAAATTGAGATACTATATAAACA  1 
+'32',                    (    1) TTGGAAATTATCTCATATTGCTTACGAGAATTATGTGTTATTATTATCCTC  1 
+'nrdB',                  (    1) GCTGCTGCTAAAGTCGGCGTGCTTAATCCGATGTATGGTACAATTTCTCCG  1 
+'4',                     (    1) TCGGATCAAAAAATGTAAAGAGCATGGGCCCTCCTGTTTATAAATATATTA  1 
+'vs',                    (    1) ATTCAGCTTCCTGGGCGTACATTGAACTTTCTTATTGGTTAAATATACATA  1 
+'41',                    (    1) AGAAAAGCTGAGTTAGCTCCTCATGTAGAAAAATGTATTACAATGCAACTG  1 
+e                        (    1) TTCGCGGAATTCTGAGAAATGCTAAATTAAAACCGGTTTATGATTCTCTTG  1 
+nrdG                     (    1) TCTTCGTCACTGGATGTTTGCATAAATGCGAAGGTTGTTATAATCGTAGTA  1 
+'dda.1',                 (    1) AAGTTGTCAGAAGCAGAAATGCAATATGATATGTGTGATAAAATTATTCAA  1 
+'I-TevIIIA',             (    1) AAACTAGCAGCCAAGGTTTTGCTTGCACCTTTAATTAGTATAATATAAATA  1 
+'60',                    (    1) ATTATAAACGAACGGGAGTTGCTAAATGGAAATCAGTTAATAATATAACTG  1 
+43                       (    1) TGGTAATTAAGCAAGGGGCTTCGGCCCCTTATTTGGAGTATAATATATCAA  1 
+denV                     (    1) TAAAGATAAATAACAGTTTACATCTCCTGTAGGTATGATACTATAGACCTA  1 
+10                       (    1) GACAAACAGACTTTTTAGATGTTTTCCGTGGAACTAGTTATAATGTAAATA  1 
+'48',                    (    1) GCCTATGAAGACCTTAAAAAACGGATGGATGACCCGGATTTAAATAATTCA  1 
+dam                      (    1) AGTGAAAAACAATATAATCACTTTAAACAAAATTGTGATAAAATAATCTTT  1 
+'ndd.3',                 (    1) AAAATGAAAAAGATTATTAAAGCTATATGGAATGTAGTTATAATACTAATA  1 
+'rnh',                   (    1) AAGTATTTATACTTGTTTACTTTAAGATTTGGATGGTATATAATAGAAATC  1 
+'nrdC',                  (    1) ACTCGTTCATATAAAAATATGCTATCAGAAGTAAGTGATATTATATACAAG  1 
+'13',                    (    1) GTAATAACAGCGCAGGAATTAAAGGGCAAGTTGTAGCGTTAAATACTTTAG  1 
+wac                      (    1) TTGTAGGAAATCCTAGTAGTGGAATGAAGCATCGCATTATTAATAATACTG  1 
+3                        (    1) GACATATATTCCTCATAATGCTTTATAACTGTTGGTGGTATAATGGGTCTA  1 
+55                       (    1) ATCCTCTATGCTTTAAGATAGGTCTTCAAATATTATGATATAATAGATCTA  1 
+'52',                    (    1) TTCGGATTAATTCAAGTCGTGCTTTTCATTTCTGATGTTATTATGGCACTA  1 
+30.7                     (    1) AGTAGTAAAATAATTGTTTACTTTGGTACAGGATATGATATTATATACCTG  1 
+46                       (    1) GTCAAGAAGCATTTTTAATTAAATCAAAAATTGACTCGTATAATAAAGTCA  1 
+24.3                     (    1) TTTTGAAAGCACACAAAACACAATCAGAAAATGATGTATATAATGGCACCA  1 
+'mobC',                  (    1) TTGAGGCCGTGTGGGATTATGCTGCACAGCATTTAGATTATTTTGGTGTTA  1 
+6A                       (    1) TGAAGTACAAAACTTCTATAAAACGCCTGAAGCGGGTATTAAATACAATAA  1 
+rIII                     (    1) CTGTCACTATAAAGCTATTCCGTGTCTTTATAAGTGATATAAATAATAATA  1 
+'47',                    (    1) TAAAGGGCTTCGGCCCTTTAGCTTTATACGGAGTTTGATATAATGATATTT  1 
+8                        (    1) TGTGGGAATATCTATTTGAGATTCCGCCTGATGTATCTATAAATAGATGCA  1 
+'I-TevII',               (    1) TCTGAACTGCATGGTGACATGCAGCTGTTTATCCTCGTATAAATATGAATA  1 
+37                       (    1) TCATCAGCCAGGCCTGTTTGTGCAGTAACAATTTCATGATAAATTGTACCA  1 
+45                       (    1) GCTGATTTTAATCGTTAATTGCTTTATTAAATTAGTTATAAAATTAAATCT  1 
+11                       (    1) TGATATGTATTATTACTCATGCTGTTCTCTCAAAATGATAAAATACTGTAG  1 
+soc                      (    1) CTTAAGAATTTAATTTACTTATTCAGAAAAGAAGATGTATAAATAATCATG  1 
+7                        (    1) TGTTGGTTTAACTCTTAAACATACAGAGACTATAATTAATAAATACAAAAA  1 
+'pseT.1',                (    1) TGATGTAAAACGATATGTACATGACCAGAAAACTATGANATGTTATTATCG  1 
+'5.4',                   (    1) TATATAAAAGTATTAAAATCGCAGCTAAAGCTCTTAATATAAATTATAGTA  1 
+31                       (    1) CAATTTATTGGTAAATAAATGCTTTAAGAACTATTTGTTATTATTAATTCA  1 
+uvsY.-2                  (    1) TCTAAAGATATGGGCATTGATATGCATATGAGAGTTGTATAAATAGATATA  1 
+5.1                      (    1) TTACCGCTCAATTAGAAACAGGTGAAACGTTAGTATCTATAAATATAACTA  1 
+trna.4A                  (    1) TGCGGCACATCTCAAGATTATTGCTAAAAATCTTTTGTAATAAATATTTCA  1 
+'motB.1',                (    1) GTAGCTCTTTATCATTTTGCTTTTGCTAGCGAATATGATATGATGAAATGG  1 
+'uvsW',                  (    1) CGACTACCACAGGAACTTTTTGGGTCAATAATGGCGCAATAAATAAATTAA  1 
+17                       (    1) ATTTAGTAGAATACAATGAATGCCCAGTTTATATTGAATTAAATAGTACTG  1 
+'30',                    (    1) ACCACAGGTCTTTGACTGAGCTTAATGATGAATTGATTTATAATAGAGCTG  1 
+1                        (    1) CAGTTAATTTCGTAGCATTTAATAAGATTACTGACGTTATAAATAATATTG  1 
+56A                      (    1) AAGTGAGCCATTAGTTTTCCTTTCAATTCATTAATAAGTTAAATAATTATA  1 
+37A                      (    1) GGATAATCATTCTGCCATCGTCACGAATACCGTATAGTTTAAATACTGGTG  1 
+42                       (    1) AGCAAAATTATAGCAGCATTGCTTTTAATCTTGATGATTATAATAAGTATA  1 
+'24',                    (    1) TTATAATATCATATTACTTTGGTCTTGTAAATAACTTTATAAATAGTATTA  1 
+22                       (    1) GCCTATATGGCTCTCGCAGAGGCCATGAAAAAAGCGTTATAAATATTATTA  1 
+35                       (    1) GATTGCCAACTTCAGCTGCTATAAGTAAATTATCTGATTATAATTTAATTC  1 
+'37',                    (    1) CGAATGACCTTACTAGAAAGGACTATGTTGATGGAGCAATAAATACTGTTA  1 
+'e',                     (    1) GCAATTATAATCCAGACCTTCTAGAAGACCTAGGTGTATTTAAATATTCTA  1 
+'vs.7',                  (    1) AGCAAGTTCAGAGGTTTAAAGCTTTCGCGAATTTTGTATATAATTGATGAG  1 
+rI.1                     (    1) GAATGAATTAACTAAAAAGCTCGGTTAGTGCAAAAGTTATAAATAGGTTTA  1 
+tA                       (    1) ACAGAAGCCTTGGTATAAGCGTTTATTCAAGCATTACGTATAAATATCTTA  1 
+'I-TevIII',              (    1) GCAGCCAAGGTTTTGCTTGCACCTTTAATTAGTATAATATAAATATGATTA  1 
+'10',                    (    1) GCCAATCGGTAGATGGAAGAAAAATTAAAACAGCAGAAATAAATATTCTTG  1 
+'tk.3',                  (    1) GGCCAAATTTTGAGTATTCCGCTTTAATGAATTGTATGTTAGAATTAAATG  1 
+56                       (    1) GTATATATTTTTAATTAATTGCTTACATACTCAAATGATATAATTATTTAA  1 
+'T4s002',                (    1) AATTCCAGAAGGATGGTTTAAAGGTCGAAAAATGAAATTTTAAATTACGTC  1 
+'46',                    (    1) ATGGCTGAATTTGATGAATACTTTTTAGATTATGATGATATGATAGAATGG  1 
+'I-TevI',                (    1) AGTAGACAATCCCGTGCTAAATTGTAGGACTTGCCCTTTAATAAATACTTC  1 
+'nrdC.11',               (    1) CATTGGCAAGACTATGACTTACTTTATAAGTTATGGATTAAATTAAATAGA  1 
+'67',                    (    1) TTAAAGGTATAATCACAGAAGATGAGTGGAATGATGAAATAAATAATATTA  1 
+'57A',                   (    1) ATGTACTGGGTAAAATTATTTGCTTTAGATTATCTTGATAAATTTAACTCA  1 
+34                       (    1) AATTCAGAGCAGAAGATGGTCTGGACGCAGGTGGTGATAAAATAATCAACG  1 
+20                       (    1) GAGAAATCCCCATCCTGCTTAAAGCAGAGAAGTCCATTATAAATATAACTA  1 
+61.4                     (    1) TTGAATTGCGTATTTTTCCTGACGTTATACGGAGTAGGTTTAAATAAAACA  1 
+30.6                     (    1) TATTTTCCTCAGTAAGGGGCTGAAGCCCCTCATTTTATTTTAAATATCAAA  1 
+arn.4                    (    1) ATTGAAGCTGTAATCACTGTAGCATCTGAACTGTGAGGAATAAATAATAAA  1 
+45.2                     (    1) GTTTAATTTATAAGAGATTATGCTTTAATTTATTAGAGTATAATCTCTATG  1 
+34B                      (    1) CTGGAACGTCAGCAAATACTGCTGTATCTCCAAAAAATTTAAAATGGATTG  1 
+18                       (    1) TTAAGGTAATGTAGTTAATGCTTCTAGCCGGTTGGATGTAGAATGTTGCAA  1 
+uvsW                     (    1) AATGATAAAGAAAATTGGTGGCGGAGCATCAAAAGATGATAAATATAAAAA  1 
+rIIA.1                   (    1) ATGGATGAGCCAGTAGTTTACTTTACCACAAGGATGTGGTATAATTAATTG  1 
+rnlA                     (    1) TATCGTTCAACTAGATACGGACGAAGAGTAGCATCTTTATAAATATCATCG  1 
+eA                       (    1) CTTCACTTTACCGAATAATGAACAACCTCTTTTAATTTTATAAATACCTTC  1 
+alt                      (    1) ACACCAATGTTTCAAAAATTTGAGGCTTCAGCGGCCGAATTAAATAAACCA  1 
+'td',                    (    1) ATATAAGCAAGCGTGAAATGGTTGAAACGCATTGGTATAAAATAGATGAAG  1 
+1A                       (    1) TACTACTGCTGATTTTATCATGAGCAATTATTCTGCAGTTAAATACCAACT  1 
+'segE',                  (    1) TCTGCAATATAATCTTTATCTATCATAATATTTCCTCAGTATAAATATAGA  1 
+'53',                    (    1) AGGAACCCATTTTCCAGAATATGCCATTGGATTCTCCTTATAAATAGATAA  1 
+'45.2',                  (    1) TTTACTTGGCGTGATATTGCTTCTATCGTATCTGGTGTTAGTATTAGTACA  1 
+19                       (    1) GTTAATACGGTGCATTCTAAAGGCCTGTTTCGGCAGGCCATATAAATACAC  1 
+49                       (    1) AAGCGATTGCATCAAATGTTTTACAATACTTGAAAATAATAAATACCCTTA  1 
+'inh',                   (    1) TTGTTTCATATACAAAGTGGTACATACTATTTTCCGAGTAATAAATATATC  1 
+'ipIII',                 (    1) GGATGAAGCAGCAGTTAACTTAGCTAAAAGTATATGGTATAATCAAACACC  1 
+'46.2',                  (    1) TTGACTATAAAGATTTTACAAATCTATCAGTACGTGTTATAGTAACTGAAG  1 
+34A                      (    1) TAGAAGCTGGAGTAGCACCTGCAGTAGATACAAAGGTTACAATACCAGATA  1 
+td                       (    1) TCGAAACGATAGACAACTTGCTTTAACAAGTTGGAGATATAGTCTGCTCTG  1 
+'34',                    (    1) ATTTCTATTATATACCATCCAAATCTTAAAGTAAACAAGTATAAATACTTA  1 
+'mobD.2',                (    1) GGAATAATGAAAACTGAAAAACAGATGTTTTTAATGAAGCTAATTGAAGAA  1 
+t                        (    1) AAAGAACAGAAGCCTTGGTATAAGCGTTTATTCAAGCATTACGTATAAATA  1 
+'dsbA',                  (    1) GATTATATTCCTGATAATATTGCTTCAAACATTGTGAATTACTATAATTCA  1 
+uvsX                     (    1) AACAATGAAAAGCTTATTTCGTATCGTAACTCCCTATTTTAGTACTAAAAA  1 
+'39',                    (    1) TTGCAGCATTAGTATTAGCAGTGTCTTTAATTAATAGTACTGATGCTGATT  1 
+'I-TevIA',               (    1) TGGCTATTTGGATTTGCAGTGGTATCAACGCTCAGTAGATGTTTTCTTGGG  1 
+srd                      (    1) TTTTCATAAAGTTGTTTACAAGTTAAAGTAAAAATGTTATAGTATAAGTAG  1 
+damA                     (    1) CATCATATGTATTTGATAGTAATACTAACACGTTTTGCGATAAATATTAAT  1 
+6                        (    1) ACAGCAGCATTACCAAACTGCTGAATGTATAATGTATTATAAGCTAAAAGG  1 
+60                       (    1) CAATTCTGGCCAATTACTAAAAAATCCGAGCAGAGAAGGATAAATAGAACC  1 
+'I-TevIB',               (    1) TGATTTTGGTGGTGTAGACCAAATTATAGAAGTTATTGATCGTATTAAAAA  1 
+T4s001                   (    1) AGGAAATATCTTTGCCGTAAGCCGAGTAGCGTTTTTGACGGAACGTTCGGA  1 
+'vs.5',                  (    1) GCAGTTAAGCATCCGGAAAAATATCCGCAGCTGACCATCCGTGTATCCGGT  1 
+'I-TevIIA',              (    1) GCTCAATCTAAAACAGAAAAAGACGTATACGATGCATTCCAAGCTTATGAG  1 
+'alt.-1',                (    1) CAGTTAAAACTAACAACAAGCTTATTCAAGCTGAAGTTATGACCACAGAAG  1 
+nrdC.7                   (    1) GTAATTGCATATGGTTATTACGCAATTAATGATTATATGCATTATAAAGAT  1 
+'arn.1',                 (    1) GGATTTCAGTTCTGTGATATGGAATTCACTAAAAAGCTCGTAGGAAAAGAT  1 
+'uvsX',                  (    1) TAAAAAATTAGCAATTGAAGCTGGATTTCCAAATAAATCTTATGCAAGAAT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 51 n= 149 bayes= -664.386 E= 3.7e-157 
+   -15    -57     32     16 
+   -21     32      1      6 
+   -31    -13     27     19 
+   -35    -38     12     35 
+     7     32    -11    -18 
+    15     37      7    -42 
+    33     14     -5    -50 
+    -4     98   -105    -18 
+    33    -80     17    -24 
+    22     32    -31    -28 
+    45    -21    -64    -24 
+   -15     26     69    -46 
+   -65     87    -18     14 
+   -31      8     36      6 
+   -28    -92    101    -18 
+   -53    -48     36     37 
+     7    -80    -83     42 
+   -15    -57    -83     54 
+    31      1    -47    -18 
+   -65    123    -31    -12 
+     4     -6     79    -67 
+   -42     79      1     -6 
+   -57     14      7     35 
+   -53     71     36    -12 
+   -28     75    -64     11 
+   -18     62      1    -15 
+    12     20     32    -46 
+     4     -6     17    -12 
+    17     48    -31    -31 
+     7     32     49    -63 
+     2     14     17    -18 
+    12   -121    -18     26 
+   -53     37     36      8 
+   -57     37     27     16 
+   -12    -21     72    -28 
+  -104   -157     79     54 
+   -69    -92    151    -54 
+   -31   -338     82     26 
+   -40   -176   -179     92 
+    72   -180   -363      8 
+     7     -6   -183     40 
+    88   -338    -93    -46 
+   119   -438   -147   -150 
+   -78   -180   -363    112 
+    57   -206    -39    -12 
+    15     26     17    -42 
+    43     -6   -147     -6 
+    26     75    -83    -46 
+   -31    101    -93      3 
+   -83     37   -147     72 
+    75   -106     65   -221 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 51 nsites= 150 E= 3.7e-157 
+ 0.320000  0.093333  0.206667  0.380000 
+ 0.306667  0.173333  0.166667  0.353333 
+ 0.286667  0.126667  0.200000  0.386667 
+ 0.280000  0.106667  0.180000  0.433333 
+ 0.373333  0.173333  0.153333  0.300000 
+ 0.393333  0.180000  0.173333  0.253333 
+ 0.446667  0.153333  0.160000  0.240000 
+ 0.346667  0.273333  0.080000  0.300000 
+ 0.446667  0.080000  0.186667  0.286667 
+ 0.413333  0.173333  0.133333  0.280000 
+ 0.486667  0.120000  0.106667  0.286667 
+ 0.320000  0.166667  0.266667  0.246667 
+ 0.226667  0.253333  0.146667  0.373333 
+ 0.286667  0.146667  0.213333  0.353333 
+ 0.293333  0.073333  0.333333  0.300000 
+ 0.246667  0.100000  0.213333  0.440000 
+ 0.373333  0.080000  0.093333  0.453333 
+ 0.320000  0.093333  0.093333  0.493333 
+ 0.440000  0.140000  0.120000  0.300000 
+ 0.226667  0.326667  0.133333  0.313333 
+ 0.366667  0.133333  0.286667  0.213333 
+ 0.266667  0.240000  0.166667  0.326667 
+ 0.240000  0.153333  0.173333  0.433333 
+ 0.246667  0.226667  0.213333  0.313333 
+ 0.293333  0.233333  0.106667  0.366667 
+ 0.313333  0.213333  0.166667  0.306667 
+ 0.386667  0.160000  0.206667  0.246667 
+ 0.366667  0.133333  0.186667  0.313333 
+ 0.400000  0.193333  0.133333  0.273333 
+ 0.373333  0.173333  0.233333  0.220000 
+ 0.360000  0.153333  0.186667  0.300000 
+ 0.386667  0.060000  0.146667  0.406667 
+ 0.246667  0.180000  0.213333  0.360000 
+ 0.240000  0.180000  0.200000  0.380000 
+ 0.326667  0.120000  0.273333  0.280000 
+ 0.173333  0.046667  0.286667  0.493333 
+ 0.220000  0.073333  0.473333  0.233333 
+ 0.286667  0.013333  0.293333  0.406667 
+ 0.269038  0.040927  0.047771  0.642264 
+ 0.586667  0.040000  0.013333  0.360000 
+ 0.373333  0.133333  0.046667  0.446667 
+ 0.653333  0.013333  0.086667  0.246667 
+ 0.813333  0.006667  0.060000  0.120000 
+ 0.206667  0.040000  0.013333  0.740000 
+ 0.526667  0.033333  0.126667  0.313333 
+ 0.393333  0.166667  0.186667  0.253333 
+ 0.480000  0.133333  0.060000  0.326667 
+ 0.426667  0.233333  0.093333  0.246667 
+ 0.286667  0.280000  0.086667  0.346667 
+ 0.200000  0.180000  0.060000  0.560000 
+ 0.600000  0.066667  0.260000  0.073333 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DWDWWWWHWWWNHDDWWWWHDNWNHNDDWDDWDDDKGDTWWAATWWWHHTA MEME-1 regular expression
+--------------------------------------------------------------------------------
+[TAG][TA][TAG][TA][AT][AT][AT][ATC][AT][AT][AT][AGT][TCA][TAG][GTA][TAG][TA][TA][AT][CTA][AGT][TAC][TA][TACG][TAC][ATC][ATG][AT][AT][AGT][AT][TA][TAG][TAG][ATG][TG][GTA][TGA][TA][AT][TA][AT]A[TA][AT][AT][AT][ATC][TAC][TA][AG]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.12 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+rIIA.1                           3.47e-02  51
+60                               3.73e-01  51
+'60',                            1.43e-04  51
+'60A',                           1.49e-05  [+1(1.49e-05)]
+'39',                            2.13e-01  51
+cef                              1.49e-05  [+1(1.49e-05)]
+motB                             6.90e-07  [+1(6.90e-07)]
+'motB.1',                        3.40e-03  51
+motB.2                           2.52e-08  [+1(2.52e-08)]
+'dda.1',                         1.28e-04  51
+srd                              3.01e-01  51
+modA                             1.80e-06  [+1(1.80e-06)]
+modB                             3.11e-05  [+1(3.11e-05)]
+mrh.2                            2.40e-09  [+1(2.40e-09)]
+soc                              1.77e-03  51
+56                               8.43e-03  51
+56A                              3.86e-03  51
+dam                              3.13e-04  51
+damA                             3.32e-01  51
+sp                               4.28e-05  [+1(4.28e-05)]
+61.4                             1.65e-02  51
+dmd                              1.67e-06  [+1(1.67e-06)]
+'41',                            8.44e-05  [+1(8.44e-05)]
+uvsX                             2.10e-01  51
+'uvsX',                          9.95e-01  51
+42                               4.54e-03  51
+imm.1                            9.57e-11  [+1(9.57e-11)]
+43                               2.38e-04  51
+45                               1.69e-03  51
+45.2                             2.50e-02  51
+'45.2',                          7.69e-02  51
+46                               7.17e-04  51
+'46',                            9.77e-03  51
+'46.2',                          1.31e-01  51
+'47',                            1.06e-03  51
+55                               5.03e-04  51
+55.6                             8.90e-10  [+1(8.90e-10)]
+nrdG                             1.14e-04  51
+'mobC',                          9.18e-04  51
+'I-TevII',                       1.22e-03  51
+'I-TevIIA',                      5.96e-01  51
+49                               9.92e-02  51
+'nrdC',                          3.88e-04  51
+nrdC.4                           9.34e-09  [+1(9.34e-09)]
+nrdC.7                           7.73e-01  51
+nrdC.7A                          3.85e-07  [+1(3.85e-07)]
+nrdC.8                           1.73e-09  [+1(1.73e-09)]
+nrdC.10                          1.25e-11  [+1(1.25e-11)]
+'nrdC.11',                       1.13e-02  51
+mobD.2                           3.32e-06  [+1(3.32e-06)]
+'mobD.2',                        1.89e-01  51
+mobD.5                           1.24e-09  [+1(1.24e-09)]
+rI.1                             6.99e-03  51
+'tk.3',                          8.43e-03  51
+'vs',                            7.48e-05  [+1(7.48e-05)]
+regB                             3.06e-08  [+1(3.06e-08)]
+'vs.5',                          5.86e-01  51
+'vs.7',                          6.23e-03  51
+denV                             2.52e-04  51
+'ipIII',                         1.13e-01  51
+e                                8.96e-05  [+1(8.96e-05)]
+eA                               4.24e-02  51
+'e',                             6.23e-03  51
+e.8                              1.09e-11  [+1(1.09e-11)]
+T4s001                           5.72e-01  51
+'T4s002',                        9.42e-03  51
+T4t008                           1.22e-05  [+1(1.22e-05)]
+trna.4                           1.35e-07  [+1(1.35e-07)]
+trna.4A                          3.40e-03  51
+ipI                              1.77e-07  [+1(1.77e-07)]
+'57A',                           1.21e-02  51
+1                                3.86e-03  51
+1A                               6.64e-02  51
+3                                4.30e-04  51
+'4',                             7.48e-05  [+1(7.48e-05)]
+'53',                            6.97e-02  51
+5.1                              3.13e-03  51
+'5.4',                           2.64e-03  51
+6                                3.59e-01  51
+6A                               9.63e-04  51
+7                                1.85e-03  51
+8                                1.17e-03  51
+'10',                            8.43e-03  51
+10                               2.66e-04  51
+11                               1.77e-03  51
+wac                              4.08e-04  51
+'13',                            4.08e-04  51
+17                               3.70e-03  51
+18                               2.66e-02  51
+19                               8.06e-02  51
+20                               1.49e-02  51
+'67',                            1.17e-02  51
+68                               2.09e-05  [+1(2.09e-05)]
+22                               4.92e-03  51
+'segD',                          4.48e-06  [+1(4.48e-06)]
+'24',                            4.73e-03  51
+24.3                             8.74e-04  51
+'inh',                           1.06e-01  51
+'segE',                          6.97e-02  51
+'uvsW',                          3.70e-03  51
+uvsW                             3.28e-02  51
+uvsY.-2                          2.75e-03  51
+uvsY                             3.77e-05  [+1(3.77e-05)]
+'48',                            2.81e-04  51
+alt.-3                           1.13e-05  [+1(1.13e-05)]
+alt.-3A                          3.06e-08  [+1(3.06e-08)]
+'alt.-1',                        6.24e-01  51
+alt                              4.48e-02  51
+'30',                            3.86e-03  51
+30.6                             1.94e-02  51
+30.7                             6.49e-04  51
+30.8                             1.13e-07  [+1(1.13e-07)]
+rIII                             1.01e-03  51
+31                               2.75e-03  51
+cd.2                             4.55e-07  [+1(4.55e-07)]
+'pseT.1',                        2.03e-03  51
+alc                              9.34e-09  [+1(9.34e-09)]
+rnlA                             4.01e-02  51
+'I-TevIII',                      8.43e-03  51
+'I-TevIIIA',                     1.43e-04  51
+'nrdB',                          4.56e-05  [+1(4.56e-05)]
+td                               1.63e-01  51
+'I-TevI',                        1.05e-02  51
+'I-TevIA',                       2.88e-01  51
+'I-TevIB',                       5.03e-01  51
+'td',                            4.86e-02  51
+frd.1                            2.52e-08  [+1(2.52e-08)]
+frd.3                            1.25e-11  [+1(1.25e-11)]
+'32',                            4.56e-05  [+1(4.56e-05)]
+'33',                            3.77e-05  [+1(3.77e-05)]
+'dsbA',                          2.03e-01  51
+'rnh',                           3.88e-04  51
+'34',                            1.72e-01  51
+34                               1.30e-02  51
+34A                              1.48e-01  51
+34B                              2.66e-02  51
+35                               5.33e-03  51
+'37',                            6.23e-03  51
+37                               1.34e-03  51
+37A                              4.36e-03  51
+t                                1.92e-01  51
+tA                               8.43e-03  51
+'asiA',                          2.65e-06  [+1(2.65e-06)]
+'arn.1',                         8.49e-01  51
+arn.4                            2.28e-02  51
+motA                             2.43e-12  [+1(2.43e-12)]
+'52',                            5.58e-04  51
+'ndd.3',                         3.48e-04  51
+ndd.4                            8.90e-10  [+1(8.90e-10)]
+ndd.6                            1.83e-12  [+1(1.83e-12)]
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: iMac-3.local
+
+********************************************************************************

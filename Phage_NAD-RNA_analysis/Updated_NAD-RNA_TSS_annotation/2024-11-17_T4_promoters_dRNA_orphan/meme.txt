@@ -1,0 +1,970 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.5.3 (Release date: Sat Jun 10 16:19:38 2023 -0700)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/Orphan_dRNA_Ec_promoters.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+nan                      1.0000     51  nan_2                    1.0000     51  
+nan_3                    1.0000     51  nan_4                    1.0000     51  
+nan_5                    1.0000     51  nan_6                    1.0000     51  
+nan_7                    1.0000     51  nan_8                    1.0000     51  
+nan_9                    1.0000     51  nan_10                   1.0000     51  
+nan_11                   1.0000     51  nan_12                   1.0000     51  
+nan_13                   1.0000     51  nan_14                   1.0000     51  
+nan_15                   1.0000     51  nan_16                   1.0000     51  
+nan_17                   1.0000     51  nan_18                   1.0000     51  
+nan_19                   1.0000     51  nan_20                   1.0000     51  
+nan_21                   1.0000     51  nan_22                   1.0000     51  
+nan_23                   1.0000     51  nan_24                   1.0000     51  
+nan_25                   1.0000     51  nan_26                   1.0000     51  
+nan_27                   1.0000     51  nan_28                   1.0000     51  
+nan_29                   1.0000     51  nan_30                   1.0000     51  
+nan_31                   1.0000     51  nan_32                   1.0000     51  
+nan_33                   1.0000     51  nan_34                   1.0000     51  
+nan_35                   1.0000     51  nan_36                   1.0000     51  
+nan_37                   1.0000     51  nan_38                   1.0000     51  
+nan_39                   1.0000     51  nan_40                   1.0000     51  
+nan_41                   1.0000     51  nan_42                   1.0000     51  
+nan_43                   1.0000     51  nan_44                   1.0000     51  
+nan_45                   1.0000     51  nan_46                   1.0000     51  
+nan_47                   1.0000     51  nan_48                   1.0000     51  
+nan_49                   1.0000     51  nan_50                   1.0000     51  
+nan_51                   1.0000     51  nan_52                   1.0000     51  
+nan_53                   1.0000     51  nan_54                   1.0000     51  
+nan_55                   1.0000     51  nan_56                   1.0000     51  
+nan_57                   1.0000     51  nan_58                   1.0000     51  
+nan_59                   1.0000     51  nan_60                   1.0000     51  
+nan_61                   1.0000     51  nan_62                   1.0000     51  
+nan_63                   1.0000     51  nan_64                   1.0000     51  
+nan_65                   1.0000     51  nan_66                   1.0000     51  
+nan_67                   1.0000     51  nan_68                   1.0000     51  
+nan_69                   1.0000     51  nan_70                   1.0000     51  
+nan_71                   1.0000     51  nan_72                   1.0000     51  
+nan_73                   1.0000     51  nan_74                   1.0000     51  
+nan_75                   1.0000     51  nan_76                   1.0000     51  
+nan_77                   1.0000     51  nan_78                   1.0000     51  
+nan_79                   1.0000     51  nan_80                   1.0000     51  
+nan_81                   1.0000     51  nan_82                   1.0000     51  
+nan_83                   1.0000     51  nan_84                   1.0000     51  
+nan_85                   1.0000     51  nan_86                   1.0000     51  
+nan_87                   1.0000     51  nan_88                   1.0000     51  
+nan_89                   1.0000     51  nan_90                   1.0000     51  
+nan_91                   1.0000     51  nan_92                   1.0000     51  
+nan_93                   1.0000     51  nan_94                   1.0000     51  
+nan_95                   1.0000     51  nan_96                   1.0000     51  
+nan_97                   1.0000     51  nan_98                   1.0000     51  
+nan_99                   1.0000     51  nan_100                  1.0000     51  
+nan_101                  1.0000     51  nan_102                  1.0000     51  
+nan_103                  1.0000     51  nan_104                  1.0000     51  
+nan_105                  1.0000     51  nan_106                  1.0000     51  
+nan_107                  1.0000     51  nan_108                  1.0000     51  
+nan_109                  1.0000     51  nan_110                  1.0000     51  
+nan_111                  1.0000     51  nan_112                  1.0000     51  
+nan_113                  1.0000     51  nan_114                  1.0000     51  
+nan_115                  1.0000     51  nan_116                  1.0000     51  
+nan_117                  1.0000     51  nan_118                  1.0000     51  
+nan_119                  1.0000     51  nan_120                  1.0000     51  
+nan_121                  1.0000     51  nan_122                  1.0000     51  
+nan_123                  1.0000     51  nan_124                  1.0000     51  
+nan_125                  1.0000     51  nan_126                  1.0000     51  
+nan_127                  1.0000     51  nan_128                  1.0000     51  
+nan_129                  1.0000     51  nan_130                  1.0000     51  
+nan_131                  1.0000     51  nan_132                  1.0000     51  
+nan_133                  1.0000     51  nan_134                  1.0000     51  
+nan_135                  1.0000     51  nan_136                  1.0000     51  
+nan_137                  1.0000     51  nan_138                  1.0000     51  
+nan_139                  1.0000     51  nan_140                  1.0000     51  
+nan_141                  1.0000     51  nan_142                  1.0000     51  
+nan_143                  1.0000     51  nan_144                  1.0000     51  
+nan_145                  1.0000     51  nan_146                  1.0000     51  
+nan_147                  1.0000     51  nan_148                  1.0000     51  
+nan_149                  1.0000     51  nan_150                  1.0000     51  
+nan_151                  1.0000     51  nan_152                  1.0000     51  
+nan_153                  1.0000     51  nan_154                  1.0000     51  
+nan_155                  1.0000     51  nan_156                  1.0000     51  
+nan_157                  1.0000     51  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/2024-11-17_T4_promoters_dRNA_orphan -nmotifs 1 -mod oops -dna -minw 51 -maxw 51 /Users/maikschauerte/Desktop/NAR_Revision/Phage_NAD-RNA_analysis/Updated_NAD-RNA_TSS_annotation/Orphan_dRNA_Ec_promoters.fasta 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=           51    maxw=           51
+nsites: minsites=      157    maxsites=      157    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            8007    N=             157
+sample: seed=            0    hsfrac=          0
+        searchsize=   8007    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.293 C 0.183 G 0.207 T 0.317 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.293 C 0.183 G 0.207 T 0.317 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1	width =  51  sites = 157  llr = 367  E-value = 2.5e-069
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  334333334432233322233333332323333221223735423333224
+pos.-specific     C  231222212222222112222221323322211222111121212222331
+probability       G  222222221123222223222123222222222234421:121:2222314
+matrix            T  333332333343434443433333223333344323345242473342241
+
+         bits    2.5                                                    
+                 2.2                                                    
+                 2.0                                                    
+                 1.7                                                    
+Relative         1.5                                                    
+Entropy          1.2                                                    
+(3.4 bits)       1.0                                                    
+                 0.7                                        *           
+                 0.5                                        *   *       
+                 0.2                                    ** ** * *     **
+                 0.0 ---------------------------------------------------
+
+Multilevel           AAAAAAATAATTTTTTTGTTTTATCATTTATTTTGGGTTATAATAATACTG
+consensus            TTTTTGTATTAGAAAAGTAAAATGATCAATAAAAATTGA ATT TTAGGCA
+sequence             CCGGGC G   AGCCGAACCGC ATCGCGG  GCT  A         TT  
+                                C G   C G    GGA C                  CA  
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                                   Site                      
+-------------             ----- ---------            ---------------------------------------------------
+nan_136                       1  4.25e-07          . ATACGACGAATCTGTATCGGGACTCATCGATATTAGGTAACAATACGCGGG           
+nan_124                       1  8.10e-06          . AGAATCCGTATCTTCGAGTGCCCACACAGATTGTCTGATAAATTGTTAAAG           
+nan_145                       1  9.17e-06          . GTGAGGCTGATGGCAATCGCCGGGCTCTTCCTGCATGTTACACTGGTACTG           
+nan_73                        1  1.49e-05          . ATGGCAAGATGAGTAATGGGGCAACAGCGTTTGGCGATTACAATAGTAACG           
+nan_125                       1  2.24e-05          . GCCGACATGAGCAGGGTGCGGCAATGGCGGCTATCGGTTATGCTCGTGCTA           
+nan_79                        1  3.93e-05          . ACGGCGGAAGTTTGCGAGTTGAAGAAAATGACTTCGCTTATAATACCACTG           
+nan_7                         1  5.45e-05          . TACGTAGGCCGGATAAGGCGTTCACGCCGCATCCGGCATAAACTACAGCTG           
+nan_27                        1  5.75e-05          . AAGTAACGTCTCGGTGGCTTATGGGCGGTAAAACAGATAAATTTTTTCCCG           
+nan_149                       1  2.34e-04          . ATACCAATAACAAGCAATGCGACGGAACCGTAGAATGGTAAACTCCAGTTG           
+nan_157                       1  2.57e-04          . TGAAAAAACCTGCACGGGTGACCCGCCACGAAATTGAGGATGCTAAGGCTG           
+nan_140                       1  2.69e-04          . GTGAGAATACGGTAAATAGTGCGTTACGGGTCATGGGGTATGATACAAAAG           
+nan_87                        1  2.82e-04          . AATTCGCAATGACCCTTATAAATAAAAGGTTTTTGGGGTAAAATGCTCGGA           
+nan_70                        1  2.82e-04          . GTGCAAAACAGATCATTCACCAATGGTCCCCCTTCGTTTACACTAGCCACA           
+nan_130                       1  3.10e-04          . CTGTAAACTAATGCCTTTACGTGGGCGGTGATTTTGTCTACAATCTTACCC           
+nan_15                        1  3.10e-04          . GCGGATACTCCGGTGCTGGCGAAACCACTGGGGTAGGTTATAGTCTCGGTG           
+nan_85                        1  3.24e-04          . ACTCTCTTTTGGGGGGAGGAATCGACACAAATTCCTGTCAAAATAGACCCG           
+nan_129                       1  3.88e-04          . CAGTGCCGCTTCGCTTTTTCTCAGCGGCGCGGGGTGTGCATAATACGCCTT           
+nan_127                       1  3.88e-04          . CAGTGCCGCTTCGCTTTTTCTCAGCGGCGCGGGGTGTGCATAATACGCCTT           
+nan_134                       1  4.64e-04          . GCGTAGCGGGTTTGCTTACACCCTCCGGTTAAGGAATGTACAATCAAACCA           
+nan_142                       1  5.06e-04          . ATCAGTAAACTGGATAACTTTCTTGGCCAGCTTGATGGTATCCTTCGCCGG           
+nan_62                        1  5.06e-04          . CTATTGTTGTGTTTTGTACATCAGTAGATATATTCTGATATACTCCTTTTG           
+nan_88                        1  6.29e-04          . TCAGGCAGGACGTAATTGAAACTTGATTAAATTCTGGCTATAGTGTTTATA           
+nan_24                        1  6.29e-04          . CCCGCCAATATTAACATTTAGTTAACTTATAATTATATTATAATTAACTCA           
+nan_89                        1  6.56e-04          . AACATATAATGCGATTGGCATTAACCCGCTTTTGTCGATATAATATATAAA           
+nan_47                        1  7.45e-04          . TAATTATTTACAGTTACAGCCGATCTCCCTGGTTGTGTAACAATATAGTTA           
+nan_2                         1  7.45e-04          . GGGAAAGTGATGCTCGACAGCGTGCCGGTCGATCCGAATATGCTCAACCAG           
+nan_83                        1  9.94e-04          . AAAGGAATTGCTCACTGGAACCCGGGCTTCATACTGGGTATCGTTTAAACG           
+nan_137                       1  1.08e-03          . GAAGGCGGAAGCCGCGCAGTAATTCGGCCTTAGCCAGATATAGTATGCGTA           
+nan_16                        1  1.12e-03          . CTAAATTTAATCTCTTCATATCTTCATAAGTATCAGATAATATATCCCATG           
+nan_13                        1  1.17e-03          . ATTACCAGTATTTCTTCGGAGTGAAGAATATTACCAGGTATATTTAACACC           
+nan_21                        1  1.32e-03          . ACGATTCATGTTCCTTCAACGCCGGGGCGCGCATGGAATATGCTGGTGGCA           
+nan_18                        1  1.42e-03          . CAAAACTTACATCTTGAAATAATCACATTGATTAGATGAATATTTATCGCG           
+nan_12                        1  1.79e-03          . GCAGAGAAGGTCGCGTTGCTGTTGACGTCGTTTACGTAGATAATTTCTTTA           
+nan_115                       1  1.86e-03          . ATTCAATGATTATAAAGTGCTAATAATCAATATTATGGTATTATATTCTGG           
+nan_94                        1  1.93e-03          . CTGCGGTCAGGCGATTGCGCGCATCAGGATGTATCCGATAAATTACCGTCT           
+nan_97                        1  2.08e-03          . TCTCTACAAATTCTGTGGCATTAATTTTTCGCTGGAGTGAAAATTATTGCG           
+nan_42                        1  2.08e-03          . ATTTCGCAAATGTGCTGACATTTTCCCCTCTAATCCGTACCATACACGCCA           
+nan_46                        1  2.16e-03          . TTTCAGTGCCAGAAATTTTTCAGCCAGTTCTTTTATGGTTAAATCTTGTCG           
+nan_84                        1  2.33e-03          . AGCGGGGAAAACTGGTTGTTCTGTACATAACGGGAAGGTTTAATAATGGCA           
+nan_96                        1  2.42e-03          . AAGTGCTCTTTAACATAATGGATGTGTTGTTTGTGTGATACTATAAAGTTG           
+nan_153                       1  2.90e-03          . TTTGCCATTAATTTCCAGCTTACGCAATGACATTTTGATAGCATTAACCTG           
+nan_126                       1  2.90e-03          . ACGACGTATTACGATGGCCGCATTCCTCCTGAAATGATAAAAAACAGGTTA           
+nan_80                        1  3.00e-03          . CCTTATATTCACCCATAGCATTGGCATCAACTGTTGAGTATGGTGAGACAG           
+nan_48                        1  3.00e-03          . GAAATCAGCAAGCAAAAAATTTATGGTGTGTTTCTGTTTATACTGGAGTTC           
+nan_143                       1  3.22e-03          . CCCCCAGTTTTCCTTGATTGGATATCCACCATGTGCTGTATCCTGCTTTTG           
+nan_154                       1  3.34e-03          . TGTACAAAGTTGTTGGTGTTGTGACGCCATTTTCGGCGCAGGTTAATGCTA           
+nan_113                       1  3.34e-03          . CATGACATGCTCGAATTACAGAAAAATAACTTTTTTGTTACATTTGTAAGA           
+nan_20                        1  3.46e-03          . TGAAGGAACATGAATCGTCAGAATTGTCGTCATCATGTTACGTTTACTTTC           
+nan_100                       1  3.58e-03          . AAGAACGTAAAATCTCGCTGCCACGCTAAGATTATCCTAAAGTTACACACA           
+nan_55                        1  3.71e-03          . TATTAGGATGTTTACATCGGATTTGTGATTAAGCGTGGTATTATTTATTAG           
+nan_147                       1  3.84e-03          . TTTTTCTTCCTCTGTGTATTTGTTCCCCATATGGCGTCATAATTTACGCTA           
+nan_135                       1  4.71e-03          . ACAAAAGTTAATTAACTATTATGTCACCCGCATTATGTGTATTTTTACCCA           
+nan_111                       1  5.04e-03          . TTTACCATCAACGTGTTAGCAACGTTGAGATTGTTGGTGACAATGCGCAAA           
+nan_3                         1  5.21e-03          . ACCGACTGGATCGAAAAACGCTTGTGTTAAAAATTTGCTAAATTTTGCCAA           
+nan_144                       1  5.75e-03          . ACAACTGGAAAATCCAGCCGGGAGCACCGTTATATGATACGATTGTTATTG           
+nan_117                       1  5.94e-03          . CTTAAATGTGCTGTCTGGTTTTTCAACAGGACGAGGTTTATCATATTGAAA           
+nan_19                        1  5.94e-03          . ATAACGCTGTGCCAACACGATTAATTGACAACATCTGGTACGATTCGCCCG           
+nan_146                       1  6.14e-03          . CAAATAAATCAACCATCGTCAGAGTGCAATCGTTCATATACACTGTCGGTG           
+nan_10                        1  6.14e-03          . GTCAGGCAATTTATAACGTTGCTGAAACGTCAGCAATGTATGATGTTGCTA           
+nan_105                       1  6.34e-03          . AAAAAGCGCAATGATTTGACGAGGGCGCGTAATTGCCCCAATCTCATAGGA           
+nan_92                        1  6.34e-03          . ATTAGTGAAAAATTTTTATTTAGTCAGTTTTTGTAGATAAAATATTCCGTA           
+nan_33                        1  6.34e-03          . CGATATCTTCGGCTTATGCCGAGCACCCCTGGCGATGTAAAGTCTACAACG           
+nan_22                        1  6.76e-03          . CCAACTTCCAGACTTTCCCAATTCAGCGTATCTGGCGCAAAATAATAAACG           
+nan_121                       1  6.98e-03          . TTTCAAACAATAAGTAGCCAAAAGGTGAATAAATGTTTAAATATTTTTCCA           
+nan_112                       1  7.44e-03          . TCCCGGGGAAAACAGTGCTTGTTTACAATTATTAGATATACACTAAATCAA           
+nan_75                        1  7.44e-03          . AACTTAGCCAACCTTGCGATGTCTGACGCAAATGTGATTATGATGGATGAG           
+nan_151                       1  7.92e-03          . CCGGTATCGCCACAGTAACTGCCGGAACTGCCTGCTCGTATAATGACTGCC           
+nan_58                        1  7.92e-03          . AATTTAGAAGTCTTTAATGCGCTTAAACTTGAACAGACTAAATTAACATTA           
+nan_52                        1  7.92e-03          . AAATTGTTATAAGAATTGTGTCACTTTTATCATTGTGATATGACCACTTCG           
+nan_141                       1  8.43e-03          . AATACGGTAAATAGTGCGTTACGGGTCATGGGGTATGATACAAAAGTAGAG           
+nan_69                        1  8.69e-03          . TATGGGTAAATGACGATGAATTCATTCGAGCGAAGGAATAAGATCATCCAA           
+nan_86                        1  8.96e-03          . CAGGAATTTGTGTCGATTCCTCCCCCCAAAAGAGAGTATTTTCTTGATCTG           
+nan_81                        1  8.96e-03          . GCTGAGATTTATGACAAACGCAAAACTGCCTGATGCGCTACGCTTATCAGG           
+nan_106                       1  9.24e-03          . GTCGAAATCATGACTTTCCAGTTTGGATGATGTTGTATAACTTCCTGACCA           
+nan_150                       1  1.11e-02          . CTTTGGCATTATTATCGACAAAACAGGCAACTGGAGTTTACCATTCTACGG           
+nan_104                       1  1.14e-02          . TTTCGAAAAAACCCGCTTCGGCGGGTTTTTTTATAGCTAAAATCTGAATCA           
+nan_99                        1  1.14e-02          . TAAATGATGCGGCCATTGCGTTCTCAGTAATTAAATAACATTATCAATGCG           
+nan_90                        1  1.14e-02          . TAAATTGGTCAACTATTTACTTGACTGATTTAGTCGGGTATTTAACCTTCA           
+nan_54                        1  1.14e-02          . CGAAACCAACATGACTTTTTTTGTGGCTGAAAGGAGTATACGGTATAGACC           
+nan_63                        1  1.28e-02          . AAATATCAAACATTTTTGACCTTAATCATGTTTTTTGATAGATATTTTACG           
+nan_102                       1  1.36e-02          . GCGAAGTAGAATTTGAAGTAATTAAGGTGGAATACCTGTAAGAATTACCCA           
+nan_38                        1  1.36e-02          . GCGTTCAAGCCGACTTTGGCTACGTCAAATTGGCGGGCATAATGCCTGGCG           
+nan_95                        1  1.40e-02          . AGGTGTTACGTGGATATGTTGCTTATTACAAGTACTGCTAATATAAAAACT           
+nan_37                        1  1.40e-02          . AGGCGTTTCTGTTGATTCTGAATTTCCCTCTGAGCTGTTATCCTCCTCATT           
+nan_57                        1  1.57e-02          . AGGTTAATTTTGGTATTTAAACCTTTTTTACTTGTTAGTATGATACAAAGG           
+nan_122                       1  1.61e-02          . CATATTTATTTACTTGGCAAATGATGCCTTTGCAAGTTTATGATATTTCAG           
+nan_123                       1  1.66e-02          . TGGCTTTTTTTGGTAAGCAGAAAATAAGTCATTAGTGAAAATATCAGTCTG           
+nan_67                        1  1.66e-02          . TGATGGTATCGGTCATTTTACCCAATAGCCGAAAGGAATAAGATGAGGGAA           
+nan_118                       1  1.70e-02          . TCCGGTCATAAATGTAGATCCGCAAGGTTTGGTTGATATAAATTTATACCC           
+nan_132                       1  1.80e-02          . CATGACCCCATCGTTGACAACCGCCCCGCTCACCCTTTATTTATAAATGTA           
+nan_101                       1  1.80e-02          . TTGAAGTAATTAAGGTGGAATACCTGTAAGAATTACCCAATACTCAAGATG           
+nan_25                        1  1.95e-02          . GAGTTAATTATAATATAATTATAAGTTAACTAAATGTTAATATTGGCGGGG           
+nan_41                        1  2.01e-02          . TCTACCAAAGGCAGTGGAATTAATAATATCATTTCAATTATTCTTCAGCAA           
+nan_110                       1  2.17e-02          . ACGCTCGATTTTATCTCCCAGTTCCGCCTTGATTTCGGCATTCTGGGGATA           
+nan_29                        1  2.17e-02          . GGGATGGTTTTGCTTTATTAACAACGGGCTAAACGTGTAGTATTTGAGTTC           
+nan_59                        1  2.23e-02          . TGACCGCAAAACATTTACGCGATTAATACTGCGCGTAATATAATTAAAAAT           
+nan_53                        1  2.23e-02          . TTTCCAGTAATAAGGAAATGATTTCTTTTTTATAGTGTAATGTAATGAGTA           
+nan_51                        1  2.48e-02          . CTAGTGAGATAGTCCAGTTTCTGAAAAATAGCCAGTGTAATGTTTTGTAGG           
+nan_103                       1  2.61e-02          . TTGGGCAGAAAATTGGATGATAGTTTACCAGATTTTGCGACCATTGTGGTG           
+nan                           1  2.68e-02          . ATATCAAGGCGGGTCGCTTTGTTGGTTTGACCCGGTGATAAAGTAAATGCC           
+nan_66                        1  2.75e-02          . CGGCCATAACGCACCTCCACTGGAAGGTTTATCAGTAATATCCTACCGTTG           
+nan_8                         1  2.82e-02          . CGTATGCCGACTTCAAAGTGCCTGATGATTTGATGTGGTAAACATAGATAA           
+nan_4                         1  3.11e-02          . CGCTTGTGTTAAAAATTTGCTAAATTTTGCCAATTTGGTAAAACAGTTGCA           
+nan_68                        1  3.19e-02          . GTTTTAATCAGGTACTACCAATCGAAAAAATTGACATTATTATTACCGATG           
+nan_148                       1  3.27e-02          . TTCATCAATCCGCTGGCAATTCCCACATACTTCGGCGTAATATCCATCGGG           
+nan_139                       1  3.44e-02          . TAAAGCGCATCCCTGAGTTGCTTACAAAAATAGATAGCTATACTGGTAGGC           
+nan_43                        1  3.44e-02          . GATTAATAAACATGTTGATTTATTCAAGAAAATGGATGTATTTTAAATGTT           
+nan_28                        1  3.69e-02          . TAGAGTATTCGTTTTCATTTAAAGATATTCTTGCGCTTTAATTACAAACTG           
+nan_34                        1  3.87e-02          . ATTGCTGGTGTTAGTGGAGTGCGACCACCAAAACAGATAACGTCGTTTGTG           
+nan_50                        1  3.97e-02          . TCTTGATCGGGTTAACTATTTTACTACTTACAAAGCAGTAGAATAACTGCG           
+nan_93                        1  4.16e-02          . AACAATCTATCTTTCATCCCATATTCATCAACATCCGCTATTATTGATTTC           
+nan_61                        1  4.16e-02          . TCATGAAGCTATTGTTGTGTTTTGTACATCAGTAGATATATTCTGATATAC           
+nan_32                        1  4.46e-02          . AGAATGCGGATTAGTTTTTGCGCGTAAATGTTGCAATGTAATATTCCGTAA           
+nan_152                       1  4.56e-02          . GGAAATATCGAGGCTTTACCTTTGCTTTGATCTGATGTATCACCTGCACAA           
+nan_74                        1  5.22e-02          . TCATTCTGATATTGGTTTTGATCGCGGCGGCAAAGGTAATATCGATAGCTA           
+nan_30                        1  5.34e-02          . TCAATAAAAATTTACGGAACTATTGATGAGAGTTTGGTGTCTTTATGTGTC           
+nan_56                        1  5.83e-02          . AATATCTTTTTCTGATATCCCGTTACGCAAATAAATAATATGATAATTATT           
+nan_108                       1  5.96e-02          . CCATTCAGCTGGGTTGCTTAATTTGATGCGCAGGGCATACAGTTGTGATTG           
+nan_119                       1  6.77e-02          . CGTAAAAGCAATAGTTCATCAGACTGCCGCAGCAGTAGTATGATGATGAAT           
+nan_60                        1  6.77e-02          . GAATATATCTACTGATGTACAAAACACAACAATAGCTTCATGATATATAAA           
+nan_39                        1  7.51e-02          . TTAAAAAATACCCTTGTCAATCAACCCATTGCCGTCGTACTTTTGATTGTT           
+nan_116                       1  7.66e-02          . CAAACATTATCATGGCTGATATTTTCCGTAGTCAGGTTTAATGTTTTAAAA           
+nan_23                        1  7.82e-02          . GTAAATTGCCGGACATAGCGAAACAATTAAGACTGCCATATCCTATTGACC           
+nan_98                        1  7.98e-02          . GCGTCAAAAAAGCCCCGGCAAGTTTTATTGTCGGGGCTATGATAGTAACTG           
+nan_5                         1  7.98e-02          . TCAAAATCCACATACTACTTTGAGGTTACGTTTTAACGTAGACTCATTGTT           
+nan_36                        1  8.63e-02          . AAATGTTAACCTTAAGGTTTTATTAAGTTTAGAAATGATAGAAAAGTTGTA           
+nan_35                        1  8.81e-02          . TTATAAACATTCCGCTTGTGTTTTTCTTTGCCGTAATGATAATCGCTATCA           
+nan_114                       1  1.01e-01          . TTTTATTTCTTTTGGCAGGTGATTAATTTTTTAACAGCAATAATTACAAAA           
+nan_45                        1  1.03e-01          . GCTGGCTTTTCTGCTTTTTCAGGAGAATAAACTCATCTACAATCTTGCGCG           
+nan_76                        1  1.09e-01          . TGAAGCCGCAAATAAATTATGCACCCGCAATGTTGGTGGGTAAGGTAGTGG           
+nan_156                       1  1.17e-01          . ACAGAGTGTGCTAATGACAGCCAGATAACTGCGCTGTTAAATTACATTTTA           
+nan_65                        1  1.59e-01          . TCATTTGTACTTTGTATTAATGAGGGATGAAATGTTATATAATATACCTTG           
+nan_91                        1  1.64e-01          . GCTGTCAATGTGCTCGTTGTTCATGCCGGATGCGGCGTGAACGCCTTATCC           
+nan_78                        1  1.67e-01          . GATGGCTTTTGAGGAATACGTGATACTTCCATTCTGATATGATCGACCGAG           
+nan_155                       1  1.70e-01          . GGTGAAGGCGTAAAAAATGAAATAAAGGCAATATATGGTAGTCTGGATCAA           
+nan_77                        1  1.70e-01          . TGGTTATCAACAATGGCCGCGCTAACGTCTGGGCTGGCACAATGGTTAACG           
+nan_31                        1  1.78e-01          . CCATAGAGACGTGATGATATTTACAGCAATTTTAATCTATTTATATGATTT           
+nan_11                        1  1.86e-01          . AAACGTGTTGTTGATGACAAGGTCTTCCAGAGCGGTGTATTTAACGTAGCG           
+nan_128                       1  1.89e-01          . TAAGCTTTTTTGATTATGTCCGAATTCGGACAAATGCTTTATAAAAAAGGG           
+nan_131                       1  1.98e-01          . TGTGAAGTGATTCACATCCGCCGTGTCGATGGAGGCGCATTATAGGGAGTT           
+nan_40                        1  2.10e-01          . TGCGGTTTCTATGATAGAGCAATTCTGTGGCGGATATTAAGATAACGGGTA           
+nan_133                       1  2.13e-01          . ACCTACAAAATCACGCTAAATCAGGCTATTGCGCTGTCTGGCGTAGGCCTG           
+nan_71                        1  2.16e-01          . ATATTTCGCCAAAAGTTGATTACTGATTTCTTCTGTCAGATAACAGATTGG           
+nan_138                       1  2.55e-01          . TTATGCCTGAAATCCAGTGTTTATCTATCTTTCCCGCTATATTAACTCTCT           
+nan_26                        1  2.91e-01          . CCAACAAATTATACTGGATAAAAAAACAGTTCATCACCATAATATTTCTGA           
+nan_6                         1  2.94e-01          . GGGAGAGGTATTTTCAGTTGATCTGGATTGTTAAATTCATATAATGCGCCT           
+nan_14                        1  2.98e-01          . ATAATATTTCCTTTGCTGCGATTTTTTCAATTTCCGATATATTCATAATTT           
+nan_109                       1  3.24e-01          . CGTGTTTCATCTATTTGACGCGCGCAGGTATTTAGCATACAAGGAGTACCG           
+nan_9                         1  3.32e-01          . ACGGGGTGAAAGATACCAACGGGGGTTGGACTGATGATAGCCTCAACGTTG           
+nan_44                        1  3.64e-01          . AACCCCATTGGGTCTATCACTTGTATGGGATTCAACGGATACTGATACATA           
+nan_49                        1  3.88e-01          . TGAAAAACAAAGGTGCATTTTTGTTTTTCTGTTCTGCCATACTCTCTGAAG           
+nan_17                        1  4.59e-01          . CACCAACAAAAAAAAGGTTTACACCATCCCCTTGCCCTGGTATCTTACCAT           
+nan_120                       1  5.35e-01          . TGACTTCTTGTCTGAGAAAATGCATAAGAAAAAATAGGTTAAAACTGAGGG           
+nan_64                        1  5.61e-01          . TTACAATTTATGAAGATGACAATAATTATAGATATATGAGAACATAAATGA           
+nan_107                       1  5.73e-01          . TGCTGAGCATTGTCAATCGGTTAATTTTGCGTGCTTTAGCATTCACATCTA           
+nan_82                        1  7.55e-01          . AAGTGGCGGATATTGCGTTGTAATGATACGCCACATCCGGCATGGTATGCC           
+nan_72                        1  8.15e-01          . CATCCGGCAACAGGAGCCAAATGCCGGATGCAACGCTGGCGCGTTTTATCC           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+nan_136                           4.2e-07  [+1]
+nan_124                           8.1e-06  [+1]
+nan_145                           9.2e-06  [+1]
+nan_73                            1.5e-05  [+1]
+nan_125                           2.2e-05  [+1]
+nan_79                            3.9e-05  [+1]
+nan_7                             5.4e-05  [+1]
+nan_27                            5.7e-05  [+1]
+nan_149                           0.00023  [+1]
+nan_157                           0.00026  [+1]
+nan_140                           0.00027  [+1]
+nan_87                            0.00028  [+1]
+nan_70                            0.00028  [+1]
+nan_130                           0.00031  [+1]
+nan_15                            0.00031  [+1]
+nan_85                            0.00032  [+1]
+nan_129                           0.00039  [+1]
+nan_127                           0.00039  [+1]
+nan_134                           0.00046  [+1]
+nan_142                           0.00051  [+1]
+nan_62                            0.00051  [+1]
+nan_88                            0.00063  [+1]
+nan_24                            0.00063  [+1]
+nan_89                            0.00066  [+1]
+nan_47                            0.00074  [+1]
+nan_2                             0.00074  [+1]
+nan_83                            0.00099  [+1]
+nan_137                            0.0011  [+1]
+nan_16                             0.0011  [+1]
+nan_13                             0.0012  [+1]
+nan_21                             0.0013  [+1]
+nan_18                             0.0014  [+1]
+nan_12                             0.0018  [+1]
+nan_115                            0.0019  [+1]
+nan_94                             0.0019  [+1]
+nan_97                             0.0021  [+1]
+nan_42                             0.0021  [+1]
+nan_46                             0.0022  [+1]
+nan_84                             0.0023  [+1]
+nan_96                             0.0024  [+1]
+nan_153                            0.0029  [+1]
+nan_126                            0.0029  [+1]
+nan_80                              0.003  [+1]
+nan_48                              0.003  [+1]
+nan_143                            0.0032  [+1]
+nan_154                            0.0033  [+1]
+nan_113                            0.0033  [+1]
+nan_20                             0.0035  [+1]
+nan_100                            0.0036  [+1]
+nan_55                             0.0037  [+1]
+nan_147                            0.0038  [+1]
+nan_135                            0.0047  [+1]
+nan_111                             0.005  [+1]
+nan_3                              0.0052  [+1]
+nan_144                            0.0058  [+1]
+nan_117                            0.0059  [+1]
+nan_19                             0.0059  [+1]
+nan_146                            0.0061  [+1]
+nan_10                             0.0061  [+1]
+nan_105                            0.0063  [+1]
+nan_92                             0.0063  [+1]
+nan_33                             0.0063  [+1]
+nan_22                             0.0068  [+1]
+nan_121                             0.007  [+1]
+nan_112                            0.0074  [+1]
+nan_75                             0.0074  [+1]
+nan_151                            0.0079  [+1]
+nan_58                             0.0079  [+1]
+nan_52                             0.0079  [+1]
+nan_141                            0.0084  [+1]
+nan_69                             0.0087  [+1]
+nan_86                              0.009  [+1]
+nan_81                              0.009  [+1]
+nan_106                            0.0092  [+1]
+nan_150                             0.011  [+1]
+nan_104                             0.011  [+1]
+nan_99                              0.011  [+1]
+nan_90                              0.011  [+1]
+nan_54                              0.011  [+1]
+nan_63                              0.013  [+1]
+nan_102                             0.014  [+1]
+nan_38                              0.014  [+1]
+nan_95                              0.014  [+1]
+nan_37                              0.014  [+1]
+nan_57                              0.016  [+1]
+nan_122                             0.016  [+1]
+nan_123                             0.017  [+1]
+nan_67                              0.017  [+1]
+nan_118                             0.017  [+1]
+nan_132                             0.018  [+1]
+nan_101                             0.018  [+1]
+nan_25                               0.02  [+1]
+nan_41                               0.02  [+1]
+nan_110                             0.022  [+1]
+nan_29                              0.022  [+1]
+nan_59                              0.022  [+1]
+nan_53                              0.022  [+1]
+nan_51                              0.025  [+1]
+nan_103                             0.026  [+1]
+nan                                 0.027  [+1]
+nan_66                              0.027  [+1]
+nan_8                               0.028  [+1]
+nan_4                               0.031  [+1]
+nan_68                              0.032  [+1]
+nan_148                             0.033  [+1]
+nan_139                             0.034  [+1]
+nan_43                              0.034  [+1]
+nan_28                              0.037  [+1]
+nan_34                              0.039  [+1]
+nan_50                               0.04  [+1]
+nan_93                              0.042  [+1]
+nan_61                              0.042  [+1]
+nan_32                              0.045  [+1]
+nan_152                             0.046  [+1]
+nan_74                              0.052  [+1]
+nan_30                              0.053  [+1]
+nan_56                              0.058  [+1]
+nan_108                              0.06  [+1]
+nan_119                             0.068  [+1]
+nan_60                              0.068  [+1]
+nan_39                              0.075  [+1]
+nan_116                             0.077  [+1]
+nan_23                              0.078  [+1]
+nan_98                               0.08  [+1]
+nan_5                                0.08  [+1]
+nan_36                              0.086  [+1]
+nan_35                              0.088  [+1]
+nan_114                               0.1  [+1]
+nan_45                                0.1  [+1]
+nan_76                               0.11  [+1]
+nan_156                              0.12  [+1]
+nan_65                               0.16  [+1]
+nan_91                               0.16  [+1]
+nan_78                               0.17  [+1]
+nan_155                              0.17  [+1]
+nan_77                               0.17  [+1]
+nan_31                               0.18  [+1]
+nan_11                               0.19  [+1]
+nan_128                              0.19  [+1]
+nan_131                               0.2  [+1]
+nan_40                               0.21  [+1]
+nan_133                              0.21  [+1]
+nan_71                               0.22  [+1]
+nan_138                              0.26  [+1]
+nan_26                               0.29  [+1]
+nan_6                                0.29  [+1]
+nan_14                                0.3  [+1]
+nan_109                              0.32  [+1]
+nan_9                                0.33  [+1]
+nan_44                               0.36  [+1]
+nan_49                               0.39  [+1]
+nan_17                               0.46  [+1]
+nan_120                              0.54  [+1]
+nan_64                               0.56  [+1]
+nan_107                              0.57  [+1]
+nan_82                               0.76  [+1]
+nan_72                               0.82  [+1]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR width=51 seqs=157
+nan_136                  (    1) ATACGACGAATCTGTATCGGGACTCATCGATATTAGGTAACAATACGCGGG  1 
+nan_124                  (    1) AGAATCCGTATCTTCGAGTGCCCACACAGATTGTCTGATAAATTGTTAAAG  1 
+nan_145                  (    1) GTGAGGCTGATGGCAATCGCCGGGCTCTTCCTGCATGTTACACTGGTACTG  1 
+nan_73                   (    1) ATGGCAAGATGAGTAATGGGGCAACAGCGTTTGGCGATTACAATAGTAACG  1 
+nan_125                  (    1) GCCGACATGAGCAGGGTGCGGCAATGGCGGCTATCGGTTATGCTCGTGCTA  1 
+nan_79                   (    1) ACGGCGGAAGTTTGCGAGTTGAAGAAAATGACTTCGCTTATAATACCACTG  1 
+nan_7                    (    1) TACGTAGGCCGGATAAGGCGTTCACGCCGCATCCGGCATAAACTACAGCTG  1 
+nan_27                   (    1) AAGTAACGTCTCGGTGGCTTATGGGCGGTAAAACAGATAAATTTTTTCCCG  1 
+nan_149                  (    1) ATACCAATAACAAGCAATGCGACGGAACCGTAGAATGGTAAACTCCAGTTG  1 
+nan_157                  (    1) TGAAAAAACCTGCACGGGTGACCCGCCACGAAATTGAGGATGCTAAGGCTG  1 
+nan_140                  (    1) GTGAGAATACGGTAAATAGTGCGTTACGGGTCATGGGGTATGATACAAAAG  1 
+nan_87                   (    1) AATTCGCAATGACCCTTATAAATAAAAGGTTTTTGGGGTAAAATGCTCGGA  1 
+nan_70                   (    1) GTGCAAAACAGATCATTCACCAATGGTCCCCCTTCGTTTACACTAGCCACA  1 
+nan_130                  (    1) CTGTAAACTAATGCCTTTACGTGGGCGGTGATTTTGTCTACAATCTTACCC  1 
+nan_15                   (    1) GCGGATACTCCGGTGCTGGCGAAACCACTGGGGTAGGTTATAGTCTCGGTG  1 
+nan_85                   (    1) ACTCTCTTTTGGGGGGAGGAATCGACACAAATTCCTGTCAAAATAGACCCG  1 
+nan_129                  (    1) CAGTGCCGCTTCGCTTTTTCTCAGCGGCGCGGGGTGTGCATAATACGCCTT  1 
+nan_127                  (    1) CAGTGCCGCTTCGCTTTTTCTCAGCGGCGCGGGGTGTGCATAATACGCCTT  1 
+nan_134                  (    1) GCGTAGCGGGTTTGCTTACACCCTCCGGTTAAGGAATGTACAATCAAACCA  1 
+nan_142                  (    1) ATCAGTAAACTGGATAACTTTCTTGGCCAGCTTGATGGTATCCTTCGCCGG  1 
+nan_62                   (    1) CTATTGTTGTGTTTTGTACATCAGTAGATATATTCTGATATACTCCTTTTG  1 
+nan_88                   (    1) TCAGGCAGGACGTAATTGAAACTTGATTAAATTCTGGCTATAGTGTTTATA  1 
+nan_24                   (    1) CCCGCCAATATTAACATTTAGTTAACTTATAATTATATTATAATTAACTCA  1 
+nan_89                   (    1) AACATATAATGCGATTGGCATTAACCCGCTTTTGTCGATATAATATATAAA  1 
+nan_47                   (    1) TAATTATTTACAGTTACAGCCGATCTCCCTGGTTGTGTAACAATATAGTTA  1 
+nan_2                    (    1) GGGAAAGTGATGCTCGACAGCGTGCCGGTCGATCCGAATATGCTCAACCAG  1 
+nan_83                   (    1) AAAGGAATTGCTCACTGGAACCCGGGCTTCATACTGGGTATCGTTTAAACG  1 
+nan_137                  (    1) GAAGGCGGAAGCCGCGCAGTAATTCGGCCTTAGCCAGATATAGTATGCGTA  1 
+nan_16                   (    1) CTAAATTTAATCTCTTCATATCTTCATAAGTATCAGATAATATATCCCATG  1 
+nan_13                   (    1) ATTACCAGTATTTCTTCGGAGTGAAGAATATTACCAGGTATATTTAACACC  1 
+nan_21                   (    1) ACGATTCATGTTCCTTCAACGCCGGGGCGCGCATGGAATATGCTGGTGGCA  1 
+nan_18                   (    1) CAAAACTTACATCTTGAAATAATCACATTGATTAGATGAATATTTATCGCG  1 
+nan_12                   (    1) GCAGAGAAGGTCGCGTTGCTGTTGACGTCGTTTACGTAGATAATTTCTTTA  1 
+nan_115                  (    1) ATTCAATGATTATAAAGTGCTAATAATCAATATTATGGTATTATATTCTGG  1 
+nan_94                   (    1) CTGCGGTCAGGCGATTGCGCGCATCAGGATGTATCCGATAAATTACCGTCT  1 
+nan_97                   (    1) TCTCTACAAATTCTGTGGCATTAATTTTTCGCTGGAGTGAAAATTATTGCG  1 
+nan_42                   (    1) ATTTCGCAAATGTGCTGACATTTTCCCCTCTAATCCGTACCATACACGCCA  1 
+nan_46                   (    1) TTTCAGTGCCAGAAATTTTTCAGCCAGTTCTTTTATGGTTAAATCTTGTCG  1 
+nan_84                   (    1) AGCGGGGAAAACTGGTTGTTCTGTACATAACGGGAAGGTTTAATAATGGCA  1 
+nan_96                   (    1) AAGTGCTCTTTAACATAATGGATGTGTTGTTTGTGTGATACTATAAAGTTG  1 
+nan_153                  (    1) TTTGCCATTAATTTCCAGCTTACGCAATGACATTTTGATAGCATTAACCTG  1 
+nan_126                  (    1) ACGACGTATTACGATGGCCGCATTCCTCCTGAAATGATAAAAAACAGGTTA  1 
+nan_80                   (    1) CCTTATATTCACCCATAGCATTGGCATCAACTGTTGAGTATGGTGAGACAG  1 
+nan_48                   (    1) GAAATCAGCAAGCAAAAAATTTATGGTGTGTTTCTGTTTATACTGGAGTTC  1 
+nan_143                  (    1) CCCCCAGTTTTCCTTGATTGGATATCCACCATGTGCTGTATCCTGCTTTTG  1 
+nan_154                  (    1) TGTACAAAGTTGTTGGTGTTGTGACGCCATTTTCGGCGCAGGTTAATGCTA  1 
+nan_113                  (    1) CATGACATGCTCGAATTACAGAAAAATAACTTTTTTGTTACATTTGTAAGA  1 
+nan_20                   (    1) TGAAGGAACATGAATCGTCAGAATTGTCGTCATCATGTTACGTTTACTTTC  1 
+nan_100                  (    1) AAGAACGTAAAATCTCGCTGCCACGCTAAGATTATCCTAAAGTTACACACA  1 
+nan_55                   (    1) TATTAGGATGTTTACATCGGATTTGTGATTAAGCGTGGTATTATTTATTAG  1 
+nan_147                  (    1) TTTTTCTTCCTCTGTGTATTTGTTCCCCATATGGCGTCATAATTTACGCTA  1 
+nan_135                  (    1) ACAAAAGTTAATTAACTATTATGTCACCCGCATTATGTGTATTTTTACCCA  1 
+nan_111                  (    1) TTTACCATCAACGTGTTAGCAACGTTGAGATTGTTGGTGACAATGCGCAAA  1 
+nan_3                    (    1) ACCGACTGGATCGAAAAACGCTTGTGTTAAAAATTTGCTAAATTTTGCCAA  1 
+nan_144                  (    1) ACAACTGGAAAATCCAGCCGGGAGCACCGTTATATGATACGATTGTTATTG  1 
+nan_117                  (    1) CTTAAATGTGCTGTCTGGTTTTTCAACAGGACGAGGTTTATCATATTGAAA  1 
+nan_19                   (    1) ATAACGCTGTGCCAACACGATTAATTGACAACATCTGGTACGATTCGCCCG  1 
+nan_146                  (    1) CAAATAAATCAACCATCGTCAGAGTGCAATCGTTCATATACACTGTCGGTG  1 
+nan_10                   (    1) GTCAGGCAATTTATAACGTTGCTGAAACGTCAGCAATGTATGATGTTGCTA  1 
+nan_105                  (    1) AAAAAGCGCAATGATTTGACGAGGGCGCGTAATTGCCCCAATCTCATAGGA  1 
+nan_92                   (    1) ATTAGTGAAAAATTTTTATTTAGTCAGTTTTTGTAGATAAAATATTCCGTA  1 
+nan_33                   (    1) CGATATCTTCGGCTTATGCCGAGCACCCCTGGCGATGTAAAGTCTACAACG  1 
+nan_22                   (    1) CCAACTTCCAGACTTTCCCAATTCAGCGTATCTGGCGCAAAATAATAAACG  1 
+nan_121                  (    1) TTTCAAACAATAAGTAGCCAAAAGGTGAATAAATGTTTAAATATTTTTCCA  1 
+nan_112                  (    1) TCCCGGGGAAAACAGTGCTTGTTTACAATTATTAGATATACACTAAATCAA  1 
+nan_75                   (    1) AACTTAGCCAACCTTGCGATGTCTGACGCAAATGTGATTATGATGGATGAG  1 
+nan_151                  (    1) CCGGTATCGCCACAGTAACTGCCGGAACTGCCTGCTCGTATAATGACTGCC  1 
+nan_58                   (    1) AATTTAGAAGTCTTTAATGCGCTTAAACTTGAACAGACTAAATTAACATTA  1 
+nan_52                   (    1) AAATTGTTATAAGAATTGTGTCACTTTTATCATTGTGATATGACCACTTCG  1 
+nan_141                  (    1) AATACGGTAAATAGTGCGTTACGGGTCATGGGGTATGATACAAAAGTAGAG  1 
+nan_69                   (    1) TATGGGTAAATGACGATGAATTCATTCGAGCGAAGGAATAAGATCATCCAA  1 
+nan_86                   (    1) CAGGAATTTGTGTCGATTCCTCCCCCCAAAAGAGAGTATTTTCTTGATCTG  1 
+nan_81                   (    1) GCTGAGATTTATGACAAACGCAAAACTGCCTGATGCGCTACGCTTATCAGG  1 
+nan_106                  (    1) GTCGAAATCATGACTTTCCAGTTTGGATGATGTTGTATAACTTCCTGACCA  1 
+nan_150                  (    1) CTTTGGCATTATTATCGACAAAACAGGCAACTGGAGTTTACCATTCTACGG  1 
+nan_104                  (    1) TTTCGAAAAAACCCGCTTCGGCGGGTTTTTTTATAGCTAAAATCTGAATCA  1 
+nan_99                   (    1) TAAATGATGCGGCCATTGCGTTCTCAGTAATTAAATAACATTATCAATGCG  1 
+nan_90                   (    1) TAAATTGGTCAACTATTTACTTGACTGATTTAGTCGGGTATTTAACCTTCA  1 
+nan_54                   (    1) CGAAACCAACATGACTTTTTTTGTGGCTGAAAGGAGTATACGGTATAGACC  1 
+nan_63                   (    1) AAATATCAAACATTTTTGACCTTAATCATGTTTTTTGATAGATATTTTACG  1 
+nan_102                  (    1) GCGAAGTAGAATTTGAAGTAATTAAGGTGGAATACCTGTAAGAATTACCCA  1 
+nan_38                   (    1) GCGTTCAAGCCGACTTTGGCTACGTCAAATTGGCGGGCATAATGCCTGGCG  1 
+nan_95                   (    1) AGGTGTTACGTGGATATGTTGCTTATTACAAGTACTGCTAATATAAAAACT  1 
+nan_37                   (    1) AGGCGTTTCTGTTGATTCTGAATTTCCCTCTGAGCTGTTATCCTCCTCATT  1 
+nan_57                   (    1) AGGTTAATTTTGGTATTTAAACCTTTTTTACTTGTTAGTATGATACAAAGG  1 
+nan_122                  (    1) CATATTTATTTACTTGGCAAATGATGCCTTTGCAAGTTTATGATATTTCAG  1 
+nan_123                  (    1) TGGCTTTTTTTGGTAAGCAGAAAATAAGTCATTAGTGAAAATATCAGTCTG  1 
+nan_67                   (    1) TGATGGTATCGGTCATTTTACCCAATAGCCGAAAGGAATAAGATGAGGGAA  1 
+nan_118                  (    1) TCCGGTCATAAATGTAGATCCGCAAGGTTTGGTTGATATAAATTTATACCC  1 
+nan_132                  (    1) CATGACCCCATCGTTGACAACCGCCCCGCTCACCCTTTATTTATAAATGTA  1 
+nan_101                  (    1) TTGAAGTAATTAAGGTGGAATACCTGTAAGAATTACCCAATACTCAAGATG  1 
+nan_25                   (    1) GAGTTAATTATAATATAATTATAAGTTAACTAAATGTTAATATTGGCGGGG  1 
+nan_41                   (    1) TCTACCAAAGGCAGTGGAATTAATAATATCATTTCAATTATTCTTCAGCAA  1 
+nan_110                  (    1) ACGCTCGATTTTATCTCCCAGTTCCGCCTTGATTTCGGCATTCTGGGGATA  1 
+nan_29                   (    1) GGGATGGTTTTGCTTTATTAACAACGGGCTAAACGTGTAGTATTTGAGTTC  1 
+nan_59                   (    1) TGACCGCAAAACATTTACGCGATTAATACTGCGCGTAATATAATTAAAAAT  1 
+nan_53                   (    1) TTTCCAGTAATAAGGAAATGATTTCTTTTTTATAGTGTAATGTAATGAGTA  1 
+nan_51                   (    1) CTAGTGAGATAGTCCAGTTTCTGAAAAATAGCCAGTGTAATGTTTTGTAGG  1 
+nan_103                  (    1) TTGGGCAGAAAATTGGATGATAGTTTACCAGATTTTGCGACCATTGTGGTG  1 
+nan                      (    1) ATATCAAGGCGGGTCGCTTTGTTGGTTTGACCCGGTGATAAAGTAAATGCC  1 
+nan_66                   (    1) CGGCCATAACGCACCTCCACTGGAAGGTTTATCAGTAATATCCTACCGTTG  1 
+nan_8                    (    1) CGTATGCCGACTTCAAAGTGCCTGATGATTTGATGTGGTAAACATAGATAA  1 
+nan_4                    (    1) CGCTTGTGTTAAAAATTTGCTAAATTTTGCCAATTTGGTAAAACAGTTGCA  1 
+nan_68                   (    1) GTTTTAATCAGGTACTACCAATCGAAAAAATTGACATTATTATTACCGATG  1 
+nan_148                  (    1) TTCATCAATCCGCTGGCAATTCCCACATACTTCGGCGTAATATCCATCGGG  1 
+nan_139                  (    1) TAAAGCGCATCCCTGAGTTGCTTACAAAAATAGATAGCTATACTGGTAGGC  1 
+nan_43                   (    1) GATTAATAAACATGTTGATTTATTCAAGAAAATGGATGTATTTTAAATGTT  1 
+nan_28                   (    1) TAGAGTATTCGTTTTCATTTAAAGATATTCTTGCGCTTTAATTACAAACTG  1 
+nan_34                   (    1) ATTGCTGGTGTTAGTGGAGTGCGACCACCAAAACAGATAACGTCGTTTGTG  1 
+nan_50                   (    1) TCTTGATCGGGTTAACTATTTTACTACTTACAAAGCAGTAGAATAACTGCG  1 
+nan_93                   (    1) AACAATCTATCTTTCATCCCATATTCATCAACATCCGCTATTATTGATTTC  1 
+nan_61                   (    1) TCATGAAGCTATTGTTGTGTTTTGTACATCAGTAGATATATTCTGATATAC  1 
+nan_32                   (    1) AGAATGCGGATTAGTTTTTGCGCGTAAATGTTGCAATGTAATATTCCGTAA  1 
+nan_152                  (    1) GGAAATATCGAGGCTTTACCTTTGCTTTGATCTGATGTATCACCTGCACAA  1 
+nan_74                   (    1) TCATTCTGATATTGGTTTTGATCGCGGCGGCAAAGGTAATATCGATAGCTA  1 
+nan_30                   (    1) TCAATAAAAATTTACGGAACTATTGATGAGAGTTTGGTGTCTTTATGTGTC  1 
+nan_56                   (    1) AATATCTTTTTCTGATATCCCGTTACGCAAATAAATAATATGATAATTATT  1 
+nan_108                  (    1) CCATTCAGCTGGGTTGCTTAATTTGATGCGCAGGGCATACAGTTGTGATTG  1 
+nan_119                  (    1) CGTAAAAGCAATAGTTCATCAGACTGCCGCAGCAGTAGTATGATGATGAAT  1 
+nan_60                   (    1) GAATATATCTACTGATGTACAAAACACAACAATAGCTTCATGATATATAAA  1 
+nan_39                   (    1) TTAAAAAATACCCTTGTCAATCAACCCATTGCCGTCGTACTTTTGATTGTT  1 
+nan_116                  (    1) CAAACATTATCATGGCTGATATTTTCCGTAGTCAGGTTTAATGTTTTAAAA  1 
+nan_23                   (    1) GTAAATTGCCGGACATAGCGAAACAATTAAGACTGCCATATCCTATTGACC  1 
+nan_98                   (    1) GCGTCAAAAAAGCCCCGGCAAGTTTTATTGTCGGGGCTATGATAGTAACTG  1 
+nan_5                    (    1) TCAAAATCCACATACTACTTTGAGGTTACGTTTTAACGTAGACTCATTGTT  1 
+nan_36                   (    1) AAATGTTAACCTTAAGGTTTTATTAAGTTTAGAAATGATAGAAAAGTTGTA  1 
+nan_35                   (    1) TTATAAACATTCCGCTTGTGTTTTTCTTTGCCGTAATGATAATCGCTATCA  1 
+nan_114                  (    1) TTTTATTTCTTTTGGCAGGTGATTAATTTTTTAACAGCAATAATTACAAAA  1 
+nan_45                   (    1) GCTGGCTTTTCTGCTTTTTCAGGAGAATAAACTCATCTACAATCTTGCGCG  1 
+nan_76                   (    1) TGAAGCCGCAAATAAATTATGCACCCGCAATGTTGGTGGGTAAGGTAGTGG  1 
+nan_156                  (    1) ACAGAGTGTGCTAATGACAGCCAGATAACTGCGCTGTTAAATTACATTTTA  1 
+nan_65                   (    1) TCATTTGTACTTTGTATTAATGAGGGATGAAATGTTATATAATATACCTTG  1 
+nan_91                   (    1) GCTGTCAATGTGCTCGTTGTTCATGCCGGATGCGGCGTGAACGCCTTATCC  1 
+nan_78                   (    1) GATGGCTTTTGAGGAATACGTGATACTTCCATTCTGATATGATCGACCGAG  1 
+nan_155                  (    1) GGTGAAGGCGTAAAAAATGAAATAAAGGCAATATATGGTAGTCTGGATCAA  1 
+nan_77                   (    1) TGGTTATCAACAATGGCCGCGCTAACGTCTGGGCTGGCACAATGGTTAACG  1 
+nan_31                   (    1) CCATAGAGACGTGATGATATTTACAGCAATTTTAATCTATTTATATGATTT  1 
+nan_11                   (    1) AAACGTGTTGTTGATGACAAGGTCTTCCAGAGCGGTGTATTTAACGTAGCG  1 
+nan_128                  (    1) TAAGCTTTTTTGATTATGTCCGAATTCGGACAAATGCTTTATAAAAAAGGG  1 
+nan_131                  (    1) TGTGAAGTGATTCACATCCGCCGTGTCGATGGAGGCGCATTATAGGGAGTT  1 
+nan_40                   (    1) TGCGGTTTCTATGATAGAGCAATTCTGTGGCGGATATTAAGATAACGGGTA  1 
+nan_133                  (    1) ACCTACAAAATCACGCTAAATCAGGCTATTGCGCTGTCTGGCGTAGGCCTG  1 
+nan_71                   (    1) ATATTTCGCCAAAAGTTGATTACTGATTTCTTCTGTCAGATAACAGATTGG  1 
+nan_138                  (    1) TTATGCCTGAAATCCAGTGTTTATCTATCTTTCCCGCTATATTAACTCTCT  1 
+nan_26                   (    1) CCAACAAATTATACTGGATAAAAAAACAGTTCATCACCATAATATTTCTGA  1 
+nan_6                    (    1) GGGAGAGGTATTTTCAGTTGATCTGGATTGTTAAATTCATATAATGCGCCT  1 
+nan_14                   (    1) ATAATATTTCCTTTGCTGCGATTTTTTCAATTTCCGATATATTCATAATTT  1 
+nan_109                  (    1) CGTGTTTCATCTATTTGACGCGCGCAGGTATTTAGCATACAAGGAGTACCG  1 
+nan_9                    (    1) ACGGGGTGAAAGATACCAACGGGGGTTGGACTGATGATAGCCTCAACGTTG  1 
+nan_44                   (    1) AACCCCATTGGGTCTATCACTTGTATGGGATTCAACGGATACTGATACATA  1 
+nan_49                   (    1) TGAAAAACAAAGGTGCATTTTTGTTTTTCTGTTCTGCCATACTCTCTGAAG  1 
+nan_17                   (    1) CACCAACAAAAAAAAGGTTTACACCATCCCCTTGCCCTGGTATCTTACCAT  1 
+nan_120                  (    1) TGACTTCTTGTCTGAGAAAATGCATAAGAAAAAATAGGTTAAAACTGAGGG  1 
+nan_64                   (    1) TTACAATTTATGAAGATGACAATAATTATAGATATATGAGAACATAAATGA  1 
+nan_107                  (    1) TGCTGAGCATTGTCAATCGGTTAATTTTGCGTGCTTTAGCATTCACATCTA  1 
+nan_82                   (    1) AAGTGGCGGATATTGCGTTGTAATGATACGCCACATCCGGCATGGTATGCC  1 
+nan_72                   (    1) CATCCGGCAACAGGAGCCAAATGCCGGATGCAACGCTGGCGCGTTTTATCC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 51 n= 157 bayes= -664.386 E= 2.5e-069 
+     6     20    -22     -5 
+    -7     48     -7    -24 
+    31    -45     18    -24 
+    23    -26      6    -14 
+     9     -3     26    -28 
+    20     33     18    -68 
+    18      7    -22     -8 
+     0    -59     26      9 
+    26      7    -57      1 
+    47      2    -63    -21 
+    -7    -26    -22     29 
+   -32     25     30    -11 
+   -36      7     15     15 
+   -13     25      2     -5 
+   -20     16    -17     17 
+   -13    -67     15     29 
+   -32    -59     22     34 
+   -24     25     40    -28 
+   -32     33    -17     15 
+   -17     37     10    -18 
+   -13    -14     22      4 
+    -7     44    -63      9 
+    12      2    -17     -2 
+   -20    -38     33     12 
+   -10     65      6    -51 
+     9     37      2    -39 
+   -44     52     22    -18 
+   -13     52    -17    -14 
+   -24     16      6      6 
+     6      2      2     -8 
+     0      2    -22     12 
+    12    -38    -22     20 
+   -20    -75     22     32 
+   -24     25    -12     12 
+   -24      7     62    -39 
+  -100    -20     78      9 
+   -57    -52    102    -31 
+   -48    -38     26     34 
+    18   -184   -122     74 
+   132   -167   -222    -94 
+    20    -14   -132     39 
+    78    -84    -22    -55 
+    36     11   -144     15 
+   -88    -67   -222    111 
+    23    -14     -7    -11 
+    12      7    -22     -2 
+     9     -9    -32     15 
+    -3     29     26    -39 
+   -40     58     30    -35 
+   -67     74    -78     29 
+    26    -75    106   -155 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 51 nsites= 157 E= 2.5e-069 
+ 0.305732  0.210191  0.178344  0.305732 
+ 0.280255  0.254777  0.197452  0.267516 
+ 0.363057  0.133758  0.235669  0.267516 
+ 0.343949  0.152866  0.216561  0.286624 
+ 0.312102  0.178344  0.248408  0.261146 
+ 0.337580  0.229299  0.235669  0.197452 
+ 0.331210  0.191083  0.178344  0.299363 
+ 0.292994  0.121019  0.248408  0.337580 
+ 0.350318  0.191083  0.140127  0.318471 
+ 0.407643  0.184713  0.133758  0.273885 
+ 0.280255  0.152866  0.178344  0.388535 
+ 0.235669  0.216561  0.254777  0.292994 
+ 0.229299  0.191083  0.229299  0.350318 
+ 0.267516  0.216561  0.210191  0.305732 
+ 0.254777  0.203822  0.184713  0.356688 
+ 0.267516  0.114650  0.229299  0.388535 
+ 0.235669  0.121019  0.242038  0.401274 
+ 0.248408  0.216561  0.273885  0.261146 
+ 0.235669  0.229299  0.184713  0.350318 
+ 0.261146  0.235669  0.222930  0.280255 
+ 0.267516  0.165605  0.242038  0.324841 
+ 0.280255  0.248408  0.133758  0.337580 
+ 0.318471  0.184713  0.184713  0.312102 
+ 0.254777  0.140127  0.261146  0.343949 
+ 0.273885  0.286624  0.216561  0.222930 
+ 0.312102  0.235669  0.210191  0.242038 
+ 0.216561  0.261146  0.242038  0.280255 
+ 0.267516  0.261146  0.184713  0.286624 
+ 0.248408  0.203822  0.216561  0.331210 
+ 0.305732  0.184713  0.210191  0.299363 
+ 0.292994  0.184713  0.178344  0.343949 
+ 0.318471  0.140127  0.178344  0.363057 
+ 0.254777  0.108280  0.242038  0.394904 
+ 0.248408  0.216561  0.191083  0.343949 
+ 0.248408  0.191083  0.318471  0.242038 
+ 0.146497  0.159236  0.356688  0.337580 
+ 0.197452  0.127389  0.420382  0.254777 
+ 0.210191  0.140127  0.248408  0.401274 
+ 0.331210  0.050955  0.089172  0.528662 
+ 0.732484  0.057325  0.044586  0.165605 
+ 0.337580  0.165605  0.082803  0.414013 
+ 0.503185  0.101911  0.178344  0.216561 
+ 0.375796  0.197452  0.076433  0.350318 
+ 0.159236  0.114650  0.044586  0.681529 
+ 0.343949  0.165605  0.197452  0.292994 
+ 0.318471  0.191083  0.178344  0.312102 
+ 0.312102  0.171975  0.165605  0.350318 
+ 0.286624  0.222930  0.248408  0.242038 
+ 0.222930  0.273885  0.254777  0.248408 
+ 0.184713  0.305732  0.121019  0.388535 
+ 0.350318  0.108280  0.433121  0.108280 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif NNDDNNNDHWWNNNNDDNNNNHNDNNNNNNNWDNNKKDWAWAHTDNWNNYR MEME-1 regular expression
+--------------------------------------------------------------------------------
+[ATC][ATC][ATG][ATG][ATG][AGC][AT][TAG][AT][AT][TA][TGAC][TAG][TACG][TAC][TAG][TGA][GTAC][TAC][TACG][TAG][TAC][AT][TGA][CATG][ATCG][TCGA][TAC][TAGC][ATG][TA][TA][TAG][TAC][GAT][GT][GT][TGA][TA]A[TA][AT][AT]T[AT][AT][TA][AGTC][CGTA][TC][GA]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.12 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+nan                              2.68e-02  51
+nan_2                            7.45e-04  51
+nan_3                            5.21e-03  51
+nan_4                            3.11e-02  51
+nan_5                            7.98e-02  51
+nan_6                            2.94e-01  51
+nan_7                            5.45e-05  [+1(5.45e-05)]
+nan_8                            2.82e-02  51
+nan_9                            3.32e-01  51
+nan_10                           6.14e-03  51
+nan_11                           1.86e-01  51
+nan_12                           1.79e-03  51
+nan_13                           1.17e-03  51
+nan_14                           2.98e-01  51
+nan_15                           3.10e-04  51
+nan_16                           1.12e-03  51
+nan_17                           4.59e-01  51
+nan_18                           1.42e-03  51
+nan_19                           5.94e-03  51
+nan_20                           3.46e-03  51
+nan_21                           1.32e-03  51
+nan_22                           6.76e-03  51
+nan_23                           7.82e-02  51
+nan_24                           6.29e-04  51
+nan_25                           1.95e-02  51
+nan_26                           2.91e-01  51
+nan_27                           5.75e-05  [+1(5.75e-05)]
+nan_28                           3.69e-02  51
+nan_29                           2.17e-02  51
+nan_30                           5.34e-02  51
+nan_31                           1.78e-01  51
+nan_32                           4.46e-02  51
+nan_33                           6.34e-03  51
+nan_34                           3.87e-02  51
+nan_35                           8.81e-02  51
+nan_36                           8.63e-02  51
+nan_37                           1.40e-02  51
+nan_38                           1.36e-02  51
+nan_39                           7.51e-02  51
+nan_40                           2.10e-01  51
+nan_41                           2.01e-02  51
+nan_42                           2.08e-03  51
+nan_43                           3.44e-02  51
+nan_44                           3.64e-01  51
+nan_45                           1.03e-01  51
+nan_46                           2.16e-03  51
+nan_47                           7.45e-04  51
+nan_48                           3.00e-03  51
+nan_49                           3.88e-01  51
+nan_50                           3.97e-02  51
+nan_51                           2.48e-02  51
+nan_52                           7.92e-03  51
+nan_53                           2.23e-02  51
+nan_54                           1.14e-02  51
+nan_55                           3.71e-03  51
+nan_56                           5.83e-02  51
+nan_57                           1.57e-02  51
+nan_58                           7.92e-03  51
+nan_59                           2.23e-02  51
+nan_60                           6.77e-02  51
+nan_61                           4.16e-02  51
+nan_62                           5.06e-04  51
+nan_63                           1.28e-02  51
+nan_64                           5.61e-01  51
+nan_65                           1.59e-01  51
+nan_66                           2.75e-02  51
+nan_67                           1.66e-02  51
+nan_68                           3.19e-02  51
+nan_69                           8.69e-03  51
+nan_70                           2.82e-04  51
+nan_71                           2.16e-01  51
+nan_72                           8.15e-01  51
+nan_73                           1.49e-05  [+1(1.49e-05)]
+nan_74                           5.22e-02  51
+nan_75                           7.44e-03  51
+nan_76                           1.09e-01  51
+nan_77                           1.70e-01  51
+nan_78                           1.67e-01  51
+nan_79                           3.93e-05  [+1(3.93e-05)]
+nan_80                           3.00e-03  51
+nan_81                           8.96e-03  51
+nan_82                           7.55e-01  51
+nan_83                           9.94e-04  51
+nan_84                           2.33e-03  51
+nan_85                           3.24e-04  51
+nan_86                           8.96e-03  51
+nan_87                           2.82e-04  51
+nan_88                           6.29e-04  51
+nan_89                           6.56e-04  51
+nan_90                           1.14e-02  51
+nan_91                           1.64e-01  51
+nan_92                           6.34e-03  51
+nan_93                           4.16e-02  51
+nan_94                           1.93e-03  51
+nan_95                           1.40e-02  51
+nan_96                           2.42e-03  51
+nan_97                           2.08e-03  51
+nan_98                           7.98e-02  51
+nan_99                           1.14e-02  51
+nan_100                          3.58e-03  51
+nan_101                          1.80e-02  51
+nan_102                          1.36e-02  51
+nan_103                          2.61e-02  51
+nan_104                          1.14e-02  51
+nan_105                          6.34e-03  51
+nan_106                          9.24e-03  51
+nan_107                          5.73e-01  51
+nan_108                          5.96e-02  51
+nan_109                          3.24e-01  51
+nan_110                          2.17e-02  51
+nan_111                          5.04e-03  51
+nan_112                          7.44e-03  51
+nan_113                          3.34e-03  51
+nan_114                          1.01e-01  51
+nan_115                          1.86e-03  51
+nan_116                          7.66e-02  51
+nan_117                          5.94e-03  51
+nan_118                          1.70e-02  51
+nan_119                          6.77e-02  51
+nan_120                          5.35e-01  51
+nan_121                          6.98e-03  51
+nan_122                          1.61e-02  51
+nan_123                          1.66e-02  51
+nan_124                          8.10e-06  [+1(8.10e-06)]
+nan_125                          2.24e-05  [+1(2.24e-05)]
+nan_126                          2.90e-03  51
+nan_127                          3.88e-04  51
+nan_128                          1.89e-01  51
+nan_129                          3.88e-04  51
+nan_130                          3.10e-04  51
+nan_131                          1.98e-01  51
+nan_132                          1.80e-02  51
+nan_133                          2.13e-01  51
+nan_134                          4.64e-04  51
+nan_135                          4.71e-03  51
+nan_136                          4.25e-07  [+1(4.25e-07)]
+nan_137                          1.08e-03  51
+nan_138                          2.55e-01  51
+nan_139                          3.44e-02  51
+nan_140                          2.69e-04  51
+nan_141                          8.43e-03  51
+nan_142                          5.06e-04  51
+nan_143                          3.22e-03  51
+nan_144                          5.75e-03  51
+nan_145                          9.17e-06  [+1(9.17e-06)]
+nan_146                          6.14e-03  51
+nan_147                          3.84e-03  51
+nan_148                          3.27e-02  51
+nan_149                          2.34e-04  51
+nan_150                          1.11e-02  51
+nan_151                          7.92e-03  51
+nan_152                          4.56e-02  51
+nan_153                          2.90e-03  51
+nan_154                          3.34e-03  51
+nan_155                          1.70e-01  51
+nan_156                          1.17e-01  51
+nan_157                          2.57e-04  51
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: iMac-3.local
+
+********************************************************************************
